@@ -1,0 +1,27 @@
+sudo: required
+dist: trusty
+language: node_js
+node_js:
+- node
+addons:
+apt:
+  sources:
+  - google-chrome
+  packages:
+  - google-chrome-stable
+  - google-chrome-beta
+before_install:
+- export CHROME_BIN=chromium-browser
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
+before_script:
+- npm install -g angular-cli
+- npm install -g karma
+- npm install
+- ng build
+script: karma start config/karma.conf.js --single-run
+deploy:
+  app: qmtis
+  provider: heroku
+  api_key:
+    secure: mxkh/0kltHHF2RaIbhCy91HiXLa3s8++zVE+FTR2v3a951zg+juCzLmzFg5Kwr18BAf4gAhze+iyui2Ow2wqlaBTTre16Xaf8W6qgOqzHC7nTkSep+a8K/Lqw1bsad4d9VfaQTuAG9xxREEvm7mYU/xAA3gAgZ8iHPWN4JdUA6GD6XhxZzWXQnOh8pe+m2sb8jqb6xbUtQOCkIyoI5ScXfDNBsNAFRokpe8rkXds4lNZ+SWZ6Q8e0u3hNZ+u8ZSMCERRjq0Ado8bhtvct2ts4ygUV6ENoB+5iCdK491s5DGt/Guh6l8VLZ/abXwpQa8E6eAOvHfTnyJOq+sqLvdlaJY7ovDZHL/9s64+q4/Io6yUZ+uOw+XsgvcBNertjapWqUk/3Zq5I9fh02EScuo/tQCf0cQ9n6fEQyYcpv37o5e6KArPmu8or6QmY3KHb+4DqI9X1kIR76L/NFAx5RrirvsF2PxbOLRYeoC0EEkujvo8wHVqXko6d3/R7/f4G1RYHhxWo6OdUrarJF/qjlV0Q4OAzn3k99g2Ub+04lJg151Jd1yKkuAyuT11gbN3ZoD5NiKDW0LO16Bv6qA3pFlpwgciqyau0PLhScFBXpop/aH47k4hU6PzPv5vgMP0Jfyl3yBhSImuJvwaB4Ejl66sphXSCyQtkb19XOZGH3Odb1A=
