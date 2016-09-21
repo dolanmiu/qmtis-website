@@ -22,6 +22,10 @@ export class NavComponent {
         {
             text: 'Join Us',
             route: 'join-us'
+        },
+        {
+            text: 'Partners',
+            route: 'partners'
         }
     ];
 }

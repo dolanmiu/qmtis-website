@@ -1,6 +1,5 @@
-<nav class="navbar navbar-default">
+<!--<nav class="navbar navbar-default">
     <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
                 aria-expanded="false">
@@ -12,13 +11,20 @@
             <a class="navbar-brand" href="#">Brand</a>
         </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul *ngFor="let link of links" class="nav navbar-nav navbar-right">
                 <li><a href="{{link.route}}">{{link.text}}</a></li>
             </ul>
         </div>
-        <!-- /.navbar-collapse -->
     </div>
-    <!-- /.container-fluid -->
+</nav>-->
+<nav class="navbar navbar-full bg-faded navbar-dark bg-inverse">
+    <div class="container">
+        <a class="navbar-brand" href="#">Brand</a>
+        <ul class="nav navbar-nav pull-xs-right">
+            <li *ngFor="let link of links" class="nav-item">
+                <a class="nav-link" href="{{link.route}}">{{link.text}}</a>
+            </li>
+        </ul>
+    </div>
 </nav>
