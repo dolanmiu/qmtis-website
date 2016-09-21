@@ -9,23 +9,23 @@ export class NavComponent {
     public links = [
         {
             text: 'Home',
-            route: '/'
+            route: '#'
         },
         {
             text: 'About Us',
-            route: 'about-us'
+            route: '#about'
         },
         {
             text: 'Committee',
-            route: 'committee'
+            route: '#committee'
         },
         {
             text: 'Join Us',
-            route: 'join-us'
+            route: '#join'
         },
         {
             text: 'Partners',
-            route: 'partners'
+            route: '#partners'
         }
     ];
 }
