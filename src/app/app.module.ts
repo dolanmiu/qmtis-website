@@ -9,6 +9,9 @@ import { NavComponent } from './nav/nav.component';
 import { BackdropComponent } from './backdrop/backdrop.component';
 import { HeroComponent } from './hero/hero.component';
 import { AboutComponent } from './about/about.component';
+import { CommitteeComponent } from './committee/committee.component';
+import { IntroComponent } from './intro/intro.component';
+import { JoinComponent } from './join/join.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { AboutComponent } from './about/about.component';
     NavComponent,
     BackdropComponent,
     HeroComponent,
-    AboutComponent
+    AboutComponent,
+    CommitteeComponent,
+    IntroComponent,
+    JoinComponent
   ],
   imports: [
     BrowserModule,
