@@ -1,0 +1,25 @@
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    line-height: 1.3em;
+}
+
+.btn-ghost {
+    background-color: #0275d8;
+    border-color: white;
+    background-color: transparent;
+    border-width: 2px;
+}
+
+.text-highlight {
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.61);
+    margin: 100px 0;
+}

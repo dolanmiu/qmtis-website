@@ -1,0 +1,13 @@
+.section {
+    padding: 100px 0;
+}
+
+.section-light {
+    @extend .section;
+    background-color: white;
+}
+
+.section-dark {
+    @extend .section;
+    background-color: #EAEAEA;
+}
