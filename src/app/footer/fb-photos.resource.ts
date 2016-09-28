@@ -1,0 +1,1 @@
+// qmtis/photos?type=uploaded

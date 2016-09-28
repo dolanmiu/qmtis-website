@@ -6,4 +6,11 @@ import { Component } from '@angular/core';
     styleUrls: ['./committee.component.scss', '../shared/section.component.scss']
 })
 export class CommitteeComponent {
+    year: number;
+
+    constructor() {
+        let currentDate = new Date();
+        currentDate.setMonth(currentDate.getMonth() - 9);
+        this.year = currentDate.getFullYear();
+    }
 }

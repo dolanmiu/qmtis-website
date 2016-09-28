@@ -4,14 +4,25 @@ import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
-
+import { BackdropComponent } from './backdrop/backdrop.component';
+import { HeroComponent } from './hero/hero.component';
+import { AboutComponent } from './about/about.component';
+import { CommitteeComponent } from './committee/committee.component';
+import { IntroComponent } from './intro/intro.component';
+import { JoinComponent } from './join/join.component';
 describe('App: QmtisWebsite', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent,
         NavComponent,
-        FooterComponent
+        FooterComponent,
+        BackdropComponent,
+        HeroComponent,
+        AboutComponent,
+        CommitteeComponent,
+        IntroComponent,
+        JoinComponent
       ],
     });
   });
