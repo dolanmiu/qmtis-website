@@ -9,7 +9,11 @@ export class NavComponent {
     public links = [
         {
             text: 'Home',
-            route: '#'
+            route: '#home'
+        },
+        {
+            text: 'Intro',
+            route: '#intro'
         },
         {
             text: 'About Us',
