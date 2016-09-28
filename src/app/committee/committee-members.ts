@@ -14,10 +14,10 @@ export class Members extends Array<Member> {
         members = [
             {
                 name: 'Pattawia Supradit',
-                description: 'dfs',
-                facebook: 'sdf',
-                linkedIn: 'sdf',
-                photoUrl: 'f'
+                description: 'Student at Queen Mary University of London with Excellence Scholarship',
+                facebook: 'https://www.facebook.com/pattawias',
+                linkedIn: 'https://www.linkedin.com/in/pattawia-supradit-249b98104',
+                photoUrl: './assets/pattawia.jpg'
             }
         ];
 

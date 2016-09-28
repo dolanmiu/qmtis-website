@@ -3,21 +3,15 @@
         <h1>Committee<small class="text-muted"> of {{year}}/{{year + 1}}</small></h1>
         <div class="row">
             <div class="col-sm-4">
-                <div class="card">
-                    <img class="card-img-top" src="..." alt="Card image cap">
+                <div *ngFor="let member of members" class="card">
+                    <img class="card-img-top img-fluid" [src]="member.photoUrl" [alt]="member.name">
                     <div class="card-block">
-                        <h4 class="card-title">Card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <h4 class="card-title">{{member.name}}</h4>
+                        <a [href]="member.facebook" target="_blank"><i class="fa fa-facebook social-icon"></i></a>
+                        <a [href]="member.linkedIn" target="_blank"><i class="fa fa-linkedin social-icon"></i></a>
+                        <p class="card-text">{{member.description}}</p>
                     </div>
                 </div>
-            </div>
-            <div *ngFor="let member of members">{{member}}</div>
-            <div class="col-sm-4">
-                One of three columns
-            </div>
-            <div class="col-sm-4">
-                One of three columns
             </div>
         </div>
     </div>
