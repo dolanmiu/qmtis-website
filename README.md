@@ -42,6 +42,7 @@ The app will automatically reload if you change any of the source files.
 
 # Misc help for developers and contributors
 > Don't worry about the below unless you want to edit and contribute to this project.
+
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class`.
