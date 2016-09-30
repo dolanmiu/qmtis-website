@@ -1,6 +1,7 @@
 /* tslint:disable:no-unused-variable */
 
 import { TestBed, async } from '@angular/core/testing';
+import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
@@ -24,6 +25,9 @@ describe('App: QmtisWebsite', () => {
         IntroComponent,
         JoinComponent
       ],
+      imports: [
+        HttpModule
+      ]
     });
   });
 
