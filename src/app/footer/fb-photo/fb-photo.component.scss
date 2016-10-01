@@ -16,3 +16,14 @@
     width: auto;
     height: auto;
 }
+
+img {
+    -webkit-filter: brightness(100%);
+    filter: brightness(100%);
+    transition: filter 0.3s;
+}
+
+img:hover {
+    -webkit-filter: brightness(120%);
+    filter: brightness(120%);
+}
