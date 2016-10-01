@@ -1,0 +1,18 @@
+.img-container {
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid grey;
+    margin-bottom: 10px;
+}
+
+.img-crop {
+    position: absolute;
+    left: -100%;
+    right: -100%;
+    top: -100%;
+    bottom: -100%;
+    margin: auto;
+    width: auto;
+    height: auto;
+}

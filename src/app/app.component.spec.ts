@@ -11,6 +11,8 @@ import { AboutComponent } from './about/about.component';
 import { CommitteeComponent } from './committee/committee.component';
 import { IntroComponent } from './intro/intro.component';
 import { JoinComponent } from './join/join.component';
+import { FacebookPhotoComponent } from './footer/fb-photo/fb-photo.component';
+
 describe('App: QmtisWebsite', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -23,7 +25,8 @@ describe('App: QmtisWebsite', () => {
         AboutComponent,
         CommitteeComponent,
         IntroComponent,
-        JoinComponent
+        JoinComponent,
+        FacebookPhotoComponent
       ],
       imports: [
         HttpModule

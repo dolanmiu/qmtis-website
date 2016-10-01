@@ -40,8 +40,8 @@
 
             <div class="col-md-6">
                 <h2>Latest Photos</h2>
-                <div *ngFor="let photo of photos" class="col-md-4 img-container">
-                    <img src="http://graph.facebook.com/{{photo.id}}/picture" class="img-crop img-fluid" />
+                <div class="row">
+                    <app-fb-photo *ngFor="let photo of photos" class="col-md-4" [fbuid]="photo.id"></app-fb-photo>
                 </div>
             </div>
         </div>

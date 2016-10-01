@@ -19,13 +19,30 @@
 /* The element to apply the animation to */
 
 nav {
-    background-color: red;
-    animation-name: example;
-    animation-duration: 4s;
+    //background-color: red;
+    //animation-name: example;
+    //animation-duration: 4s;
+    transition: background-color 0.5s, height 0.5s;
+    height: 100px;
+    transition-timing-function: ease-out;
+}
+
+div {
+    transition: margin 0.5s;
+    transition-timing-function: ease-out;
 }
 
 .active {
     border-bottom: 3px solid #2B99DD;
     box-sizing: border-box;
     margin-bottom: -3px;
+}
+
+.unscrolled-nav {
+    background-color: transparent;
+    height: 70px;
+}
+
+.nav-middle {
+    margin-top: 30px;
 }
