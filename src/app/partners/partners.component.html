@@ -1,4 +1,7 @@
-<section class="section">
-    <div class="container">
+<section class="section-dark">
+    <div class="container text-xs-center">
+        <div *ngFor="let partner of partners" class="partner">
+            <img src="./assets/partners/{{partner.link}}" [alt]="partner.name" />
+        </div>
     </div>
 </section>

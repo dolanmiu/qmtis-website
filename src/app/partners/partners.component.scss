@@ -1,1 +1,15 @@
-    
+.partner {
+    position: relative;
+    margin: 30px;
+    display: inline-block;
+    img {
+        height: 50px;
+        -webkit-filter: saturate(100%) opacity(100%);
+        filter: saturate(100%) opacity(100%);
+        transition: filter 0.3s;
+    }
+    img:hover {
+        -webkit-filter: saturate(150%) opacity(50%);
+        filter: saturate(150%) opacity(50%);
+    }
+}
