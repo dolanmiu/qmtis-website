@@ -16,12 +16,9 @@ export class FooterComponent {
 
         this.facebookService.getHeroes().subscribe(
             photos => {
-                console.log(photos);
                 this.photos = photos.data;
             },
             err => {
-                // Log errors if any
-                console.log(err);
             });
     }
 }

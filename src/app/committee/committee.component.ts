@@ -16,6 +16,5 @@ export class CommitteeComponent {
         this.year = currentDate.getFullYear();
 
         this.members = new Members();
-        console.log(this.members);
     }
 }

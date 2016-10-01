@@ -3,8 +3,8 @@ import { Component } from '@angular/core';
 @Component({
     selector: 'app-partners',
     templateUrl: './partners.component.html',
-    styleUrls: ['./partners.component.scss'],
+    styleUrls: ['./partners.component.scss', '../shared/section.component.scss'],
 })
-export class AppComponent {
+export class PartnersComponent {
 
 }

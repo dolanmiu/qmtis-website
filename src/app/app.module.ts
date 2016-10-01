@@ -11,6 +11,7 @@ import { HeroComponent } from './hero/hero.component';
 import { AboutComponent } from './about/about.component';
 import { CommitteeComponent } from './committee/committee.component';
 import { IntroComponent } from './intro/intro.component';
+import { PartnersComponent } from './partners/partners.component';
 import { JoinComponent } from './join/join.component';
 import { FacebookPhotoComponent } from './footer/fb-photo/fb-photo.component';
 
@@ -25,7 +26,8 @@ import { FacebookPhotoComponent } from './footer/fb-photo/fb-photo.component';
     CommitteeComponent,
     IntroComponent,
     JoinComponent,
-    FacebookPhotoComponent
+    FacebookPhotoComponent,
+    PartnersComponent
   ],
   imports: [
     BrowserModule,
