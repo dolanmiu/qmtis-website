@@ -20,10 +20,11 @@
 img {
     -webkit-filter: brightness(100%);
     filter: brightness(100%);
-    transition: filter 0.3s;
+    transition: all 0.3s;
 }
 
 img:hover {
     -webkit-filter: brightness(120%);
     filter: brightness(120%);
+    transform: scale(1.1);
 }

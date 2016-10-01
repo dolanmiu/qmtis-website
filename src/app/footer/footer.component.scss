@@ -1,3 +1,7 @@
+p {
+    font-size: 0.8em;
+}
+
 .footer {
     background-color: #104464;
     padding-top: 50px;
@@ -15,5 +19,21 @@
 
 .logo-text {
     margin-top: 10px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.logo-description {
     font-size: 0.8em;
+    font-weight: lighter;
+}
+
+.footer-heading {
+    font-size: 1.2em;
+    font-weight: 100;
+}
+
+.message-us {
+    color: white;
+    text-decoration: underline dotted white;
 }

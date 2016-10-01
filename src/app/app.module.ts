@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavComponent } from './nav/nav.component';
 import { BackdropComponent } from './backdrop/backdrop.component';
-import { HeroComponent } from './hero/hero.component';
 import { AboutComponent } from './about/about.component';
 import { CommitteeComponent } from './committee/committee.component';
 import { IntroComponent } from './intro/intro.component';
@@ -15,13 +14,14 @@ import { PartnersComponent } from './partners/partners.component';
 import { JoinComponent } from './join/join.component';
 import { FacebookPhotoComponent } from './footer/fb-photo/fb-photo.component';
 
+import { HeroModule } from './hero/hero.module';
+
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     NavComponent,
     BackdropComponent,
-    HeroComponent,
     AboutComponent,
     CommitteeComponent,
     IntroComponent,
@@ -32,7 +32,8 @@ import { FacebookPhotoComponent } from './footer/fb-photo/fb-photo.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    HeroModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -16,10 +16,16 @@ h1 {
     border-color: white;
     background-color: transparent;
     border-width: 2px;
+    margin: 50px 0;
 }
 
 .text-highlight {
     z-index: -1;
     background-color: rgba(0, 0, 0, 0.61);
     margin: 100px 0;
+}
+
+.mouse {
+    margin-top: 100px;
+    position: relative;
 }
