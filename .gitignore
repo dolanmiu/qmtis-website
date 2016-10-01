@@ -3,6 +3,7 @@
 # compiled output
 /dist
 /tmp
+/psds/output
 
 # dependencies
 /node_modules
