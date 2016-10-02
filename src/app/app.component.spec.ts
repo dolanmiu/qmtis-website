@@ -6,13 +6,14 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
 import { BackdropComponent } from './backdrop/backdrop.component';
-import { HeroComponent } from './hero/hero.component';
 import { AboutComponent } from './about/about.component';
 import { CommitteeComponent } from './committee/committee.component';
 import { IntroComponent } from './intro/intro.component';
 import { JoinComponent } from './join/join.component';
 import { PartnersComponent } from './partners/partners.component';
 import { FacebookPhotoComponent } from './footer/fb-photo/fb-photo.component';
+
+import { HeroModule } from './hero/hero.module';
 
 describe('App: QmtisWebsite', () => {
   beforeEach(() => {
@@ -22,7 +23,6 @@ describe('App: QmtisWebsite', () => {
         NavComponent,
         FooterComponent,
         BackdropComponent,
-        HeroComponent,
         AboutComponent,
         CommitteeComponent,
         IntroComponent,
@@ -31,7 +31,8 @@ describe('App: QmtisWebsite', () => {
         PartnersComponent
       ],
       imports: [
-        HttpModule
+        HttpModule,
+        HeroModule
       ]
     });
   });
