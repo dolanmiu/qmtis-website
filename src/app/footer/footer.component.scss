@@ -4,7 +4,6 @@ p {
 
 .footer {
     background-color: #104464;
-    padding-top: 50px;
     color: #F2F2F2;
 }
 
@@ -36,4 +35,15 @@ p {
 .message-us {
     color: white;
     text-decoration: underline dotted white;
+}
+
+.skyline {
+    position: absolute;
+    -webkit-transform: translate(0, -100%);
+    transform: translate(0, -100%);
+    background-image: url("./assets/skyline.png");
+    background-repeat: repeat-x;
+    right: 0;
+    left: 0;
+    height: 134px;
 }
