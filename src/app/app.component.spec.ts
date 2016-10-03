@@ -4,16 +4,15 @@ import { TestBed, async } from '@angular/core/testing';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
-import { FooterComponent } from './footer/footer.component';
 import { BackdropComponent } from './backdrop/backdrop.component';
 import { AboutComponent } from './about/about.component';
 import { CommitteeComponent } from './committee/committee.component';
 import { IntroComponent } from './intro/intro.component';
 import { JoinComponent } from './join/join.component';
 import { PartnersComponent } from './partners/partners.component';
-import { FacebookPhotoComponent } from './footer/fb-photo/fb-photo.component';
 
 import { HeroModule } from './hero/hero.module';
+import { FooterModule } from './footer/footer.module';
 
 describe('App: QmtisWebsite', () => {
   beforeEach(() => {
@@ -21,18 +20,17 @@ describe('App: QmtisWebsite', () => {
       declarations: [
         AppComponent,
         NavComponent,
-        FooterComponent,
         BackdropComponent,
         AboutComponent,
         CommitteeComponent,
         IntroComponent,
         JoinComponent,
-        FacebookPhotoComponent,
         PartnersComponent
       ],
       imports: [
         HttpModule,
-        HeroModule
+        HeroModule,
+        FooterModule
       ]
     });
   });
