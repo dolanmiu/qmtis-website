@@ -15,6 +15,8 @@ import { JoinComponent } from './join/join.component';
 import { HeroModule } from './hero/hero.module';
 import { FooterModule } from './footer/footer.module';
 
+import { IconTextBlockComponent } from './shared/icon-text-block/icon-text-block.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +26,8 @@ import { FooterModule } from './footer/footer.module';
     CommitteeComponent,
     IntroComponent,
     JoinComponent,
-    PartnersComponent
+    PartnersComponent,
+    IconTextBlockComponent
   ],
   imports: [
     BrowserModule,

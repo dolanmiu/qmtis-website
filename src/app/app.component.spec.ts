@@ -14,6 +14,8 @@ import { PartnersComponent } from './partners/partners.component';
 import { HeroModule } from './hero/hero.module';
 import { FooterModule } from './footer/footer.module';
 
+import { IconTextBlockComponent } from './shared/icon-text-block/icon-text-block.component';
+
 describe('App: QmtisWebsite', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -25,7 +27,8 @@ describe('App: QmtisWebsite', () => {
         CommitteeComponent,
         IntroComponent,
         JoinComponent,
-        PartnersComponent
+        PartnersComponent,
+        IconTextBlockComponent
       ],
       imports: [
         HttpModule,
