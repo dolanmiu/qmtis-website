@@ -1,12 +1,17 @@
 import { Component, Renderer } from '@angular/core';
 
+class NavTab {
+    text: string;
+    route: string;
+}
+
 @Component({
     selector: 'app-nav',
     templateUrl: './nav.component.html',
     styleUrls: ['./nav.component.scss']
 })
 export class NavComponent {
-    links = [
+    links: Array<NavTab> = [
         {
             text: 'Home',
             route: '#home'
@@ -26,6 +31,10 @@ export class NavComponent {
         {
             text: 'Join Us',
             route: '#join'
+        },
+        {
+            text: 'Events',
+            route: '#events'
         }
     ];
 

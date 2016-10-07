@@ -10,6 +10,7 @@ import { CommitteeComponent } from './committee/committee.component';
 import { IntroComponent } from './intro/intro.component';
 import { JoinComponent } from './join/join.component';
 import { PartnersComponent } from './partners/partners.component';
+import { EventsComponent } from './events/events.component';
 
 import { HeroModule } from './hero/hero.module';
 import { FooterModule } from './footer/footer.module';
@@ -28,7 +29,8 @@ describe('App: QmtisWebsite', () => {
         IntroComponent,
         JoinComponent,
         PartnersComponent,
-        IconTextBlockComponent
+        IconTextBlockComponent,
+        EventsComponent
       ],
       imports: [
         HttpModule,
