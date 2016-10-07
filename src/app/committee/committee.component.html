@@ -8,7 +8,7 @@
                     <img class="card-img-top img-fluid" src="./assets/committee/{{member.photoUrl}}" [alt]="member.name">
                     <div class="card-block">
                         <h4 class="card-title">{{member.name}}</h4>
-                        <p class="lead">{{member.position}}</p>
+                        <p class="lead lead-role">{{member.position}}</p>
                         <a [href]="member.facebook" target="_blank" [style.visibility]="member.facebook ? 'visible' : 'hidden'"><i class="fa fa-facebook social-icon"></i></a>
                         <a [href]="member.linkedIn" target="_blank" [style.visibility]="member.linkedIn ? 'visible' : 'hidden'"><i class="fa fa-linkedin social-icon"></i></a>
                         <p class="card-text">{{member.description}}</p>

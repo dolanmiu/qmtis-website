@@ -32,7 +32,11 @@ export class Members extends Array<Member> {
             {
                 name: 'Pattawia Supradit',
                 position: 'Secretary',
-                description: 'Student at Queen Mary University of London with Excellence Scholarship',
+                description: `Course: Economics and Finance
+Year: 2nd
+Experience: - Ministry of Finance (MoF), Royal Thai Embassy
+- Sales and Trading Summer analyst at BNP Paribas
+- Financial Institutions Coverage (FIC) at BNP Paribas`,
                 facebook: 'https://www.facebook.com/pattawias',
                 linkedIn: 'https://www.linkedin.com/in/pattawia-supradit-249b98104',
                 photoUrl: 'pattawia.jpg'
