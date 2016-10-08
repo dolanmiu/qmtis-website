@@ -35,7 +35,7 @@ export class FacebookService {
 
     public getEvents(): Observable<any> {
         return this.http.get(this.heroesUrl).flatMap(authToken => {
-            return this.http.get(`${this.eventsUrl}?${authToken.text()}&limit=9`).map(eventJson => {
+            return this.http.get(`${this.eventsUrl}?${authToken.text()}&limit=4`).map(eventJson => {
                 return eventJson.json();
             }).catch(this.handleError);
         }).catch(this.handleError);

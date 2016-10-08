@@ -6,6 +6,8 @@ import { EventCardComponent } from './event-card/event-card.component';
 
 import { CutPipe } from '../shared/cut.pipe';
 
+import { AgmCoreModule } from 'angular2-google-maps/core';
+
 @NgModule({
     declarations: [
         EventsComponent,
@@ -13,7 +15,10 @@ import { CutPipe } from '../shared/cut.pipe';
         CutPipe
     ],
     imports: [
-        BrowserModule
+        BrowserModule,
+        AgmCoreModule.forRoot({
+            apiKey: 'AIzaSyDBJz2_mr_wf4cpUc40NUZtWwDX3Hl439E'
+        })
     ],
     providers: [
     ],

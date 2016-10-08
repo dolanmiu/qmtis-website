@@ -1,0 +1,17 @@
+.drop-shadow {
+    box-shadow: 0 0 20px #E8E8E8;
+    transition: all 0.2s;
+}
+
+.drop-shadow:hover {
+    box-shadow: 0 0 30px #CCCCCC;
+}
+
+.card {
+    transition: all 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+}

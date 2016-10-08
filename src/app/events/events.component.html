@@ -1,7 +1,34 @@
 <section id="events" class="section-dark">
     <div class="container">
         <h2>Events</h2>
-        <app-event-card *ngFor="let event of events" [name]="event.name" [description]="event.description" [date]="event.start_time"></app-event-card>
-        (click)="getRandomWord()" {{events}}
+        <div class="row">
+            <div class="col-lg-6">
+                <!--<div *ngFor="let event of events">
+                    <sebm-google-map [latitude]="event.place.location ? event.place.location.latitude : 0" [longitude]="event.place.location ? event.place.location.longitude : 0">
+                        <sebm-google-map-marker [latitude]="lat" [longitude]="lng"></sebm-google-map-marker>
+                    </sebm-google-map>
+                </div>-->
+                <div class="card">
+                    <div class="card-img-top" src="..." alt="Card image cap">
+                        <sebm-google-map [latitude]="currentLat" [longitude]="currentLng" [zoom]="17" [scrollwheel]="false">
+                            <sebm-google-map-marker [latitude]="currentLat" [longitude]="currentLng"></sebm-google-map-marker>
+                        </sebm-google-map>
+                    </div>
+                    <div class="card-block">
+                        <h4 class="card-title">{{currentEvent.name}}</h4>
+                        <p class="lead">{{currentEvent.start_time | date: 'medium'}}</p>
+                        <ul class="fa-ul">
+                            <li><i class="fa-li fa fa-map-marker"></i>{{currentEvent.place.name}}<br />{{currentEvent.place.location ? currentEvent.place.location.street : ""}}<br />{{currentEvent.place.location ? currentEvent.place.location.zip : ""}}
+                        </ul>
+                        <p class="card-text">{{currentEvent.description}}</p>
+                        <a href="#" class="btn btn-primary" href="https://www.facebook.com/events/{{currentEvent.id}}/" target="_blank">Go to Event</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <app-event-card *ngFor="let event of events" [name]="event.name" [description]="event.description" [date]="event.start_time" (click)="LoadEventToSide(event)"></app-event-card>
+            </div>
+        </div>
     </div>
 </section>

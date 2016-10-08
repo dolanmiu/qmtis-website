@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FacebookService } from '../shared/fb-photos.service';
+import { FacebookService } from '../shared/fb.service';
 
 @Component({
     selector: 'app-footer',
