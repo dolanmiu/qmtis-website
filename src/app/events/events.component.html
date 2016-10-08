@@ -1,6 +1,7 @@
 <section id="events" class="section-dark">
     <div class="container">
         <h2>Events</h2>
-        {{events}}
+        <app-event-card *ngFor="let event of events" [name]="event.name" [description]="event.description" [date]="event.start_time"></app-event-card>
+        (click)="getRandomWord()" {{events}}
     </div>
 </section>

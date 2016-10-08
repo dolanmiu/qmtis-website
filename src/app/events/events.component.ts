@@ -13,6 +13,7 @@ export class EventsComponent {
     constructor(private facebookService: FacebookService) {
         this.facebookService.getEvents().subscribe(
             events => {
+                console.log(events.data);
                 this.events = events.data;
             },
             err => {
