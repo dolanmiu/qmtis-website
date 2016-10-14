@@ -27,7 +27,7 @@
             </div>
 
             <div class="col-lg-6">
-                <app-event-card *ngFor="let event of events" [name]="event.name" [description]="event.description" [date]="event.start_time" (click)="LoadEventToSide(event)"></app-event-card>
+                <app-event-card *ngFor="let event of events" [name]="event.name" [description]="event.description" [date]="event.start_time" (click)="LoadEventToSide(event)" [active]="event.id == currentEvent.id"></app-event-card>
             </div>
         </div>
     </div>

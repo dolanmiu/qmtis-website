@@ -1,6 +1,16 @@
-<div class="card drop-shadow">
+<div class="card drop-shadow" [class.active]="active">
     <div class="card-block">
-        <p class="text-xs-right">{{date | date: 'dd/MM/yyyy'}}</p>
+        <div class="clearfix">
+            <div class="row">
+                <div class="col-xs-6 text-xs-left">
+                    <p [hidden]="!active"><i class="fa fa-arrow-left" aria-hidden="true"></i></p>
+                </div>
+
+                <div class="col-xs-6 text-xs-right">
+                    <p>{{date | date: 'dd/MM/yyyy'}}</p>
+                </div>
+            </div>
+        </div>
         <h5 class="card-title">{{name}}</h5>
         <p class="card-text">{{description | cut: 200}}</p>
 

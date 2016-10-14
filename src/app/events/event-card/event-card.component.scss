@@ -15,3 +15,10 @@
     transform: scale(1.02);
     cursor: pointer;
 }
+
+.active {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border-bottom: 3px solid #0275d8;
+}

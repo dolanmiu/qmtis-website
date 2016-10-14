@@ -10,6 +10,7 @@ export class EventCardComponent {
     @Input() name: string;
     @Input() description: string;
     @Input() date: string;
+    @Input() active: boolean;
 
     constructor() {
     }
