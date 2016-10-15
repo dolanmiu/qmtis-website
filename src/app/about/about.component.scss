@@ -1,0 +1,25 @@
+.about-card {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.10);
+    background-color: white;
+    padding: 100px 82px;
+}
+
+.overflow-box {
+    margin-left: -200px;
+    position: relative;
+    z-index: 10;
+}
+
+.about-background {
+    width: 500px;
+    overflow: hidden;
+}
+
+.about-hover {
+    position: absolute;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+}
