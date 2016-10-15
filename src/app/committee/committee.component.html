@@ -3,9 +3,9 @@
         <h1>Committee</h1>
         <p class="lead">{{year}}/{{year + 1}}</p>
         <div class="row">
-            <div *ngFor="let member of members" class="col-sm-4">
+            <div *ngFor="let member of members" class="col-md-4">
                 <div class="card">
-                    <img class="card-img-top img-fluid" src="./assets/committee/{{member.photoUrl}}" [alt]="member.name">
+                    <img class="card-img-top img-fluid hidden-sm-down" src="./assets/committee/{{member.photoUrl}}" [alt]="member.name">
                     <div class="card-block">
                         <h4 class="card-title">{{member.name}}</h4>
                         <p class="lead lead-role">{{member.position}}</p>
