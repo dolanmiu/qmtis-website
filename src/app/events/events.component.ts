@@ -41,7 +41,6 @@ export class EventsComponent {
 
         this.facebookService.getEvents().subscribe(
             events => {
-                console.log(events.data);
                 this.currentEvent = events.data[0];
                 this.LoadEventToSide(this.currentEvent);
                 this.events = events.data;
