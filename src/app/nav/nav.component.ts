@@ -17,10 +17,6 @@ export class NavComponent {
             route: '#home'
         },
         {
-            text: 'Intro',
-            route: '#intro'
-        },
-        {
             text: 'About Us',
             route: '#about'
         },
