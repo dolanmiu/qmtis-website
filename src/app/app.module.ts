@@ -18,6 +18,7 @@ import { EventsModule } from './events/events.module';
 
 import { IconTextBlockComponent } from './shared/icon-text-block/icon-text-block.component';
 import { CutPipe } from './shared/cut.pipe';
+import { SmoothAnchorLinkDirective } from './shared/smooth-anchor-link.directive';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { CutPipe } from './shared/cut.pipe';
     IntroComponent,
     JoinComponent,
     PartnersComponent,
-    IconTextBlockComponent
+    IconTextBlockComponent,
+    SmoothAnchorLinkDirective
   ],
   imports: [
     BrowserModule,

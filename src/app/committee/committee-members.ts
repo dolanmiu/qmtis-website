@@ -58,6 +58,7 @@ export class Members extends Array<Member> {
                 name: 'Mike Vorozeykin',
                 position: 'Head of Operations',
                 facebook: 'https://www.facebook.com/mijail.vorozeykin',
+                linkedIn: 'https://www.linkedin.com/in/mike-vorozheykin-22900ba9',
                 photoUrl: 'mike.jpg'
             }
         ];
