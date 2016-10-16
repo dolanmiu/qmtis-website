@@ -1,7 +1,7 @@
-<section id="intro" class="section-light">
+<section id="intro" class="section-light hidden-md-down">
     <div class="container">
         <div class="row">
-            <div *ngFor="let point of keyPoints" class="col-md-4">
+            <div *ngFor="let point of keyPoints" class="col-lg-4">
                 <app-icon-text-block [icon]="point.icon" [title]="point.title" [description]="point.description"></app-icon-text-block>
             </div>
         </div>
