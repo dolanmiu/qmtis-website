@@ -1,6 +1,7 @@
 <section id="events" class="section-dark">
     <div class="container">
-        <h1>Events</h1>
+        <h1 class="hidden-lg-up">Next Event</h1>
+        <h1 class="hidden-md-down">Events</h1>
         <div class="row">
             <div class="col-lg-6">
                 <!--<div *ngFor="let event of events">
@@ -9,7 +10,7 @@
                     </sebm-google-map>
                 </div>-->
                 <div class="card">
-                    <div class="card-img-top" src="..." alt="Card image cap">
+                    <div class="card-img-top hidden-md-down" src="..." alt="Card image cap">
                         <sebm-google-map [latitude]="currentLat" [longitude]="currentLng" [zoom]="17" [scrollwheel]="false" [streetViewControl]="false">
                             <sebm-google-map-marker [latitude]="currentLat" [longitude]="currentLng"></sebm-google-map-marker>
                         </sebm-google-map>
@@ -26,7 +27,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-6">
+            <div class="col-lg-6 hidden-md-down">
                 <app-event-card *ngFor="let event of events" [name]="event.name" [description]="event.description" [date]="event.start_time" (click)="LoadEventToSide(event)" [active]="event.id == currentEvent.id"></app-event-card>
             </div>
         </div>

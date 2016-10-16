@@ -1,6 +1,6 @@
 <nav id="navbar" class="navbar navbar-full bg-faded navbar-fixed-top" [ngClass]="{'unscrolled-nav': !scrolled, 'navbar-dark': scrolled, 'bg-inverse ': scrolled}">
     <div class="container">
-        <a class="navbar-brand nav-padding" href="#"><img src="./assets/qm-logo.png" /></a>
+        <a class="navbar-brand nav-padding hidden-sm-down" href="#"><img src="./assets/qm-logo.png" /></a>
         <ul class="nav navbar-nav pull-xs-right nav-padding">
             <li *ngFor="let link of links" class="nav-item">
                 <a class="nav-link" href="{{link.route}}">{{link.text}}</a>
