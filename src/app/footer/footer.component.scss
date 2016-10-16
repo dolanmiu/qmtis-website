@@ -10,6 +10,18 @@ p {
 .social-icon {
     margin-right: 5px;
     margin-left: 5px;
+    .fa-facebook:hover {
+        color: #3b5998;
+    }
+    .fa-twitter:hover {
+        color: #00aced;
+    }
+    .fa-linkedin:hover {
+        color: #4875B4;
+    }
+    .fa-github:hover {
+        color: #333;
+    }
 }
 
 .company-details {
