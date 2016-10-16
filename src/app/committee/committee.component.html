@@ -3,7 +3,7 @@
         <h1>Committee</h1>
         <p class="lead">{{year}}/{{year + 1}}</p>
         <div class="row">
-            <div *ngFor="let member of members" class="col-md-6 col-lg-4">
+            <div *ngFor="let member of members" class="col-md-6 col-lg-3">
                 <div class="card">
                     <img class="card-img-top img-fluid hidden-sm-down" src="./assets/committee/{{member.photoUrl}}" [alt]="member.name">
                     <div class="card-block">
@@ -11,7 +11,6 @@
                         <p class="lead lead-role">{{member.position}}</p>
                         <a [href]="member.facebook" target="_blank" [style.visibility]="member.facebook ? 'visible' : 'hidden'"><i class="fa fa-facebook social-icon"></i></a>
                         <a [href]="member.linkedIn" target="_blank" [style.visibility]="member.linkedIn ? 'visible' : 'hidden'"><i class="fa fa-linkedin social-icon"></i></a>
-                        <p class="card-text">{{member.description}}</p>
                     </div>
                 </div>
             </div>
