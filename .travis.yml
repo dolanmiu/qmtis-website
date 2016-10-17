@@ -27,7 +27,7 @@ deploy:
     secure: g1ER0YKBOx4uWCuC37RWdR9+s0bDd5yppOzg0ijNuxG0vB/LxnvHl5PUcxqgrOlWPbPBz8u4xJfIkwdjeped3ycT+/teTX4xNXbPghq+vZ3ucYQoPcZd9PZjbaIzgAH0OcjfVNTqaOrLarqfOAhE8/vhHLJXHHttX+hbPQmkxbiGZMzSN91QSoXSXsXsKapfRGpuWyGRgJSTqgT4GHpo34k/YwgCJOzKzMsXDKwFvdgMMyhvkYNw/SrQHXj2BGAG46pNQ08GWxXLQZSmGmdlW8kSCzFGe1ZjMcpUtz4ZP1GNQ+iDO6k9cqqS85EtTRJjRx54P01y7w6Jk0f5v8WJsR9WtKGx+fw7bGYYX2Lsx/mMWkvZvJVQn8p094uSKJcCR1Jc5uQwnTMtKae0/V4YCnIJ4mDanNEUgOab2qXvigJVrFOUaUZyiN5+kvLKaEGXeZ3CZYwY5C+VonsBif+PeHfxGo3mXefMn23UJ5POxPlwHSxngmg+ZOPGt2/m6wJOJMUTDwrBIpuKRrbl11o3yqL/z6DMJlFjEr23VBpqBx9kGwaj22CUGxZyVmmJK6V2ujeajgKOxwz5t+684gKZSuKtq3GYAs9oobZAHIxp6p3mgl26QBc0XrvafSmUprAL8yqnHbliDAR4lUVNl52bmkTfzl4nJYjdQEatHUF2+gM=
 after_success:
     - cd dist
-    - "find . -type f -exec curl -u $FTP_USER:$FTP_PASSWORD --ftp-create-dirs -T {} ftp://ftp.qmtis.com/{} \;"
+    - find . -type f -exec curl -u $FTP_USER:$FTP_PASSWORD --ftp-create-dirs -T {} ftp://ftp.qmtis.com/{} \;
 env:
   global:
   - secure: 0TidlWQdMS24Rmd3VoJlpBZ0R7WbhQxxu8tq5UU/5Ok/E6Cicunv/ayVLjJlqF98qfb0xKfBHowtxAb4ZvkXEk6Cd3X0Vu4fIsen0Qa+9VUKuMAVtR8VVg5qsuxuL3P8lJk2pl0TAgcZcLRLFBVudJuibF1iu6cL4RIpsr4Bl1VtPyU7rJwvc4oGoeKkhdcC10xdsnB88Nbg69Is0ZJNeZrWKyyNkLjUPuBn/6EnR7QHhijTszHxiAoHPSH/IEMjXVe8h3WROHZLnqhZPmCH3/cVcgkG7dSW+t8YiUqC57Jv97oZmA2U2zHaEb3ruyNVBCKvm7e+cgxJExyg42HntwSvIYhpH4tI6ZJnXLt1keFARK0y1lROJ+kJ1nmw2TKjGEmVGAI1oxExWMrN/Dlzley2gJisu2/LJzNNVweEQ/k8AYTRzuOqG4auBVZnh6MCB3sZeXodYBkZs1wE4q7cTrNblVKgSjTZmaq7Hwp2QduUpj2jU2FoDkzkGljwmfpjohWpF+4DhVFQc/yfbtJJJSgyKMcGvOx23OzxNWGgbQn+9b2F9IobVC7f2qDucIrcIGYhm+CzM9S6jRhr+Ex1eHf22dd9C10tnV/6b9tSjh7hUc/HEKl2DNNsbWCXBZoP7fhh8maQ+5Kk+gk7UbREOTjCP7xFHxrWSDFdYlkkskI=
