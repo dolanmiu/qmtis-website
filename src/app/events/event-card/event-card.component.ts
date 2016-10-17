@@ -1,9 +1,11 @@
 import { Component, Input } from '@angular/core';
+import { DateSanitizerService } from '../../shared/date-sanitizer.service';
 
 @Component({
     selector: 'app-event-card',
     templateUrl: './event-card.component.html',
-    styleUrls: ['./event-card.component.scss']
+    styleUrls: ['./event-card.component.scss'],
+    providers: [DateSanitizerService]
 })
 export class EventCardComponent {
 
@@ -12,6 +14,10 @@ export class EventCardComponent {
     @Input() date: string;
     @Input() active: boolean;
 
-    constructor() {
+    constructor(private dateSanitizerService: DateSanitizerService) {
+    }
+
+    public sanitizeDate(dateString: string): string {
+        return this.dateSanitizerService.sanitize(dateString);
     }
 }

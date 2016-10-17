@@ -17,7 +17,7 @@
                     </div>
                     <div class="card-block">
                         <h4 class="card-title">{{currentEvent.name}}</h4>
-                        <p class="lead">{{currentEvent.start_time | date: 'medium'}}</p>
+                        <p class="lead">{{sanitizeDate(currentEvent.start_time) | date: 'medium'}}</p>
                         <ul class="fa-ul">
                             <li><i class="fa-li fa fa-map-marker"></i>{{currentEvent.place.name}}<br />{{currentEvent.place.location ? currentEvent.place.location.street : ""}}<br />{{currentEvent.place.location ? currentEvent.place.location.zip : ""}}
                         </ul>
