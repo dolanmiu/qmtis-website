@@ -2,19 +2,21 @@
     height: 100px;
     overflow: hidden;
     position: relative;
-    border: 1px solid grey;
     margin-bottom: 10px;
 }
 
 .img-crop {
     position: absolute;
-    left: -100%;
-    right: -100%;
-    top: -100%;
-    bottom: -100%;
-    margin: auto;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
     width: auto;
     height: auto;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
 }
 
 img {
@@ -26,5 +28,5 @@ img {
 img:hover {
     -webkit-filter: brightness(120%);
     filter: brightness(120%);
-    transform: scale(1.1);
+    //transform: scale(1.1);
 }
