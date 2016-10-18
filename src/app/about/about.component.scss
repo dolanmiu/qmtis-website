@@ -1,7 +1,13 @@
 .about-card {
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.10);
     background-color: white;
-    padding: 100px 82px;
+    padding: 20px;
+}
+
+@media (min-width: 768px) {
+    .about-card {
+        padding: 100px 82px;
+    }
 }
 
 .overflow-box {

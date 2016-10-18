@@ -13,10 +13,6 @@ class NavTab {
 export class NavComponent {
     links: Array<NavTab> = [
         {
-            text: 'Home',
-            route: '#home'
-        },
-        {
             text: 'About Us',
             route: '#about'
         },
