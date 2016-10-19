@@ -17,6 +17,10 @@ h1 {
     background-color: transparent;
     border-width: 2px;
     margin: 50px 0;
+     :active {
+        background-color: transparent !important;
+        color: white;
+    }
 }
 
 .text-highlight {
