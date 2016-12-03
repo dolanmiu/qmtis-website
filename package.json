@@ -21,7 +21,6 @@
     "@angular/platform-browser": "2.0.0",
     "@angular/platform-browser-dynamic": "2.0.0",
     "@angular/router": "3.0.0",
-    "angular-cli": "1.0.0-beta.15",
     "angular2-google-maps": "^0.15.0",
     "core-js": "^2.4.1",
     "express": "^4.14.0",
@@ -33,6 +32,7 @@
   },
   "devDependencies": {
     "@types/jasmine": "^2.2.30",
+    "angular-cli": "^1.0.0-beta.20-4",
     "codelyzer": "~0.0.26",
     "jasmine-core": "2.4.1",
     "jasmine-spec-reporter": "2.5.0",
