@@ -10,8 +10,8 @@ import 'rxjs/add/operator/mergeMap';
 export class FacebookService {
     private heroesUrl = `https://graph.facebook.com/oauth/access_token?client_id=1811073865793293
         &client_secret=e7e692daa00561d8613062df66b2dafe&grant_type=client_credentials`;
-    private photosUrl = 'https://graph.facebook.com/v2.7/qmtis/photos';
-    private eventsUrl = 'https://graph.facebook.com/v2.7/qmtis/events';
+    private photosUrl = 'https://graph.facebook.com/v2.8/qmtis/photos';
+    private eventsUrl = 'https://graph.facebook.com/v2.8/qmtis/events';
 
     private authTokenObservable: Observable<any>;
     private authToken: string;
