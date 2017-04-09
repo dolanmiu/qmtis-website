@@ -15,8 +15,7 @@ export class Members extends Array<Member> {
             {
                 name: 'Ioannis Karagiannakis',
                 position: 'President',
-                facebook: 'https://www.facebook.com/giannis.karagiannakis.9',
-                linkedIn: 'https://www.linkedin.com/in/ioannis-karagiannakis-50161188',
+                linkedIn: 'https://www.linkedin.com/in/ioanniskaragiannakis',
                 photoUrl: 'ioannis.jpg'
             },
             {
