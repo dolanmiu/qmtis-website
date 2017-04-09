@@ -14,7 +14,7 @@ export class FooterComponent {
     constructor(private facebookService: FacebookService) {
         this.year = new Date().getFullYear();
 
-        this.facebookService.getHeroes().subscribe(
+        this.facebookService.getPhotos().subscribe(
             photos => {
                 this.photos = photos.data;
             },

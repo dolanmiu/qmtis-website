@@ -6,13 +6,17 @@ import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/mergeMap';
 // qmtis?fields=engagement,fan_count,app_links,mission,events.limit(99999){attending_count} - get eventcount and fan count
 
+const PHOTOS_URL = 'https://graph.facebook.com/v2.8/qmtis/photos';
+const EVENTS_URL = 'https://graph.facebook.com/v2.8/qmtis/events';
+const OAUTH_URL = `https://graph.facebook.com/oauth/access_token?client_id=1811073865793293&client_secret=6ea0510253eb7bf717b7816706913a34&grant_type=client_credentials`;
+
+interface FaceboothOAuthResponse {
+    access_token: string,
+    token_type: string,
+}
+
 @Injectable()
 export class FacebookService {
-    private heroesUrl = `https://graph.facebook.com/oauth/access_token?client_id=1811073865793293
-        &client_secret=6ea0510253eb7bf717b7816706913a34&grant_type=client_credentials`;
-    private photosUrl = 'https://graph.facebook.com/v2.8/qmtis/photos';
-    private eventsUrl = 'https://graph.facebook.com/v2.8/qmtis/events';
-
     private authTokenObservable: Observable<any>;
     private authToken: string;
 
@@ -20,23 +24,26 @@ export class FacebookService {
 
     }
 
-    private getAuthToken(): void {
-        this.authTokenObservable = this.http.get(this.heroesUrl).map(authToken => {
-            this.authToken = authToken.text();
-        }).catch(this.handleError);
+    private getAuthToken(): Observable<FaceboothOAuthResponse> {
+        if (this.authTokenObservable) {
+            return this.authTokenObservable;
+        }
+        
+        this.authTokenObservable = this.http.get(OAUTH_URL).map(response => response.json()).catch(this.handleError);
+        return this.authTokenObservable;
     }
 
-    public getHeroes(): Observable<any> {
-        return this.http.get(this.heroesUrl).flatMap(authToken => {
-            return this.http.get(`${this.photosUrl}?${authToken.text()}&type=uploaded&limit=9`).map(photoJson => {
+    public getPhotos(): Observable<any> {
+        return this.getAuthToken().flatMap(authToken => {
+            return this.http.get(`${PHOTOS_URL}?access_token=${authToken.access_token}&type=uploaded&limit=9`).map(photoJson => {
                 return photoJson.json();
             }).catch(this.handleError);
         }).catch(this.handleError);
     }
 
     public getEvents(): Observable<any> {
-        return this.http.get(this.heroesUrl).flatMap(authToken => {
-            return this.http.get(`${this.eventsUrl}?${authToken.text()}&limit=4`).map(eventJson => {
+        return this.getAuthToken().flatMap(authToken => {
+            return this.http.get(`${EVENTS_URL}?access_token=${authToken.access_token}&limit=4`).map(eventJson => {
                 return eventJson.json();
             }).catch(this.handleError);
         }).catch(this.handleError);
