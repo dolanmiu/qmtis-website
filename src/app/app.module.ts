@@ -15,11 +15,7 @@ import { JoinComponent } from './join/join.component';
 import { HeroModule } from './hero/hero.module';
 import { FooterModule } from './footer/footer.module';
 import { EventsModule } from './events/events.module';
-
-import { IconTextBlockComponent } from './shared/icon-text-block/icon-text-block.component';
-import { CutPipe } from './shared/cut.pipe';
-import { SmoothAnchorLinkDirective } from './shared/smooth-anchor-link.directive';
-import { FacebookService } from './shared/fb.service';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
     declarations: [
@@ -31,8 +27,6 @@ import { FacebookService } from './shared/fb.service';
         IntroComponent,
         JoinComponent,
         PartnersComponent,
-        IconTextBlockComponent,
-        SmoothAnchorLinkDirective
     ],
     imports: [
         BrowserModule,
@@ -40,10 +34,8 @@ import { FacebookService } from './shared/fb.service';
         HttpModule,
         HeroModule,
         FooterModule,
-        EventsModule
-    ],
-    providers: [
-        FacebookService
+        EventsModule,
+        SharedModule,
     ],
     bootstrap: [AppComponent]
 })

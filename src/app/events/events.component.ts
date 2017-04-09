@@ -7,11 +7,15 @@ interface Event {
     place: {
         location: {
             latitude: number,
-            longitude: number
-        }
+            longitude: number,
+            street: string,
+            zip: string,
+        },
+        name: string;
     };
     description: string;
     start_time: string;
+    id: string;
 }
 
 @Component({
@@ -28,11 +32,15 @@ export class EventsComponent {
         place: {
             location: {
                 latitude: 0,
-                longitude: 0
-            }
+                longitude: 0,
+                street: '',
+                zip: '',
+            },
+            name: '',
         },
         description: '',
-        start_time: '2016-01-20T19:00:00'
+        start_time: '2016-01-20T19:00:00',
+        id: '',
     };
 
     currentLat: number;
