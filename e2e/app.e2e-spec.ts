@@ -1,10 +1,10 @@
-import { QmtisWebsitePage } from './app.po';
+import { QmtisNewPage } from './app.po';
 
-describe('qmtis-website App', function() {
-  let page: QmtisWebsitePage;
+describe('qmtis-new App', () => {
+  let page: QmtisNewPage;
 
   beforeEach(() => {
-    page = new QmtisWebsitePage();
+    page = new QmtisNewPage();
   });
 
   it('should display message saying app works', () => {

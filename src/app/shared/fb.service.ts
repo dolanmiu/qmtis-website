@@ -9,7 +9,7 @@ import 'rxjs/add/operator/mergeMap';
 @Injectable()
 export class FacebookService {
     private heroesUrl = `https://graph.facebook.com/oauth/access_token?client_id=1811073865793293
-        &client_secret=e7e692daa00561d8613062df66b2dafe&grant_type=client_credentials`;
+        &client_secret=6ea0510253eb7bf717b7816706913a34&grant_type=client_credentials`;
     private photosUrl = 'https://graph.facebook.com/v2.8/qmtis/photos';
     private eventsUrl = 'https://graph.facebook.com/v2.8/qmtis/events';
 

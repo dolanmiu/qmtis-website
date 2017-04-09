@@ -19,29 +19,32 @@ import { EventsModule } from './events/events.module';
 import { IconTextBlockComponent } from './shared/icon-text-block/icon-text-block.component';
 import { CutPipe } from './shared/cut.pipe';
 import { SmoothAnchorLinkDirective } from './shared/smooth-anchor-link.directive';
+import { FacebookService } from './shared/fb.service';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavComponent,
-    BackdropComponent,
-    AboutComponent,
-    CommitteeComponent,
-    IntroComponent,
-    JoinComponent,
-    PartnersComponent,
-    IconTextBlockComponent,
-    SmoothAnchorLinkDirective
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule,
-    HeroModule,
-    FooterModule,
-    EventsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        NavComponent,
+        BackdropComponent,
+        AboutComponent,
+        CommitteeComponent,
+        IntroComponent,
+        JoinComponent,
+        PartnersComponent,
+        IconTextBlockComponent,
+        SmoothAnchorLinkDirective
+    ],
+    imports: [
+        BrowserModule,
+        FormsModule,
+        HttpModule,
+        HeroModule,
+        FooterModule,
+        EventsModule
+    ],
+    providers: [
+        FacebookService
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
