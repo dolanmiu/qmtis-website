@@ -1,10 +1,8 @@
 #  [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
 # Queen Mary Trading & Investment Society Website
 
-> This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.14.
-
-> The official QMTIS Website, made in Angular2.
-It is automatically deployed to Heroku [here](https://qmtis.herokuapp.com/).
+> The official QMTIS Website, made in Angular.
+It is automatically deployed to Heroku [here](https://qmtis.herokuapp.com/) and [qmtis.com](http://qmtis.com/).
 
 > This project has unit tests and uses Travis-CI for automated testing. Check it out [here](https://travis-ci.org/dolanmiu/qmtis-website).
 Once all the unit tests have passed, it will deploy to the [Heroku](https://qmtis.herokuapp.com/) app.
