@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { FacebookService } from '../shared/fb.service';
-import { DateSanitizerService } from '../shared/date-sanitizer.service';
+
+import { DateSanitizerService } from '../../shared/date-sanitizer.service';
+import { FacebookService } from '../../shared/fb.service';
 
 interface Event {
     name: string;
@@ -21,13 +22,13 @@ interface Event {
 @Component({
     selector: 'app-events',
     templateUrl: './events.component.html',
-    styleUrls: ['./events.component.scss', '../shared/section.component.scss'],
+    styleUrls: ['./events.component.scss', '../../shared/section.component.scss'],
     providers: [FacebookService, DateSanitizerService]
 })
 export class EventsComponent {
-    events: Array<any>;
+    public events: any[];
 
-    currentEvent: Event = {
+    public currentEvent: Event = {
         name: '',
         place: {
             location: {
@@ -43,8 +44,8 @@ export class EventsComponent {
         id: '',
     };
 
-    currentLat: number;
-    currentLng: number;
+    public currentLat: number;
+    public currentLng: number;
 
     constructor(private facebookService: FacebookService, private dateSanitizerService: DateSanitizerService) {
 
@@ -53,8 +54,8 @@ export class EventsComponent {
                 this.currentEvent = events.data[0];
                 this.LoadEventToSide(this.currentEvent);
                 this.events = events.data;
-            },
-            err => {
+            }, (err) => {
+                console.error(err);
             });
     }
 

@@ -4,7 +4,7 @@ import { Members } from './committee-members';
 @Component({
     selector: 'app-committee',
     templateUrl: './committee.component.html',
-    styleUrls: ['./committee.component.scss', '../shared/section.component.scss']
+    styleUrls: ['./committee.component.scss', '../../shared/section.component.scss']
 })
 export class CommitteeComponent {
     year: number;

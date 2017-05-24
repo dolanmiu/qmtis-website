@@ -11,26 +11,16 @@ const EVENTS_URL = 'https://graph.facebook.com/v2.8/qmtis/events';
 const OAUTH_URL = `https://graph.facebook.com/oauth/access_token?client_id=1811073865793293&client_secret=6ea0510253eb7bf717b7816706913a34&grant_type=client_credentials`;
 
 interface FaceboothOAuthResponse {
-    access_token: string,
-    token_type: string,
+    access_token: string;
+    token_type: string;
 }
 
 @Injectable()
 export class FacebookService {
     private authTokenObservable: Observable<any>;
-    private authToken: string;
 
     constructor(private http: Http) {
 
-    }
-
-    private getAuthToken(): Observable<FaceboothOAuthResponse> {
-        if (this.authTokenObservable) {
-            return this.authTokenObservable;
-        }
-        
-        this.authTokenObservable = this.http.get(OAUTH_URL).map(response => response.json()).catch(this.handleError);
-        return this.authTokenObservable;
     }
 
     public getPhotos(): Observable<any> {
@@ -47,6 +37,15 @@ export class FacebookService {
                 return eventJson.json();
             }).catch(this.handleError);
         }).catch(this.handleError);
+    }
+
+    private getAuthToken(): Observable<FaceboothOAuthResponse> {
+        if (this.authTokenObservable) {
+            return this.authTokenObservable;
+        }
+
+        this.authTokenObservable = this.http.get(OAUTH_URL).map(response => response.json()).catch(this.handleError);
+        return this.authTokenObservable;
     }
 
     private handleError(error: any) {

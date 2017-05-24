@@ -17,8 +17,8 @@ export class FooterComponent {
         this.facebookService.getPhotos().subscribe(
             photos => {
                 this.photos = photos.data;
-            },
-            err => {
+            }, (err) => {
+                console.error(err);
             });
     }
 }

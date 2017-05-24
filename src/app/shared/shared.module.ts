@@ -1,18 +1,19 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http'; 
+import { HttpModule } from '@angular/http';
+import { BrowserModule } from '@angular/platform-browser';
 
-import { IconTextBlockComponent } from './icon-text-block/icon-text-block.component';
 import { CutPipe } from './cut.pipe';
-import { SmoothAnchorLinkDirective } from './smooth-anchor-link.directive';
-import { FacebookService } from './fb.service';
 import { DateSanitizerService } from './date-sanitizer.service';
+import { FacebookService } from './fb.service';
+import { IconTextBlockComponent } from './icon-text-block/icon-text-block.component';
+import { SmoothAnchorLinkDirective } from './smooth-anchor-link.directive';
 
 @NgModule({
     declarations: [
         IconTextBlockComponent,
         SmoothAnchorLinkDirective,
+        CutPipe,
     ],
     imports: [
         BrowserModule,
@@ -26,6 +27,7 @@ import { DateSanitizerService } from './date-sanitizer.service';
     exports: [
         IconTextBlockComponent,
         SmoothAnchorLinkDirective,
+        CutPipe
     ]
 })
 export class SharedModule { }

@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { DateSanitizerService } from '../../shared/date-sanitizer.service';
+import { DateSanitizerService } from '../../../shared/date-sanitizer.service';
 
 @Component({
     selector: 'app-event-card',
@@ -9,10 +9,10 @@ import { DateSanitizerService } from '../../shared/date-sanitizer.service';
 })
 export class EventCardComponent {
 
-    @Input() name: string;
-    @Input() description: string;
-    @Input() date: string;
-    @Input() active: boolean;
+    @Input() public name: string;
+    @Input() public description: string;
+    @Input() public date: string;
+    @Input() public active: boolean;
 
     constructor(private dateSanitizerService: DateSanitizerService) {
     }

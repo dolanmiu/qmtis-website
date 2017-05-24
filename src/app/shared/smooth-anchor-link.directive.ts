@@ -1,4 +1,4 @@
-import { Directive, ElementRef, HostListener } from '@angular/core';
+import { Directive, HostListener } from '@angular/core';
 
 enum Direction {
     Down,
@@ -8,7 +8,7 @@ enum Direction {
 @Directive({ selector: '[appSmoothAnchorLink]' })
 export class SmoothAnchorLinkDirective {
 
-    constructor(el: ElementRef) {
+    constructor() {
     }
 
     @HostListener('click', ['$event'])

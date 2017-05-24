@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-class Partner {
+interface Partner {
     link: string;
     name: string;
 }
@@ -8,10 +8,10 @@ class Partner {
 @Component({
     selector: 'app-partners',
     templateUrl: './partners.component.html',
-    styleUrls: ['./partners.component.scss', '../shared/section.component.scss'],
+    styleUrls: ['./partners.component.scss', '../../shared/section.component.scss'],
 })
 export class PartnersComponent {
-    partners: Array<Partner> = [
+    public partners: Partner[] = [
         {
             link: 'baml-logo.png',
             name: 'Bank of America Merrill Lynch'

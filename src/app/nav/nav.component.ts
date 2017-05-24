@@ -1,6 +1,6 @@
 import { Component, Renderer } from '@angular/core';
 
-class NavTab {
+interface NavTab {
     text: string;
     route: string;
 }
@@ -11,7 +11,7 @@ class NavTab {
     styleUrls: ['./nav.component.scss']
 })
 export class NavComponent {
-    links: Array<NavTab> = [
+    public links: NavTab[] = [
         {
             text: 'About Us',
             route: '#about'
@@ -30,10 +30,10 @@ export class NavComponent {
         }
     ];
 
-    scrolled: boolean;
+    public scrolled: boolean;
 
     constructor(renderer: Renderer) {
-        renderer.listenGlobal('window', 'scroll', (evt: Event) => {
+        renderer.listenGlobal('window', 'scroll', () => {
             this.scrolled = document.body.scrollTop > 60 ? true : false;
         });
     }

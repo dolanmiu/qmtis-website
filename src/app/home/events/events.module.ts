@@ -1,10 +1,10 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 
-import { EventsComponent } from './events.component';
 import { EventCardComponent } from './event-card/event-card.component';
+import { EventsComponent } from './events.component';
 
-import { CutPipe } from '../shared/cut.pipe';
+import { SharedModule } from '../../shared/shared.module';
 
 import { AgmCoreModule } from 'angular2-google-maps/core';
 
@@ -12,13 +12,13 @@ import { AgmCoreModule } from 'angular2-google-maps/core';
     declarations: [
         EventsComponent,
         EventCardComponent,
-        CutPipe
     ],
     imports: [
         BrowserModule,
         AgmCoreModule.forRoot({
             apiKey: 'AIzaSyDBJz2_mr_wf4cpUc40NUZtWwDX3Hl439E'
-        })
+        }),
+        SharedModule
     ],
     providers: [
     ],

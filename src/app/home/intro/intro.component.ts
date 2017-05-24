@@ -8,7 +8,7 @@ class KeyPoint {
 @Component({
     selector: 'app-intro',
     templateUrl: './intro.component.html',
-    styleUrls: ['./intro.component.scss', '../shared/section.component.scss']
+    styleUrls: ['./intro.component.scss', '../../shared/section.component.scss']
 })
 export class IntroComponent {
     keyPoints: Array<KeyPoint> = [{
