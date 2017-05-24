@@ -10,12 +10,14 @@ It is automatically deployed to Heroku [here](https://qmtis.herokuapp.com/).
 Once all the unit tests have passed, it will deploy to the [Heroku](https://qmtis.herokuapp.com/) app.
 
 ## Technologies
-<img src="https://angular.io/resources/images/logos/angular2/angular.png" height="120">
-<img src="https://avatars1.githubusercontent.com/u/3284117" height="120">
-<img src="https://worldvectorlogo.com/logos/heroku.svg" height="120">
-<img src="https://worldvectorlogo.com/logos/travis-ci-icon.svg" height="120">
-<img src="http://tradesouthwest.com/assets/icons/bootstrap-logo.png" height="120">
-<img src="https://strongloop.com/wp-content/uploads/2015/12/nodejs-logo.png" height="120">
+<p>
+    <img src="https://angular.io/resources/images/logos/angular/angular.png" height="120">
+    <img src="https://avatars1.githubusercontent.com/u/3284117" height="120">
+    <img src="https://worldvectorlogo.com/logos/heroku.svg" height="120">
+    <img src="https://worldvectorlogo.com/logos/travis-ci-icon.svg" height="120">
+    <img src="http://getbootstrap.com/assets/brand/bootstrap-solid.svg" height="120">
+    <img src="https://strongloop.com/wp-content/uploads/2015/12/nodejs-logo.png" height="120">
+</p>
 
 ## Usage
 Simple clone the repo, and type:
