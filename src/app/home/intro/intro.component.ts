@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-class KeyPoint {
+interface KeyPoint {
     title: string;
     icon: string;
 }
@@ -11,7 +11,7 @@ class KeyPoint {
     styleUrls: ['./intro.component.scss', '../../shared/section.component.scss']
 })
 export class IntroComponent {
-    keyPoints: Array<KeyPoint> = [{
+    public keyPoints: KeyPoint[] = [{
         title: 'A Great learning opportunity',
         icon: 'line-chart'
     },

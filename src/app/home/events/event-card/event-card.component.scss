@@ -1,24 +1,26 @@
-.drop-shadow {
-    box-shadow: 0 0 20px #E8E8E8;
-    transition: all 0.2s;
-}
+$drop-shadow-color: #e8e8e8;
+$drop-shadow-hover-color: #ccc;
+$active-color: #0275d8;
 
-.drop-shadow:hover {
-    box-shadow: 0 0 30px #CCCCCC;
+.drop-shadow {
+    box-shadow: 0 0 20px $drop-shadow-color;
+    transition: all .2s;
+
+    &:hover {
+        box-shadow: 0 0 30px $drop-shadow-hover-color;
+    }
 }
 
 .card {
-    transition: all 0.2s;
-}
+    transition: all .2s;
 
-.card:hover {
-    transform: scale(1.02);
-    cursor: pointer;
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.02);
+    }
 }
 
 .active {
+    border-bottom: 3px solid $active-color;
     box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    border-bottom: 3px solid #0275d8;
 }

@@ -8,9 +8,9 @@ export class DateSanitizerService {
     }
 
     public sanitize(dateString: string): string {
-        let re = /(\d+-\d+-\w+:\d+:\d+)/;
+        const re = /(\d+-\d+-\w+:\d+:\d+)/;
 
-        let matches = dateString.match(re);
+        const matches = dateString.match(re);
         return matches[0];
     }
 }

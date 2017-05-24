@@ -8,8 +8,8 @@ import { FacebookService } from '../shared/fb.service';
     providers: [FacebookService]
 })
 export class FooterComponent {
-    year: number;
-    photos: Array<any>;
+    public year: number;
+    public photos: any[];
 
     constructor(private facebookService: FacebookService) {
         this.year = new Date().getFullYear();

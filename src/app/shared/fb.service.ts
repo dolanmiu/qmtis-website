@@ -1,13 +1,15 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
+import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/mergeMap';
+import { Observable } from 'rxjs/Observable';
+
 // qmtis?fields=engagement,fan_count,app_links,mission,events.limit(99999){attending_count} - get eventcount and fan count
 
 const PHOTOS_URL = 'https://graph.facebook.com/v2.8/qmtis/photos';
 const EVENTS_URL = 'https://graph.facebook.com/v2.8/qmtis/events';
+// tslint:disable-next-line:max-line-length
 const OAUTH_URL = `https://graph.facebook.com/oauth/access_token?client_id=1811073865793293&client_secret=6ea0510253eb7bf717b7816706913a34&grant_type=client_credentials`;
 
 interface FaceboothOAuthResponse {
