@@ -60,7 +60,7 @@ Run `npm test` to execute the unit tests via [Karma](https://karma-runner.github
 Tests are run automatically with Travis CI.
 Travis CI is a hosted, distributed continuous integration service used to build and test software projects hosted at GitHub. You can check my Travis CI build here:
 
-[https://travis-ci.org/dolanmiu/Yieldify-Task](https://travis-ci.org/dolanmiu/Yieldify-Task)
+[https://travis-ci.org/dolanmiu/qmtis-website](https://travis-ci.org/dolanmiu/qmtis-website)
 
 ## Running end-to-end tests
 
@@ -73,7 +73,7 @@ Before running the tests make sure you are serving the app via `npm start`.
 
 This project is automatically deployed to Heroku here:
 
-[https://yieldify-task.herokuapp.com](https://yieldify-task.herokuapp.com/).
+[https://qmtis.herokuapp.com](https://qmtis.herokuapp.com/).
 
 To make this work on Heroku, I had to create a simple Express server to serve the static files.
 It uses a `Procfile`, which launches the tiny Express server `server.js`, which serves the `/dist` folder
