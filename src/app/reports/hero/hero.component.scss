@@ -1,7 +1,19 @@
 :host {
     align-items: center;
+    color: white;
     display: flex;
     height: 50vh;
     justify-content: center;
     text-align: center;
+}
+
+h1 {
+    line-height: 1.3em;
+}
+
+.text-highlight {
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.30);
+    margin: 100px 0;
+    padding: 0 10px;
 }
