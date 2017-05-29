@@ -6,14 +6,14 @@ import { MouseIconComponent } from './mouse-icon/mouse-icon.component';
 @NgModule({
     declarations: [
         HeroComponent,
-        MouseIconComponent
+        MouseIconComponent,
     ],
     imports: [
     ],
     providers: [],
     bootstrap: [],
     exports: [
-        HeroComponent
-    ]
+        HeroComponent,
+    ],
 })
 export class HeroModule { }

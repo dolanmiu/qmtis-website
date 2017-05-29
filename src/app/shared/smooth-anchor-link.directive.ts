@@ -2,15 +2,18 @@ import { Directive, HostListener } from '@angular/core';
 
 enum Direction {
     Down,
-    Up
+    Up,
+}
+
+interface Rect {
+    top: number;
+    left: number;
 }
 
 @Directive({ selector: '[appSmoothAnchorLink]' })
 export class SmoothAnchorLinkDirective {
 
-    constructor() {
-    }
-
+    // tslint:disable-next-line:typedef
     @HostListener('click', ['$event']) public onMouseEnter(e): boolean {
         const id = e.target.hash.substring(1);
         const element = document.getElementById(id);
@@ -20,7 +23,7 @@ export class SmoothAnchorLinkDirective {
         return false;
     }
 
-    private cumulativeOffset(element: any) {
+    private cumulativeOffset(element: any): Rect {
         let top = 0;
         let left = 0;
         do {
@@ -31,11 +34,11 @@ export class SmoothAnchorLinkDirective {
 
         return {
             top: top,
-            left: left
+            left: left,
         };
-    };
+    }
 
-    private recursiveScroll(from: number, to: number, direction: Direction, speed: number) {
+    private recursiveScroll(from: number, to: number, direction: Direction, speed: number): void {
         if (direction === Direction.Down && from >= to) {
             return;
         }
@@ -55,7 +58,7 @@ export class SmoothAnchorLinkDirective {
 
     }
 
-    private smoothScroll(yPos: number) {
+    private smoothScroll(yPos: number): void {
         const targetY = yPos;
         const currentY = (window.pageYOffset || document.documentElement.scrollTop) - (document.documentElement.clientTop || 0);
         let direction;

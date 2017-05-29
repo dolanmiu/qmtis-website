@@ -23,7 +23,7 @@ interface Event {
     selector: 'app-events',
     templateUrl: './events.component.html',
     styleUrls: ['./events.component.scss', '../../shared/section.component.scss'],
-    providers: [FacebookService, DateSanitizerService]
+    providers: [FacebookService, DateSanitizerService],
 })
 export class EventsComponent {
     public events: any[];

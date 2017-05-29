@@ -4,14 +4,14 @@ import { Members } from './committee-members';
 @Component({
     selector: 'app-committee',
     templateUrl: './committee.component.html',
-    styleUrls: ['./committee.component.scss', '../../shared/section.component.scss']
+    styleUrls: ['./committee.component.scss', '../../shared/section.component.scss'],
 })
 export class CommitteeComponent {
-    year: number;
-    members: Members;
+    public year: number;
+    public members: Members;
 
     constructor() {
-        let currentDate = new Date();
+        const currentDate = new Date();
         currentDate.setMonth(currentDate.getMonth() - 8);
         this.year = currentDate.getFullYear();
 

@@ -5,7 +5,7 @@ import { FacebookService } from '../shared/fb.service';
     selector: 'app-footer',
     templateUrl: './footer.component.html',
     styleUrls: ['./footer.component.scss'],
-    providers: [FacebookService]
+    providers: [FacebookService],
 })
 export class FooterComponent {
     public year: number;

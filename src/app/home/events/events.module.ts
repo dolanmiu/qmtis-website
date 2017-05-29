@@ -16,14 +16,14 @@ import { AgmCoreModule } from 'angular2-google-maps/core';
     imports: [
         BrowserModule,
         AgmCoreModule.forRoot({
-            apiKey: 'AIzaSyDBJz2_mr_wf4cpUc40NUZtWwDX3Hl439E'
+            apiKey: 'AIzaSyDBJz2_mr_wf4cpUc40NUZtWwDX3Hl439E',
         }),
-        SharedModule
+        SharedModule,
     ],
     providers: [
     ],
     exports: [
-        EventsComponent
-    ]
+        EventsComponent,
+    ],
 })
 export class EventsModule { }

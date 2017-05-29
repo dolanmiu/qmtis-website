@@ -1,19 +1,19 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FooterComponent } from './footer.component';
+import { BrowserModule } from '@angular/platform-browser';
 import { FacebookPhotoComponent } from './fb-photo/fb-photo.component';
+import { FooterComponent } from './footer.component';
 
 @NgModule({
     declarations: [
         FooterComponent,
-        FacebookPhotoComponent
+        FacebookPhotoComponent,
     ],
     imports: [
-        BrowserModule
+        BrowserModule,
     ],
     providers: [],
     exports: [
-        FooterComponent
-    ]
+        FooterComponent,
+    ],
 })
 export class FooterModule { }

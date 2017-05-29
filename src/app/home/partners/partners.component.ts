@@ -14,55 +14,55 @@ export class PartnersComponent {
     public partners: Partner[] = [
         {
             link: 'baml-logo.png',
-            name: 'Bank of America Merrill Lynch'
+            name: 'Bank of America Merrill Lynch',
         },
         {
             link: 'blackrock-logo.png',
-            name: 'Black Rock'
+            name: 'Black Rock',
         },
         {
             link: 'bloomberg-logo.png',
-            name: 'Bloomberg'
+            name: 'Bloomberg',
         },
         {
             link: 'boe-logo.png',
-            name: 'Bank of England'
+            name: 'Bank of England',
         },
         {
             link: 'ey-logo.png',
-            name: 'Ernest and Young'
+            name: 'Ernest and Young',
         },
         {
             link: 'galbraiths-logo.png',
-            name: 'Galbraiths'
+            name: 'Galbraiths',
         },
         {
             link: 'goldman-sachs-logo.png',
-            name: 'Goldman Sachs'
+            name: 'Goldman Sachs',
         },
         {
             link: 'hsbc-logo.png',
-            name: 'HSBC'
+            name: 'HSBC',
         },
         {
             link: 'jp-morgan-logo.png',
-            name: 'JP Morgan'
+            name: 'JP Morgan',
         },
         {
             link: 'morgan-stanley-logo.png',
-            name: 'Morgan Stanley'
+            name: 'Morgan Stanley',
         },
         {
             link: 'shell-logo.png',
-            name: 'Shell'
+            name: 'Shell',
         },
         {
             link: 'thomson-reuters-logo.png',
-            name: 'Thomson Reuters'
+            name: 'Thomson Reuters',
         },
         {
             link: 'seedrs-logo.png',
-            name: 'Seedrs'
-        }
+            name: 'Seedrs',
+        },
     ];
 }

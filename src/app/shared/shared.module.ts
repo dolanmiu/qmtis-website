@@ -27,7 +27,7 @@ import { SmoothAnchorLinkDirective } from './smooth-anchor-link.directive';
     exports: [
         IconTextBlockComponent,
         SmoothAnchorLinkDirective,
-        CutPipe
-    ]
+        CutPipe,
+    ],
 })
 export class SharedModule { }

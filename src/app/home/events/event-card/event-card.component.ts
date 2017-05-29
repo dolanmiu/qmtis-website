@@ -5,7 +5,7 @@ import { DateSanitizerService } from '../../../shared/date-sanitizer.service';
     selector: 'app-event-card',
     templateUrl: './event-card.component.html',
     styleUrls: ['./event-card.component.scss'],
-    providers: [DateSanitizerService]
+    providers: [DateSanitizerService],
 })
 export class EventCardComponent {
 

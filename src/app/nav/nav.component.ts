@@ -8,26 +8,26 @@ interface NavTab {
 @Component({
     selector: 'app-nav',
     templateUrl: './nav.component.html',
-    styleUrls: ['./nav.component.scss']
+    styleUrls: ['./nav.component.scss'],
 })
 export class NavComponent {
     public links: NavTab[] = [
         {
             text: 'About Us',
-            route: '#about'
+            route: '#about',
         },
         {
             text: 'Committee',
-            route: '#committee'
+            route: '#committee',
         },
         {
             text: 'Join Us',
-            route: '#join'
+            route: '#join',
         },
         {
             text: 'Events',
-            route: '#events'
-        }
+            route: '#events',
+        },
     ];
 
     public scrolled: boolean;

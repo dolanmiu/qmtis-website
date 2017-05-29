@@ -33,10 +33,10 @@ export class FacebookService {
         }).catch(this.handleError);
     }
 
-    public getEvents(): Observable<any> {
+    public getEvents(): Observable<FacebookEventResponse> {
         return this.getAuthToken().flatMap(authToken => {
             return this.http.get(`${EVENTS_URL}?access_token=${authToken.access_token}&limit=4`).map(eventJson => {
-                return eventJson.json();
+                return eventJson.json() as FacebookEventResponse;
             }).catch(this.handleError);
         }).catch(this.handleError);
     }
@@ -50,10 +50,10 @@ export class FacebookService {
         return this.authTokenObservable;
     }
 
-    private handleError(error: any) {
+    private handleError(error: any): Observable<Error> {
         // In a real world app, we might use a remote logging infrastructure
         // We'd also dig deeper into the error to get a better message
-        let errMsg = (error.message) ? error.message :
+        const errMsg = (error.message) ? error.message :
             error.status ? `${error.status} - ${error.statusText}` : 'Server error';
         console.error(errMsg); // log to console instead
         return Observable.throw(errMsg);

@@ -70,6 +70,7 @@
     ],
     "radix": true,
     "semicolon": [
+      true,
       "always"
     ],
     "triple-equals": [
@@ -124,7 +125,7 @@
     "one-variable-per-declaration": [
       true
     ],
-    "no-any": true,
+    "no-any": false,
     "no-consecutive-blank-lines": [
       true
     ],
