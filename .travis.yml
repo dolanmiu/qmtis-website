@@ -3,7 +3,7 @@ dist: trusty
 language: node_js
 node_js:
 - node
-addons: 
+addons:
 apt:
   sources:
   - google-chrome
@@ -16,7 +16,7 @@ before_install:
 - sh -e /etc/init.d/xvfb start
 before_script:
 - npm install
-# script: 
+script: npm run build
 # deploy:
 #   app: qmtis
 #   provider: heroku
