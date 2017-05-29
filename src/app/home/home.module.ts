@@ -30,7 +30,7 @@ import { SharedModule } from '../shared/shared.module';
         SharedModule,
     ],
     exports: [
-        HomeComponent
-    ]
+        HomeComponent,
+    ],
 })
 export class HomeModule { }
