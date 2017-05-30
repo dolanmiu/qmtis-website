@@ -1,9 +1,11 @@
+$hero-color: #fff;
+
 .hero {
-    height: 100vh;
-    display: flex;
     align-items: center;
+    color: $hero-color;
+    display: flex;
+    height: 100vh;
     justify-content: center;
-    color: white;
     text-align: center;
 }
 
@@ -17,7 +19,8 @@ h1 {
     background-color: transparent;
     border-width: 2px;
     margin: 50px 0;
-     :active {
+
+    :active {
         background-color: transparent !important;
         color: white;
     }

@@ -1,15 +1,18 @@
-.section {
+$light-color: #fff;
+$dark-color: #eaeaea;
+
+%section {
     padding: 100px 0;
 }
 
 .section-light {
-    @extend .section;
-    background-color: white;
+    @extend %section;
+    background-color: $light-color;
 }
 
 .section-dark {
-    @extend .section;
-    background-color: #EAEAEA;
+    @extend %section;
+    background-color: $dark-color;
 }
 
 .section-padding {
