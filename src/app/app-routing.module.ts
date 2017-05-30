@@ -13,9 +13,6 @@ import { ReportsComponent } from './reports/reports.component';
             {
                 path: 'reports', component: ReportsComponent,
             },
-            {
-                path: '**', component: HomeComponent,
-            },
         ]),
     ],
     declarations: [],

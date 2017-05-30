@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { BackdropComponent } from './backdrop/backdrop.component';
 import { HeroComponent } from './hero/hero.component';
 import { PostCardComponent } from './post-card/post-card.component';
+import { ReportComponent } from './report/report.component';
+import { ReportsRoutingModule } from './reports-routing.module';
 import { ReportsComponent } from './reports.component';
 
 @NgModule({
@@ -12,9 +14,11 @@ import { ReportsComponent } from './reports.component';
         PostCardComponent,
         HeroComponent,
         BackdropComponent,
+        ReportComponent,
     ],
     imports: [
         CommonModule,
+        ReportsRoutingModule,
     ],
     exports: [
         ReportsComponent,

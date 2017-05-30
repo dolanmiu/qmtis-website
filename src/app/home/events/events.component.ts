@@ -3,22 +3,6 @@ import { Component } from '@angular/core';
 import { DateSanitizerService } from '../../shared/date-sanitizer.service';
 import { FacebookService } from '../../shared/fb.service';
 
-interface Event {
-    name: string;
-    place: {
-        location: {
-            latitude: number,
-            longitude: number,
-            street: string,
-            zip: string,
-        },
-        name: string;
-    };
-    description: string;
-    start_time: string;
-    id: string;
-}
-
 @Component({
     selector: 'app-events',
     templateUrl: './events.component.html',
@@ -28,7 +12,7 @@ interface Event {
 export class EventsComponent {
     public events: any[];
 
-    public currentEvent: Event = {
+    public currentEvent: FacebookEvent = {
         name: '',
         place: {
             location: {
@@ -59,7 +43,7 @@ export class EventsComponent {
             });
     }
 
-    public LoadEventToSide(event: Event): void {
+    public LoadEventToSide(event: FacebookEvent): void {
         this.currentEvent = event;
         this.currentLat = event.place.location ? event.place.location.latitude : 51.524157676276;
         this.currentLng = event.place.location ? event.place.location.longitude : -0.040120183598639;
