@@ -19,23 +19,23 @@ interface FaceboothOAuthResponse {
 
 @Injectable()
 export class FacebookService {
-    private authTokenObservable: Observable<any>;
+    private authTokenObservable: Observable<FaceboothOAuthResponse>;
 
     constructor(private http: Http) {
 
     }
 
-    public getPhotos(): Observable<any> {
-        return this.getAuthToken().flatMap(authToken => {
-            return this.http.get(`${PHOTOS_URL}?access_token=${authToken.access_token}&type=uploaded&limit=9`).map(photoJson => {
-                return photoJson.json();
+    public getPhotos(): Observable<FacebookPhotosResponse> {
+        return this.getAuthToken().flatMap((authToken) => {
+            return this.http.get(`${PHOTOS_URL}?access_token=${authToken.access_token}&type=uploaded&limit=9`).map((photoJson) => {
+                return photoJson.json() as FacebookPhotosResponse;
             }).catch(this.handleError);
         }).catch(this.handleError);
     }
 
     public getEvents(): Observable<FacebookEventResponse> {
-        return this.getAuthToken().flatMap(authToken => {
-            return this.http.get(`${EVENTS_URL}?access_token=${authToken.access_token}&limit=4`).map(eventJson => {
+        return this.getAuthToken().flatMap((authToken) => {
+            return this.http.get(`${EVENTS_URL}?access_token=${authToken.access_token}&limit=4`).map((eventJson) => {
                 return eventJson.json() as FacebookEventResponse;
             }).catch(this.handleError);
         }).catch(this.handleError);
@@ -46,7 +46,9 @@ export class FacebookService {
             return this.authTokenObservable;
         }
 
-        this.authTokenObservable = this.http.get(OAUTH_URL).map(response => response.json()).catch(this.handleError);
+        this.authTokenObservable = this.http.get(OAUTH_URL)
+            .map((response) => response.json() as FaceboothOAuthResponse)
+            .catch(this.handleError);
         return this.authTokenObservable;
     }
 

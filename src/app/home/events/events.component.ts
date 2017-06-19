@@ -10,7 +10,7 @@ import { FacebookService } from '../../shared/fb.service';
     providers: [FacebookService, DateSanitizerService],
 })
 export class EventsComponent {
-    public events: any[];
+    public events: FacebookEvent[];
 
     public currentEvent: FacebookEvent = {
         name: '',
@@ -33,14 +33,13 @@ export class EventsComponent {
 
     constructor(private facebookService: FacebookService, private dateSanitizerService: DateSanitizerService) {
 
-        this.facebookService.getEvents().subscribe(
-            events => {
-                this.currentEvent = events.data[0];
-                this.LoadEventToSide(this.currentEvent);
-                this.events = events.data;
-            }, (err) => {
-                console.error(err);
-            });
+        this.facebookService.getEvents().subscribe((events) => {
+            this.currentEvent = events.data[0];
+            this.LoadEventToSide(this.currentEvent);
+            this.events = events.data;
+        }, (err) => {
+            console.error(err);
+        });
     }
 
     public LoadEventToSide(event: FacebookEvent): void {

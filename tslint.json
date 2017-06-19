@@ -168,12 +168,11 @@
         }
       }
     ],
-    "no-unused-variable": [
-      true
-    ],
+    "no-unused-variable": true,
     "array-type": [
       true,
       "array-simple"
-    ]
+    ],
+    "arrow-parens": true
   }
 }

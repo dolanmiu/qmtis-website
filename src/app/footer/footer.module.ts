@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
+import { FacebookService } from '../shared/fb.service';
 import { FacebookPhotoComponent } from './fb-photo/fb-photo.component';
 import { FooterComponent } from './footer.component';
 
@@ -11,7 +13,7 @@ import { FooterComponent } from './footer.component';
     imports: [
         BrowserModule,
     ],
-    providers: [],
+    providers: [FacebookService],
     exports: [
         FooterComponent,
     ],
