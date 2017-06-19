@@ -5,12 +5,14 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/mergeMap';
 import { Observable } from 'rxjs/Observable';
 
+import { environment } from '../../environments/environment';
+
 // qmtis?fields=engagement,fan_count,app_links,mission,events.limit(99999){attending_count} - get eventcount and fan count
 
 const PHOTOS_URL = 'https://graph.facebook.com/v2.8/qmtis/photos';
 const EVENTS_URL = 'https://graph.facebook.com/v2.8/qmtis/events';
 // tslint:disable-next-line:max-line-length
-const OAUTH_URL = `https://graph.facebook.com/oauth/access_token?client_id=1811073865793293&client_secret=6ea0510253eb7bf717b7816706913a34&grant_type=client_credentials`;
+const OAUTH_URL = `https://graph.facebook.com/oauth/access_token?client_id=${environment.facebook.clientId}&client_secret=${environment.facebook.clientSecret}&grant_type=client_credentials`;
 
 interface FaceboothOAuthResponse {
     access_token: string;
@@ -53,11 +55,9 @@ export class FacebookService {
     }
 
     private handleError(error: any): Observable<Error> {
-        // In a real world app, we might use a remote logging infrastructure
-        // We'd also dig deeper into the error to get a better message
         const errMsg = (error.message) ? error.message :
             error.status ? `${error.status} - ${error.statusText}` : 'Server error';
-        console.error(errMsg); // log to console instead
+        console.error(errMsg);
         return Observable.throw(errMsg);
     }
 }
