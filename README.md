@@ -46,6 +46,8 @@ Please refer to the [Wiki]https://github.com/dolanmiu/qmtis-website/wiki/How-to-
 ## Misc help for developers and contributors
 Please refer to the [Wiki](https://github.com/dolanmiu/qmtis-website/wiki/Developers-and-contributors) for more details
 
+---
+
 Made with ♥ by Dolan Miu
 
 [travis-image]: https://travis-ci.org/dolanmiu/qmtis-website.svg?branch=master
