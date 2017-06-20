@@ -21,7 +21,7 @@ Once all the unit tests have passed, it will deploy to the [Heroku](https://qmti
 </p>
 
 ## Usage
-Simple clone the repo, and type:
+Simple clone the repo, and in the command line, type:
 
 1. `npm install`
 2. `npm start`
