@@ -28,4 +28,11 @@ export class BloggerService {
         });
     }
 
+    public post(id: string): Observable<Post> {
+        // tslint:disable-next-line:max-line-length
+        const postUrl = `https://www.googleapis.com/blogger/v3/blogs/${environment.blogger.id}/posts/${id}?key=${environment.blogger.apiKey}`;
+
+        return this.http.get(postUrl).map((blog) => blog.json() as Post);
+    }
+
 }
