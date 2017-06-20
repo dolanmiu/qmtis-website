@@ -9,7 +9,7 @@ Once all the unit tests have passed, it will deploy to the [Heroku](https://qmti
 
 ## Technologies
 <p>
-    <img src="https://angular.io/resources/images/logos/angular/angular.png" height="120">
+    <img src="https://angular.io/assets/images/logos/angular/angular.png" height="120">
     <img src="https://avatars1.githubusercontent.com/u/3284117" height="120">
     <img src="https://worldvectorlogo.com/logos/heroku.svg" height="120">
     <img src="https://worldvectorlogo.com/logos/travis-ci-icon.svg" height="120">
