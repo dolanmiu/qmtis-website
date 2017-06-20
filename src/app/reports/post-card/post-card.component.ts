@@ -9,6 +9,7 @@ export class PostCardComponent {
     @Input() public title: string;
     @Input() public content: string;
     @Input() public link: string;
+    @Input() public date: string;
 
     constructor() { }
 }

@@ -4,8 +4,7 @@
 
 <section id="reports" class="section-dark hidden-md-down section-padding">
     <div class="container">
-        <app-post-card *ngFor="let post of posts" [title]="post.title" [content]="post.content"
-            link="hello"></app-post-card>
+        <app-post-card *ngFor="let post of posts" [title]="post.title" [content]="post.content" [date]="post.published" link="hello"></app-post-card>
 
         <nav>
             <ul class="pagination justify-content-center">
