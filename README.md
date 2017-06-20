@@ -44,7 +44,7 @@ The app will automatically reload if you change any of the source files.
 3. Save, commit and push to `origin/master`. Everything should deploy automatically and you should see your change within minutes.
 
 ## Add Reports
-Please refer to the [Wiki]https://github.com/dolanmiu/qmtis-website/wiki/How-to-create-a-Report) for more details
+Please refer to the [Wiki](https://github.com/dolanmiu/qmtis-website/wiki/How-to-create-a-Report) for more details
 
 ## Misc help for developers and contributors
 Please refer to the [Wiki](https://github.com/dolanmiu/qmtis-website/wiki/Developers-and-contributors) for more details
