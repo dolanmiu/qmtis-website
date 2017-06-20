@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
+import { SharedModule } from 'app/shared/shared.module';
 import { BackdropComponent } from './backdrop/backdrop.component';
 import { BloggerService } from './blogger.service';
 import { HeroComponent } from './hero/hero.component';
@@ -20,6 +21,7 @@ import { ReportsComponent } from './reports.component';
     imports: [
         CommonModule,
         ReportsRoutingModule,
+        SharedModule,
     ],
     providers: [
         BloggerService,

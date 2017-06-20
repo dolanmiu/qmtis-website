@@ -14,6 +14,7 @@ interface PageReference {
 })
 export class ReportsComponent implements OnInit {
     public pageReferences: PageReference[];
+    public posts: Post[];
 
     constructor(private bloggerService: BloggerService) { }
 
@@ -24,6 +25,7 @@ export class ReportsComponent implements OnInit {
                     id: i + 1,
                 };
             });
+            this.posts = res.posts.items;
             console.log(this.pageReferences);
         });
     }

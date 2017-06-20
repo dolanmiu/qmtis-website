@@ -7,6 +7,7 @@ import { CutPipe } from './cut.pipe';
 import { DateSanitizerService } from './date-sanitizer.service';
 import { FacebookService } from './fb.service';
 import { IconTextBlockComponent } from './icon-text-block/icon-text-block.component';
+import { RemoveHtmlTagsPipe } from './remove-html-tags.pipe';
 import { SmoothAnchorLinkDirective } from './smooth-anchor-link.directive';
 
 @NgModule({
@@ -14,6 +15,7 @@ import { SmoothAnchorLinkDirective } from './smooth-anchor-link.directive';
         IconTextBlockComponent,
         SmoothAnchorLinkDirective,
         CutPipe,
+        RemoveHtmlTagsPipe,
     ],
     imports: [
         BrowserModule,
@@ -28,6 +30,7 @@ import { SmoothAnchorLinkDirective } from './smooth-anchor-link.directive';
         IconTextBlockComponent,
         SmoothAnchorLinkDirective,
         CutPipe,
+        RemoveHtmlTagsPipe,
     ],
 })
 export class SharedModule { }
