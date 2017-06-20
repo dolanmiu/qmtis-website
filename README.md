@@ -1,4 +1,7 @@
-#  [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+[![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+
+---
+
 # Queen Mary Trading & Investment Society Website
 
 > The official QMTIS Website, made in Angular.
