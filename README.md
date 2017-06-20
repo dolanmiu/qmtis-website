@@ -1,3 +1,7 @@
+<p align="center">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/54/Queen_Mary%2C_University_of_London_logo.svg/1280px-Queen_Mary%2C_University_of_London_logo.svg.png" height="120">
+</p>
+
 [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
 
 ---
