@@ -23,10 +23,19 @@
         "name": "Ioana Iacobescu",
         "slug": "ioana",
 		"position": "Vice President (Head of Operations)",
-		"linkedIn": " https://www.linkedin.com/in/ioana-iacobescu",
+		"linkedIn": "https://www.linkedin.com/in/ioana-iacobescu",
         "facebook": "https://www.facebook.com/soberpigs",
 		"email": "i.iacobescu@hss15.qmul.ac.uk",
-        "photoUrl": "pattawia.jpg",
+        "photoUrl": "ioana.jpg",
         "description": "Ioana is a 3rd year student in the BSc Economics & Finance & Management programme at Queen Mary and the former president of the Fashion Society. She just interned at Xerox Finance in London and is now interning at Erste Asset Management. She is co-founder of MatchYourVibe which is a UK fashion start-up. In charge of the Operations department of QMTIS, her role includes organising socials and formal events, coordinating the HR, Outreach and Public Relation divisions. For any enquiries about upcoming events and available roles within the Operations department, contact Ioana via email."
+    },
+    "ryan": {
+        "name": "Ryan Gumbrell",
+        "slug": "ryan",
+		"position": "Vice President (Head of Investments)",
+		"linkedIn": "https://www.linkedin.com/in/ryangumbrell/",
+        "facebook": "https://www.facebook.com/RyanGumbrell",
+        "photoUrl": "ryan.jpg",
+        "description": "Ryan is a 3rd year Economics student. He has had two internships during his undergraduate degree. One in a global asset manager, Old Mutual, and the other in a boutique, Asia-focused fund. He has been with QMTIS since joining Queen Mary in 2015 and is now our Head of Investments."
     }
 }
