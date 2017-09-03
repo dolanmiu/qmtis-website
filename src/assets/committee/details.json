@@ -1,11 +1,32 @@
 {
 	"chris": {
-		"name": "Christian Hirsekorn",
+        "name": "Christian Hirsekorn",
+        "slug": "chris",
 		"position": "President",
 		"linkedIn": "https://www.linkedin.com/in/christianhirsekorn",
         "facebook": "https://www.facebook.com/ChrisHirsekorn1",
 		"email": "chris@hirsekorn.com",
         "photoUrl": "chris.jpg",
         "description": "Christian is a 3rd year student in the BSc Economics & Finance programme at Queen Mary. He held roles as the Vice President and Portfolio Manager in QMTIS in previous years and is also the captain of the QMBL Breakdancing club for 2017/2018. He interned in Equity Research and Equity S&T at MainFirst Bank in London this summer. Prior to his studies, Christian interned for two and a half years at Sparkasse Group where he worked in divisions such as Private & Commercial Banking, Real Estate and S&T.\nChristian is in charge of the overall strategy of QMTIS and ensures the smooth running of QMTIS subdivisions such as the Investments group and the Operations group, QMTIS projects and events.\nFor any enquiries contact Christian via email."
-	}
+    },
+    "pattawia": {
+        "name": "Pattawia Supradit",
+        "slug": "pattawia",
+		"position": "Vice President",
+		"linkedIn": " https://www.linkedin.com/in/pattawias",
+        "facebook": "https://www.facebook.com/pattawias",
+		"email": "pattawias@yahoo.com",
+        "photoUrl": "pattawia.jpg",
+        "description": "Pattawia is a 3rd year student in the BSc Economics & Finance programme with Excellence Scholarship awarded by the School at Queen Mary. She is currently interning in Global Markets with Nomura, London with different rotations from FX Sales, Risk Solutions Group (IBD) and Asian Equities Sales. On her 2nd year of university, she was a president of Thai Society at QM as well as the Secretary of QMTIS. She also did her summer internship with BNP Paribas in Financial Institutions Coverage (FIC) and FICC Sales and Trading. Patty will be organising events, our mentorship programme and overlooking the finances of QMTIS. For any enquiries contact Pattawia via email."
+    },
+    "ioana": {
+        "name": "Ioana Iacobescu",
+        "slug": "ioana",
+		"position": "Vice President (Head of Operations)",
+		"linkedIn": " https://www.linkedin.com/in/ioana-iacobescu",
+        "facebook": "https://www.facebook.com/soberpigs",
+		"email": "i.iacobescu@hss15.qmul.ac.uk",
+        "photoUrl": "pattawia.jpg",
+        "description": "Ioana is a 3rd year student in the BSc Economics & Finance & Management programme at Queen Mary and the former president of the Fashion Society. She just interned at Xerox Finance in London and is now interning at Erste Asset Management. She is co-founder of MatchYourVibe which is a UK fashion start-up. In charge of the Operations department of QMTIS, her role includes organising socials and formal events, coordinating the HR, Outreach and Public Relation divisions. For any enquiries about upcoming events and available roles within the Operations department, contact Ioana via email."
+    }
 }
