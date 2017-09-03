@@ -47,5 +47,25 @@
 		"email": "d.kolodkin@se15.qmul.ac.uk",
         "photoUrl": "daniil.jpg",
         "description": "Daniil is a 3rd year Mathematics with Finance and Accounting student. He is the chess captain in the QMUL Chess Society. Having traded different asset classes since 14 years old and now managing a portfolio, Daniil has gained a significant understanding of the financial markets. Formerly he has interned in Prime Brokerage in Otkritie Capital in London and has received experience in Trinnacle Capital Management, which is a big data Hedge Fund based in New-York. Daniil will be the Head of the FX team under the investment group. For any enquiries about joining the FX group contact Daniil via email."
+    },
+    "daniel": {
+        "name": "Daniel Yehuda",
+        "slug": "daniel",
+		"position": "Head of Macro Economic Research",
+		"linkedIn": "https://www.linkedin.com/in/daniel-yehuda-88498013b",
+        "facebook": "https://www.facebook.com/daniel.yehuda.5",
+		"email": "d.yehuda@hss15.qmul.ac.uk",
+        "photoUrl": "daniel.jpg",
+        "description": "Daniel is a 3rd year student in the BSc Economics programme at Queen Mary. He has interned at Commerzbank and Allianz in London and is now interning at XL Catlin. In charge of the macroeconomic research division of QMTIS, his role includes organising the macro research team and informing the wider society about macroeconomic shocks. For any enquiries about available roles within the macro research team, contact Daniel via email."
+    },
+    "ebube": {
+        "name": "Ebube Abara",
+        "slug": "ebube",
+		"position": "Head of Technology",
+		"linkedIn": "https://www.linkedin.com/in/ebubeabara",
+        "facebook": "https://www.facebook.com/ebubechukwu.abara",
+		"email": "e.n.abara@se14.qmul.ac.uk",
+        "photoUrl": "ebube.jpg",
+        "description": "3rd year BSc Computer Science student at Queen Mary University of London. He is the current founder of DotOrg Limited, a software development agency. Ebube just interned in Fixed Income, Asset Management technology at J.P. Morgan. Prior to university, he worked for two years as a trainee software developer at Wesleyan, another financial services company. His tech team will be responsible for organising events in Fintech, researching and keeping up to date with related news and mentoring members that want to get into the industry. For inquiries, please contact via email."
     }
 }
