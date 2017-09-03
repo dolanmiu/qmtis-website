@@ -11,7 +11,7 @@ import 'rxjs/Rx';
     styleUrls: ['./committee.component.scss', '../shared/section.component.scss'],
 })
 export class CommiteeComponent implements OnInit {
-    private member$: Observable<any>;
+    public member$: Observable<any>;
 
     constructor(private http: Http, route: ActivatedRoute, router: Router) {
         this.member$ = route.queryParams.flatMap((params) => {
