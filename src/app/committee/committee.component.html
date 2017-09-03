@@ -3,7 +3,33 @@
 <app-hero></app-hero>
 
 <section id="reports" class="section-dark hidden-md-down section-padding">
-    <div class="container">
-        HELL WORTLD {{committee$ | async | json}}
+    <div class="container" *ngIf="member$ | async; let member">
+        <h1 class="display-3">{{member.name}}</h1>
+        <p class="lead position">{{member.position}}</p>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <p>{{member.description}}</p>
+
+                <hr>
+
+                <p>
+                    <strong>Email:</strong> <a [href]="member.email" target="_blank">{{member.email}}</a>
+                </p>
+
+                <p>
+                    <strong>Facebook:</strong> <a [href]="member.facebook" target="_blank">{{member.facebook}}</a>
+                </p>
+
+                <p>
+                    <strong>LinkedIn:</strong> <a [href]="member.linkedIn" target="_blank">{{member.linkedIn}}</a>
+                </p>
+            </div>
+
+            <div class="col-lg-6">
+                <img class="img-fluid" src="./assets/committee/{{member.photoUrl}}" [alt]="member.name">
+            </div>
+        </div>
+
     </div>
 </section>

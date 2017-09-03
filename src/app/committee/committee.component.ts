@@ -11,10 +11,10 @@ import 'rxjs/Rx';
     styleUrls: ['./committee.component.scss', '../shared/section.component.scss'],
 })
 export class CommiteeComponent implements OnInit {
-    private committee$: Observable<any>;
+    private member$: Observable<any>;
 
     constructor(private http: Http, route: ActivatedRoute, router: Router) {
-        this.committee$ = route.queryParams.flatMap((params) => {
+        this.member$ = route.queryParams.flatMap((params) => {
             console.log(params);
             return this.http.get('/assets/committee/details.json')
                 .map((res) => res.json())
