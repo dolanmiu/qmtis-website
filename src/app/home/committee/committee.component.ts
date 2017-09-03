@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Members } from './committee-members';
+import { Http } from '@angular/http';
+import { Observable } from 'rxjs/Rx';
 
 @Component({
     selector: 'app-committee',
@@ -8,13 +9,27 @@ import { Members } from './committee-members';
 })
 export class CommitteeComponent {
     public year: number;
-    public members: Members;
+    public members$: Observable<any>;
 
-    constructor() {
+    constructor(http: Http) {
+        this.members$ = http.get('/assets/committee/details.json')
+            .map((res) => res.json())
+            .map((members) => {
+                const arr = [];
+
+                for (const key in members) {
+                    if (!members[key]) {
+                        continue;
+                    }
+
+                    arr.push(members[key]);
+                }
+
+                return arr;
+            });
+
         const currentDate = new Date();
         currentDate.setMonth(currentDate.getMonth() - 8);
         this.year = currentDate.getFullYear();
-
-        this.members = new Members();
     }
 }
