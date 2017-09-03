@@ -37,5 +37,15 @@
         "facebook": "https://www.facebook.com/RyanGumbrell",
         "photoUrl": "ryan.jpg",
         "description": "Ryan is a 3rd year Economics student. He has had two internships during his undergraduate degree. One in a global asset manager, Old Mutual, and the other in a boutique, Asia-focused fund. He has been with QMTIS since joining Queen Mary in 2015 and is now our Head of Investments."
+    },
+    "daniil": {
+        "name": "Daniil Kolodkin",
+        "slug": "daniil",
+		"position": "Head of FX",
+		"linkedIn": "https://www.linkedin.com/in/daniil-kolodkin-175438111",
+        "facebook": "https://www.facebook.com/dkolodkin",
+		"email": "d.kolodkin@se15.qmul.ac.uk",
+        "photoUrl": "daniil.jpg",
+        "description": "Daniil is a 3rd year Mathematics with Finance and Accounting student. He is the chess captain in the QMUL Chess Society. Having traded different asset classes since 14 years old and now managing a portfolio, Daniil has gained a significant understanding of the financial markets. Formerly he has interned in Prime Brokerage in Otkritie Capital in London and has received experience in Trinnacle Capital Management, which is a big data Hedge Fund based in New-York. Daniil will be the Head of the FX team under the investment group. For any enquiries about joining the FX group contact Daniil via email."
     }
 }
