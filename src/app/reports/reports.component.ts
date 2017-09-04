@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavigationEnd, Router } from "@angular/router";
+import { NavigationEnd, Router } from '@angular/router';
 
 import { BloggerService } from './blogger.service';
 

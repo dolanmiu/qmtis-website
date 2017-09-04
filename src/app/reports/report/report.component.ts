@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params, NavigationEnd, Router } from '@angular/router';
-import { Observable, Subscription } from "rxjs/Rx";
+import { ActivatedRoute, NavigationEnd, Params, Router } from '@angular/router';
+import { Observable, Subscription } from 'rxjs/Rx';
 
 import { BloggerService } from '../blogger.service';
 
@@ -17,7 +17,7 @@ export class ReportComponent implements OnInit {
             if (ev instanceof NavigationEnd) {
                 window.scrollTo(0, 0);
             }
-        })
+        });
     }
 
     public ngOnInit(): void {
