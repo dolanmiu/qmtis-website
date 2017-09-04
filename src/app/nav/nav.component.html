@@ -3,10 +3,10 @@
         <a pageScroll class="navbar-brand nav-padding hidden-sm-down" href="#home"><img src="./assets/qm-logo.png" /></a>
         <ul class="nav navbar-nav pull-xs-right nav-padding">
             <li class="nav-item hidden-sm-down">
-                <a pageScroll class="nav-link" href="#home">Home</a>
+                <a pageScroll class="nav-link" href="#home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" routerLink="/" fragment="home">Home</a>
             </li>
             <li *ngFor="let link of links" class="nav-item">
-                <a pageScroll class="nav-link" href="{{link.route}}">{{link.text}}</a>
+                <a pageScroll class="nav-link" href="#{{link.route}}" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" routerLink="/" fragment="{{link.route}}">{{link.text}}</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" routerLink="/reports" href="#reports">Reports</a>
@@ -21,7 +21,7 @@
     <div class="container">
         <ul class="nav navbar-nav pull-xs-right nav-padding">
             <li *ngFor="let link of links" class="nav-item">
-                <a pageScroll class="nav-link" href="{{link.route}}">{{link.text}}</a>
+                <a pageScroll class="nav-link" href="#{{link.route}}">{{link.text}}</a>
             </li>
         </ul>
     </div>

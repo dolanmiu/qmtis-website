@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params, Router } from '@angular/router';
-import { Observable } from 'rxjs/Observable';
+import { ActivatedRoute, Params, NavigationEnd, Router } from '@angular/router';
+import { Observable, Subscription } from "rxjs/Rx";
 
 import { BloggerService } from '../blogger.service';
 
@@ -13,6 +13,11 @@ export class ReportComponent implements OnInit {
     public post: Observable<Post>;
 
     constructor(private activatedRoute: ActivatedRoute, private bloggerService: BloggerService, private router: Router) {
+        this.router.events.first().subscribe((ev) => {
+            if (ev instanceof NavigationEnd) {
+                window.scrollTo(0, 0);
+            }
+        })
     }
 
     public ngOnInit(): void {
@@ -20,7 +25,7 @@ export class ReportComponent implements OnInit {
             return this.bloggerService.post(params.id);
         }).catch((err) => {
             this.router.navigate(['/reports']);
-            return err;
+            return Observable.throw(err);
         });
     }
 }

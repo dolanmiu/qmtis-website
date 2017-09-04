@@ -12,12 +12,6 @@ div {
     transition-timing-function: ease-out;
 }
 
-.active {
-    border-bottom: 3px solid $nav-border-color;
-    box-sizing: border-box;
-    margin-bottom: -3px;
-}
-
 .unscrolled-nav {
     background-color: transparent;
     height: 100px;
