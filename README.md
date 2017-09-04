@@ -34,18 +34,22 @@ Simple clone the repo, and in the command line, type:
 The app will automatically reload if you change any of the source files.
 
 ## Add Committee Members
-1. Navigate to `/src/app/committee/committee-members.ts`
+1. Navigate to `/src/assets/committee/details.json`
 2. Follow the format:
 ```
-{
-    name: 'Pattawia Supradit',
-    description: 'Hello, I am a student at QM',
-    facebook: 'http://www.facebook.com/pattawias',
-    linkedIn: 'http://www.linkedin.com/pattawias',
-    photoUrl: 'http://www.facebook.com/pattawias.png'
-}
+"pattawia": {
+        "name": "Pattawia Supradit",
+        "slug": "pattawia",
+		"position": "Vice President",
+		"linkedIn": " https://www.linkedin.com/in/pattawias",
+        "facebook": "https://www.facebook.com/pattawias",
+		"email": "pattawias@yahoo.com",
+        "photoUrl": "pattawia.jpg",
+        "description": "Pattawia is a 3rd year student..."
+    }
 ```
-3. Save, commit and push to `origin/master`. Everything should deploy automatically and you should see your change within minutes.
+3. Add a picture inside `/src/assets/committee`, in this example, it would be `/src/assets/committee/pattawia.jpg`
+4. Save, commit and push to `origin/master`. Everything should deploy automatically if your tests pass, and you should see your change within minutes.
 
 ## Add Reports
 Please refer to the [Wiki](https://github.com/dolanmiu/qmtis-website/wiki/How-to-create-a-Report) for more details
