@@ -38,14 +38,14 @@ The app will automatically reload if you change any of the source files.
 2. Follow the format:
 ```
 "pattawia": {
-        "name": "Pattawia Supradit",
-        "slug": "pattawia",
-		"position": "Vice President",
-		"linkedIn": " https://www.linkedin.com/in/pattawias",
-        "facebook": "https://www.facebook.com/pattawias",
-		"email": "pattawias@yahoo.com",
-        "photoUrl": "pattawia.jpg",
-        "description": "Pattawia is a 3rd year student..."
+    "name": "Pattawia Supradit",
+    "slug": "pattawia",
+    "position": "Vice President",
+	"linkedIn": " https://www.linkedin.com/in/pattawias",
+    "facebook": "https://www.facebook.com/pattawias",
+	"email": "pattawias@yahoo.com",
+    "photoUrl": "pattawia.jpg",
+    "description": "Pattawia is a 3rd year student..."
     }
 ```
 3. Add a picture inside `/src/assets/committee`, in this example, it would be `/src/assets/committee/pattawia.jpg`
