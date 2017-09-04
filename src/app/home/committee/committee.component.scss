@@ -1,11 +1,13 @@
+$lead-role-color: #b7b7b7;
+
 .social-icon {
     margin-right: 10px;
 }
 
 .lead-role {
-    color: #B7B7B7;
-    margin-bottom: 0;
+    color: $lead-role-color;
     font-size: 1rem;
+    margin-bottom: 0;
 }
 
 h4 {

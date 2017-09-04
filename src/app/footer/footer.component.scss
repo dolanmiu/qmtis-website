@@ -1,44 +1,66 @@
+$message-us-color: #fff;
+$company-details-color: rgba(173, 173, 173, .81);
+$footer-bg-color: #104464;
+$footer-text-color: #f2f2f2;
+$facebook-color: #3b5998;
+$twitter-color: #00aced;
+$linkedin-color: #4875b4;
+$github-color: #333;
+
 p {
-    font-size: 0.8em;
+    font-size: .8em;
 }
 
 .footer {
-    background-color: #104464;
-    color: #F2F2F2;
+    background-color: $footer-bg-color;
+    color: $footer-text-color;
 }
 
 .social-icon {
-    margin-right: 5px;
     margin-left: 5px;
-    .fa-facebook:hover {
-        color: #3b5998;
+    margin-right: 5px;
+
+    .fa-facebook {
+        &:hover {
+            color: $facebook-color;
+        }
     }
-    .fa-twitter:hover {
-        color: #00aced;
+
+    .fa-twitter {
+        &:hover {
+            color: $twitter-color;
+        }
     }
-    .fa-linkedin:hover {
-        color: #4875B4;
+
+    .fa-linkedin {
+        &:hover {
+            color: $linkedin-color;
+        }
     }
-    .fa-github:hover {
-        color: #333;
+
+    .fa-github {
+        &:hover {
+            color: $github-color;
+        }
     }
 }
 
 .company-details {
-    color: rgba(173, 173, 173, 0.81);
-    font-size: 0.8em;
+    color: $company-details-color;
+    font-size: .8em;
 }
 
 .logo-text {
-    margin-top: 10px;
-    font-size: 0.9em;
+    font-size: .9em;
     font-weight: bold;
+    margin-top: 10px;
 }
 
 .logo-description {
-    font-size: 0.8em;
+    font-size: .8em;
     font-weight: lighter;
 }
+
 
 .footer-heading {
     font-size: 1.2em;
@@ -46,19 +68,18 @@ p {
 }
 
 .message-us {
-    color: white;
-    text-decoration: underline dotted white;
+    color: $message-us-color;
+    text-decoration: underline dotted $message-us-color;
 }
 
 .skyline {
-    position: absolute;
-    -webkit-transform: translate(0, -100%);
-    transform: translate(0, -100%);
-    background-image: url("/assets/skyline.png");
+    background-image: url('/assets/skyline.png');
     background-repeat: repeat-x;
-    right: 0;
-    left: 0;
     height: 134px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    transform: translate(0, -100%);
 }
 
 .fa-fw {

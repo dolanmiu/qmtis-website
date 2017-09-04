@@ -1,6 +1,9 @@
+$shadow-color: rgba(0, 0, 0, .1);
+$bg-color: #fff;
+
 .about-card {
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.10);
-    background-color: white;
+    background-color: $bg-color;
+    box-shadow: 0 0 30px $shadow-color;
     padding: 20px;
 }
 
@@ -17,8 +20,8 @@
 }
 
 .about-background {
-    width: 500px;
     overflow: hidden;
+    width: 500px;
 }
 
 .about-hover {
@@ -26,6 +29,6 @@
 }
 
 .flex-container {
-    display: flex;
     align-items: center;
+    display: flex;
 }

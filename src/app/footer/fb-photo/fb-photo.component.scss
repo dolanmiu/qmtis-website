@@ -1,32 +1,26 @@
 .img-container {
     height: 100px;
+    margin-bottom: 10px;
     overflow: hidden;
     position: relative;
-    margin-bottom: 10px;
 }
 
 .img-crop {
+    height: auto;
+    left: 50%;
+    min-height: 100%;
+    min-width: 100%;
     position: absolute;
     top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    -ms-transform: translateX(-50%) translateY(-50%);
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
+    width: auto;
 }
 
 img {
-    -webkit-filter: brightness(100%);
     filter: brightness(100%);
-    transition: all 0.3s;
-}
+    transition: filter .3s;
 
-img:hover {
-    -webkit-filter: brightness(120%);
-    filter: brightness(120%);
-    //transform: scale(1.1);
+    &:hover {
+        filter: brightness(120%);
+    }
 }

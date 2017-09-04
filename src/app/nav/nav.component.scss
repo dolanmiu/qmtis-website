@@ -1,5 +1,10 @@
+$nav-hover-color: rgba(255, 255, 255, .5);
+$nav-shadow-color: rgba(0, 0, 0, .7);
+$nav-border-color: #2b99dd;
+$nav-text-color: #fff;
+
 nav {
-    transition: all 0.5s;
+    transition: background-color .5s, height .5s, padding-top .5s;
     transition-timing-function: ease-out;
 }
 
@@ -8,7 +13,7 @@ div {
 }
 
 .active {
-    border-bottom: 3px solid #2B99DD;
+    border-bottom: 3px solid $nav-border-color;
     box-sizing: border-box;
     margin-bottom: -3px;
 }
@@ -17,14 +22,17 @@ div {
     background-color: transparent;
     height: 100px;
     padding-top: 30px;
+    text-shadow: 0 1px 3px $nav-shadow-color;
+
     a {
-        color: white;
-        transition: all 0.5s;
+        color: $nav-text-color;
+        transition: color .5s;
+
+        &:hover {
+            color: $nav-hover-color;
+        }
     }
-    a:hover {
-        color: rgba(255, 255, 255, .5);
-    }
-    text-shadow: 0px 1px 3px rgba(0, 0, 0, .7);
+
 }
 
 .btn {
