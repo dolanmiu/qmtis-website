@@ -8,12 +8,10 @@ import { DateSanitizerService } from './date-sanitizer.service';
 import { FacebookService } from './fb.service';
 import { IconTextBlockComponent } from './icon-text-block/icon-text-block.component';
 import { RemoveHtmlTagsPipe } from './remove-html-tags.pipe';
-import { SmoothAnchorLinkDirective } from './smooth-anchor-link.directive';
 
 @NgModule({
     declarations: [
         IconTextBlockComponent,
-        SmoothAnchorLinkDirective,
         CutPipe,
         RemoveHtmlTagsPipe,
     ],
@@ -28,7 +26,6 @@ import { SmoothAnchorLinkDirective } from './smooth-anchor-link.directive';
     ],
     exports: [
         IconTextBlockComponent,
-        SmoothAnchorLinkDirective,
         CutPipe,
         RemoveHtmlTagsPipe,
     ],
