@@ -46,7 +46,7 @@ The app will automatically reload if you change any of the source files.
     "email": "pattawias@yahoo.com",
     "photoUrl": "pattawia.jpg",
     "description": "Pattawia is a 3rd year student..."
-    }
+}
 ```
 3. Add a picture inside `/src/assets/committee`, in this example, it would be `/src/assets/committee/pattawia.jpg`
 4. Save, commit and push to `origin/master`. Everything should deploy automatically if your tests pass, and you should see your change within minutes.
