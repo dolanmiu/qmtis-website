@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { CommiteeComponent } from './committee/committee.component';
 import { HomeComponent } from './home/home.component';
 import { ReportsComponent } from './reports/reports.component';
+import { SponsorComponent } from './sponsor/sponsor.component';
 
 @NgModule({
     imports: [
@@ -16,6 +17,9 @@ import { ReportsComponent } from './reports/reports.component';
             },
             {
                 path: 'committee', component: CommiteeComponent,
+            },
+            {
+                path: 'sponsors', component: SponsorComponent,
             },
         ]),
     ],

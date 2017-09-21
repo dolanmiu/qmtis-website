@@ -9,6 +9,7 @@ import { FooterModule } from './footer/footer.module';
 import { HomeModule } from './home/home.module';
 import { NavComponent } from './nav/nav.component';
 import { ReportsModule } from './reports/reports.module';
+import { SponsorModule } from './sponsor/sponsor.module';
 @NgModule({
     declarations: [
         AppComponent,
@@ -22,6 +23,7 @@ import { ReportsModule } from './reports/reports.module';
         AppRoutingModule,
         ReportsModule,
         CommitteeModule,
+        SponsorModule,
     ],
     bootstrap: [AppComponent],
 })
