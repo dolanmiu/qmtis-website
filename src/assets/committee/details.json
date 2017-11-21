@@ -67,5 +67,15 @@
 		"email": "e.n.abara@se14.qmul.ac.uk",
         "photoUrl": "ebube.jpg",
         "description": "3rd year BSc Computer Science student at Queen Mary University of London. He is the current founder of DotOrg Limited, a software development agency. Ebube just interned in Fixed Income, Asset Management technologies at J.P. Morgan. Prior to university, he worked for two years as a trainee software developer at Wesleyan, another financial services company. His tech team will be responsible for organising events in the Fintech space, researching and keeping up to date with related news and mentoring members that want to get into the industry. For inquiries, please contact via email."
+    },
+    "hossam": {
+        "name": "Hossam Uddin",
+        "slug": "hossam",
+        "position": "Head of Outreach",
+        "linkedIn": "https://www.linkedin.com/in/hossam-uddin-2bb60410b/",
+        "facebook": "https://www.facebook.com/hossam.uddin.7",
+        "email": "h.uddin@hss16.qmul.ac.uk",
+        "photoUrl": "hossam.jpg",
+        "description": "Hossam is a 2nd year student studying Mathematics and Statistics at Queen Mary University of London. He joined QMTIS recently as Head of Outreach. Hossam will be assisting towards sponsorships, inviting guests for our events and executing the mentorship program. Prior to his studies, Hossam took a gap year where he interned at PwC for 6 months in Tax. In his first year at QMUL, Hossam completed a spring week at JP Morgan, and a summer internship at HSBC in Wealth Management and Commercial Banking. Outside of his studies, Hossam plays cricket at a competitive level and enjoys reading fiction. For inquiries, please contact via email."
     }
 }
