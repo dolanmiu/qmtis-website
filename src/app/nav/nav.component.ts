@@ -34,7 +34,9 @@ export class NavComponent {
 
     constructor(renderer: Renderer) {
         renderer.listenGlobal('window', 'scroll', () => {
-            this.scrolled = document.body.scrollTop > 60 ? true : false;
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+            this.scrolled = scrollTop > 60 ? true : false;
+            console.log(scrollTop);
         });
     }
 }
