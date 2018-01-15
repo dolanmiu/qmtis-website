@@ -1,0 +1,16 @@
+.partnerBankOfAmerica {
+    display: inline-block;
+    margin: 30px;
+    position: relative;
+
+    img {
+        filter: saturate(100%) opacity(100%);
+        height: 50px;
+        transition: filter .3s;
+        width: 300px
+
+        &:hover {
+            filter: saturate(150%) opacity(50%);
+        }
+    }
+}
