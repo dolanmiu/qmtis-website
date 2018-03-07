@@ -10,7 +10,7 @@ import { BloggerService } from '../blogger.service';
     styleUrls: ['./report.component.scss', '../../shared/section.component.scss'],
 })
 export class ReportComponent implements OnInit {
-    public post: Observable<Post>;
+    public post$: Observable<Post>;
 
     constructor(private activatedRoute: ActivatedRoute, private bloggerService: BloggerService, private router: Router) {
         this.router.events.first().subscribe((ev) => {
@@ -21,7 +21,7 @@ export class ReportComponent implements OnInit {
     }
 
     public ngOnInit(): void {
-        this.post = this.activatedRoute.queryParams.flatMap((params) => {
+        this.post$ = this.activatedRoute.queryParams.flatMap((params) => {
             return this.bloggerService.post(params.id);
         }).map((post) => {
             return {
