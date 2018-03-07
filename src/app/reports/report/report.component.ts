@@ -23,6 +23,11 @@ export class ReportComponent implements OnInit {
     public ngOnInit(): void {
         this.post = this.activatedRoute.queryParams.flatMap((params) => {
             return this.bloggerService.post(params.id);
+        }).map((post) => {
+            return {
+                ...post,
+                content: post.content.replace(/<!--[\s\S]*?-->/g, ''),
+            };
         }).catch((err) => {
             this.router.navigate(['/reports']);
             return Observable.throw(err);
