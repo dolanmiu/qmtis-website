@@ -36,7 +36,6 @@ export class NavComponent {
         renderer.listenGlobal('window', 'scroll', () => {
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
             this.scrolled = scrollTop > 60 ? true : false;
-            console.log(scrollTop);
         });
     }
 }
