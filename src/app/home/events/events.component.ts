@@ -35,14 +35,18 @@ export class EventsComponent {
 
         this.facebookService.getEvents().subscribe((events) => {
             this.currentEvent = events.data[0];
-            this.LoadEventToSide(this.currentEvent);
+            this.loadEventToSide(this.currentEvent);
             this.events = events.data;
         }, (err) => {
             console.error(err);
         });
     }
 
-    public LoadEventToSide(event: FacebookEvent): void {
+    public loadEventToSide(event: FacebookEvent): void {
+        if (!event) {
+            return;
+        }
+        
         this.currentEvent = event;
         this.currentLat = event.place.location ? event.place.location.latitude : 51.524157676276;
         this.currentLng = event.place.location ? event.place.location.longitude : -0.040120183598639;

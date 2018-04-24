@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { AgmCoreModule } from '@agm/core';
 
 import { EventCardComponent } from './event-card/event-card.component';
 import { EventsComponent } from './events.component';
-
 import { SharedModule } from '../../shared/shared.module';
 
-import { AgmCoreModule } from 'angular2-google-maps/core';
 
 @NgModule({
     declarations: [

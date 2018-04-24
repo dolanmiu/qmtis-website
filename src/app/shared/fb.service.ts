@@ -54,7 +54,7 @@ export class FacebookService {
         return this.authTokenObservable;
     }
 
-    private handleError(error: any): Observable<Error> {
+    private handleError(error: any): Observable<any> {
         const errMsg = (error.message) ? error.message :
             error.status ? `${error.status} - ${error.statusText}` : 'Server error';
         console.error(errMsg);

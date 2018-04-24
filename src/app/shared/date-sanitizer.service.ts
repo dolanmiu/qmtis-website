@@ -8,6 +8,10 @@ export class DateSanitizerService {
     }
 
     public sanitize(dateString: string): string {
+        if (!dateString) {
+            return 'Date Empty';
+        }
+
         const re = /(\d+-\d+-\w+:\d+:\d+)/;
 
         const matches = dateString.match(re);
