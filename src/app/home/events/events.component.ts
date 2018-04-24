@@ -32,7 +32,6 @@ export class EventsComponent {
     public currentLng: number;
 
     constructor(private facebookService: FacebookService, private dateSanitizerService: DateSanitizerService) {
-
         this.facebookService.getEvents().subscribe((events) => {
             this.currentEvent = events.data[0];
             this.loadEventToSide(this.currentEvent);
@@ -46,7 +45,7 @@ export class EventsComponent {
         if (!event) {
             return;
         }
-        
+
         this.currentEvent = event;
         this.currentLat = event.place.location ? event.place.location.latitude : 51.524157676276;
         this.currentLng = event.place.location ? event.place.location.longitude : -0.040120183598639;

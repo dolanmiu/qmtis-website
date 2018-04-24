@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, NavigationEnd, Params, Router } from '@angular/router';
-import { Observable, Subscription } from 'rxjs/Rx';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { Observable } from 'rxjs/Observable';
 
 import { BloggerService } from '../blogger.service';
 
