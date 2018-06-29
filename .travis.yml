@@ -21,15 +21,15 @@ before_script:
 script:
 - npm run lint
 - npm run sass-lint
-#- npm run build -- --prod
-- npm run build -- --prod --base-href "/qmtis-website/"
+- npm run build -- --prod
+# - npm run build -- --prod --base-href "/qmtis-website/"
 # deploy:
 #   app: qmtis
 #   provider: heroku
 #   api_key:
 #     secure: g1ER0YKBOx4uWCuC37RWdR9+s0bDd5yppOzg0ijNuxG0vB/LxnvHl5PUcxqgrOlWPbPBz8u4xJfIkwdjeped3ycT+/teTX4xNXbPghq+vZ3ucYQoPcZd9PZjbaIzgAH0OcjfVNTqaOrLarqfOAhE8/vhHLJXHHttX+hbPQmkxbiGZMzSN91QSoXSXsXsKapfRGpuWyGRgJSTqgT4GHpo34k/YwgCJOzKzMsXDKwFvdgMMyhvkYNw/SrQHXj2BGAG46pNQ08GWxXLQZSmGmdlW8kSCzFGe1ZjMcpUtz4ZP1GNQ+iDO6k9cqqS85EtTRJjRx54P01y7w6Jk0f5v8WJsR9WtKGx+fw7bGYYX2Lsx/mMWkvZvJVQn8p094uSKJcCR1Jc5uQwnTMtKae0/V4YCnIJ4mDanNEUgOab2qXvigJVrFOUaUZyiN5+kvLKaEGXeZ3CZYwY5C+VonsBif+PeHfxGo3mXefMn23UJ5POxPlwHSxngmg+ZOPGt2/m6wJOJMUTDwrBIpuKRrbl11o3yqL/z6DMJlFjEr23VBpqBx9kGwaj22CUGxZyVmmJK6V2ujeajgKOxwz5t+684gKZSuKtq3GYAs9oobZAHIxp6p3mgl26QBc0XrvafSmUprAL8yqnHbliDAR4lUVNl52bmkTfzl4nJYjdQEatHUF2+gM=
 after_success:
-#   - echo "qmtis.com" > dist/CNAME
+    - echo "qmtis.com" > dist/CNAME
     - ngh --repo=https://GH_TOKEN@github.com/dolanmiu/qmtis-website.git --name="Travis CI" --email=dolan_miu@hotmail.com --no-silent
 # FTP Deployment
 #   - npm run build
