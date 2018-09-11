@@ -1,29 +1,29 @@
 {
-	"chris": {
-        "name": "Christian Hirsekorn",
-        "slug": "chris",
-		"position": "President",
-		"linkedIn": "https://www.linkedin.com/in/christianhirsekorn",
-        "facebook": "https://www.facebook.com/ChrisHirsekorn1",
-		"email": "hirsekornchristian@gmail.com",
-        "photoUrl": "chris.jpg",
-        "description": "Christian is a 3rd year student in the BSc Economics & Finance programme at Queen Mary. He held roles as the Vice President and Portfolio Manager in QMTIS in previous years and is also the captain of the QMBL Breakdancing club for 2017/2018. He interned in Equity Research and Equity S&T at MainFirst Bank in London this summer. Prior to his studies, Christian interned for two and a half years at Sparkasse Group where he worked in divisions such as Private & Commercial Banking, Real Estate and S&T.\nChristian is in charge of the overall strategy of QMTIS and ensures the smooth running of QMTIS subdivisions such as the Investments group and the Operations group, QMTIS projects and events.\nFor any enquiries contact Christian via email."
+    "hossam": {
+        "name": "Hossam Uddin",
+        "slug": "hossam",
+        "position": "President",
+        "linkedIn": "https://www.linkedin.com/in/hossam-uddin-2bb60410b/",
+        "facebook": "https://www.facebook.com/hossam.uddin.7",
+        "email": "h.uddin@hss16.qmul.ac.uk",
+        "photoUrl": "hossam.jpg",
+        "description": "Hossam is a 3rd year student studying Mathematics and Statistics at Queen Mary University of London. Prior to his studies, Hossam took a gap year where he interned at PwC for 6 months in Tax. Last summer he interned as trading analyst at Royal Bank of Canada. In his first year at QMUL, Hossam completed a spring week at JP Morgan, and a summer internship at HSBC in Wealth Management and Commercial Banking. Outside of his studies, Hossam plays cricket at a competitive level and enjoys reading fiction. For inquiries, please contact via email."
     },
     "pattawia": {
         "name": "Pattawia Supradit",
         "slug": "pattawia",
-		"position": "Vice President",
-		"linkedIn": " https://www.linkedin.com/in/pattawias",
+        "position": "Vice President",
+        "linkedIn": " https://www.linkedin.com/in/pattawias",
         "facebook": "https://www.facebook.com/pattawias",
-		"email": "pattawias@yahoo.com",
+        "email": "pattawias@yahoo.com",
         "photoUrl": "pattawia.jpg",
         "description": "Pattawia is a 3rd year student in the BSc Economics & Finance programme with Excellence Scholarship awarded by the School at Queen Mary. She is currently interning in Global Markets with Nomura, London with different rotations from FX Sales, Risk Solutions Group (IBD) and Asian Equities Sales. In her 2nd year of university, she was the president of Thai Society at QM as well as the Secretary of QMTIS. She also did her summer internship with BNP Paribas in Financial Institutions Coverage (FIC) and FICC Sales and Trading. Patty will be organising events, our mentorship programme and overlooking the finances of QMTIS. For any enquiries contact Pattawia via email."
     },
     "ryan": {
         "name": "Ryan Gumbrell",
         "slug": "ryan",
-		"position": "Vice President (Head of Investments)",
-		"linkedIn": "https://www.linkedin.com/in/ryangumbrell/",
+        "position": "Vice President (Head of Investments)",
+        "linkedIn": "https://www.linkedin.com/in/ryangumbrell/",
         "facebook": "https://www.facebook.com/RyanGumbrell",
         "photoUrl": "ryan.jpg",
         "description": "Ryan is a 3rd year Economics student. He has had two internships during his undergraduate degree. One in a global asset manager, Old Mutual, and the other in a boutique, Asia-focused fund. He has been with QMTIS since joining Queen Mary in 2015 and is now our Head of Investments."
@@ -31,41 +31,31 @@
     "daniil": {
         "name": "Daniil Kolodkin",
         "slug": "daniil",
-		"position": "Head of FX",
-		"linkedIn": "https://www.linkedin.com/in/daniil-kolodkin-175438111",
+        "position": "Head of FX",
+        "linkedIn": "https://www.linkedin.com/in/daniil-kolodkin-175438111",
         "facebook": "https://www.facebook.com/dkolodkin",
-		"email": "d.kolodkin@se15.qmul.ac.uk",
+        "email": "d.kolodkin@se15.qmul.ac.uk",
         "photoUrl": "daniil.jpg",
         "description": "Daniil is a 3rd year Mathematics with Finance and Accounting student. He is the chess captain in the QMUL Chess Society. Having traded different asset classes since 14 years old and now managing a portfolio, Daniil has gained a significant understanding of the financial markets. Formerly he has interned in Prime Brokerage in Otkritie Capital in London and has received experience in Trinnacle Capital Management, which is a big data Hedge Fund based in New-York. Daniil will be the Head of the FX team under the investment group. For any enquiries about joining the FX group contact Daniil via email."
     },
     "daniel": {
         "name": "Daniel Yehuda",
         "slug": "daniel",
-		"position": "Head of Macro Economic Research",
-		"linkedIn": "https://www.linkedin.com/in/daniel-yehuda-88498013b",
+        "position": "Head of Macro Economic Research",
+        "linkedIn": "https://www.linkedin.com/in/daniel-yehuda-88498013b",
         "facebook": "https://www.facebook.com/daniel.yehuda.5",
-		"email": "d.yehuda@hss15.qmul.ac.uk",
+        "email": "d.yehuda@hss15.qmul.ac.uk",
         "photoUrl": "daniel.jpg",
         "description": "Daniel is a 3rd year student in the BSc Economics programme at Queen Mary. He has interned at Commerzbank and Allianz in London and is now interning at XL Catlin. In charge of the macroeconomic research division of QMTIS, his role includes organising the macro research team and informing the wider society about macroeconomic shocks. For any enquiries about available roles within the macro research team, contact Daniel via email."
     },
-    "ebube": {
-        "name": "Ebube Abara",
-        "slug": "ebube",
-		"position": "Head of Technology",
-		"linkedIn": "https://www.linkedin.com/in/ebubeabara",
-        "facebook": "https://www.facebook.com/ebubechukwu.abara",
-		"email": "e.n.abara@se14.qmul.ac.uk",
-        "photoUrl": "ebube.jpg",
-        "description": "3rd year BSc Computer Science student at Queen Mary University of London. He is the current founder of DotOrg Limited, a software development agency. Ebube just interned in Fixed Income, Asset Management technologies at J.P. Morgan. Prior to university, he worked for two years as a trainee software developer at Wesleyan, another financial services company. His tech team will be responsible for organising events in the Fintech space, researching and keeping up to date with related news and mentoring members that want to get into the industry. For inquiries, please contact via email."
-    },
-    "hossam": {
-        "name": "Hossam Uddin",
-        "slug": "hossam",
-        "position": "Head of Outreach",
-        "linkedIn": "https://www.linkedin.com/in/hossam-uddin-2bb60410b/",
-        "facebook": "https://www.facebook.com/hossam.uddin.7",
-        "email": "h.uddin@hss16.qmul.ac.uk",
-        "photoUrl": "hossam.jpg",
-        "description": "Hossam is a 2nd year student studying Mathematics and Statistics at Queen Mary University of London. He joined QMTIS recently as Head of Outreach. Hossam will be assisting towards sponsorships, inviting guests for our events and executing the mentorship program. Prior to his studies, Hossam took a gap year where he interned at PwC for 6 months in Tax. In his first year at QMUL, Hossam completed a spring week at JP Morgan, and a summer internship at HSBC in Wealth Management and Commercial Banking. Outside of his studies, Hossam plays cricket at a competitive level and enjoys reading fiction. For inquiries, please contact via email."
+    "damodara": {
+        "name": "Damodara Puddu",
+        "slug": "damodara",
+        "position": "Vice President (Head of Technology)",
+        "linkedIn": "https://www.linkedin.com/in/damodara-puddu-a7684914a/",
+        "facebook": "https://www.facebook.com/don.pablo.90",
+        "email": "damodara.puddu@gmail.com",
+        "photoUrl": "damo.jpg",
+        "description": "2nd year BSc Computer Science student at Queen Mary University of London. He is engaged in projects and research covering Data Science, Quants and Big Data. His tech team will be responsible for organising events in the Fintech space, researching and keeping up to date with related news and mentoring members that want to get into the industry. For inquiries, please contact via email."
     }
 }
