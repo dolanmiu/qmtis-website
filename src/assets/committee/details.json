@@ -6,47 +6,18 @@
         "linkedIn": "https://www.linkedin.com/in/hossam-uddin-2bb60410b/",
         "facebook": "https://www.facebook.com/hossam.uddin.7",
         "email": "h.uddin@hss16.qmul.ac.uk",
-        "photoUrl": "hossam.jpg",
-        "description": "Hossam is a 3rd year student studying Mathematics and Statistics at Queen Mary University of London. Prior to his studies, Hossam took a gap year where he interned at PwC for 6 months in Tax. Last summer he interned as trading analyst at Royal Bank of Canada. In his first year at QMUL, Hossam completed a spring week at JP Morgan, and a summer internship at HSBC in Wealth Management and Commercial Banking. Outside of his studies, Hossam plays cricket at a competitive level and enjoys reading fiction. For inquiries, please contact via email."
+        "photoUrl": "hossam.png",
+        "description": "Hossam is a final year Mathematics and Statistics student at Queen Mary, University of London. Prior to his studies, Hossam took a gap year where he interned at PwC for 6 months in Tax. In his first year at QMUL, Hossam completed a spring week at JP Morgan, and a summer internship at HSBC in Wealth Management and Commercial Banking. In his second year Hossam completed a summer internship at RBC Capital Markets in the Investment Banking division. Outside of his studies, Hossam plays cricket at a competitive level. For inquiries, please contact via email."
     },
-    "pattawia": {
-        "name": "Pattawia Supradit",
-        "slug": "pattawia",
-        "position": "Vice President",
-        "linkedIn": " https://www.linkedin.com/in/pattawias",
-        "facebook": "https://www.facebook.com/pattawias",
-        "email": "pattawias@yahoo.com",
-        "photoUrl": "pattawia.jpg",
-        "description": "Pattawia is a 3rd year student in the BSc Economics & Finance programme with Excellence Scholarship awarded by the School at Queen Mary. She is currently interning in Global Markets with Nomura, London with different rotations from FX Sales, Risk Solutions Group (IBD) and Asian Equities Sales. In her 2nd year of university, she was the president of Thai Society at QM as well as the Secretary of QMTIS. She also did her summer internship with BNP Paribas in Financial Institutions Coverage (FIC) and FICC Sales and Trading. Patty will be organising events, our mentorship programme and overlooking the finances of QMTIS. For any enquiries contact Pattawia via email."
-    },
-    "ryan": {
-        "name": "Ryan Gumbrell",
-        "slug": "ryan",
-        "position": "Vice President (Head of Investments)",
-        "linkedIn": "https://www.linkedin.com/in/ryangumbrell/",
-        "facebook": "https://www.facebook.com/RyanGumbrell",
-        "photoUrl": "ryan.jpg",
-        "description": "Ryan is a 3rd year Economics student. He has had two internships during his undergraduate degree. One in a global asset manager, Old Mutual, and the other in a boutique, Asia-focused fund. He has been with QMTIS since joining Queen Mary in 2015 and is now our Head of Investments."
-    },
-    "daniil": {
-        "name": "Daniil Kolodkin",
-        "slug": "daniil",
-        "position": "Head of FX",
-        "linkedIn": "https://www.linkedin.com/in/daniil-kolodkin-175438111",
-        "facebook": "https://www.facebook.com/dkolodkin",
-        "email": "d.kolodkin@se15.qmul.ac.uk",
-        "photoUrl": "daniil.jpg",
-        "description": "Daniil is a 3rd year Mathematics with Finance and Accounting student. He is the chess captain in the QMUL Chess Society. Having traded different asset classes since 14 years old and now managing a portfolio, Daniil has gained a significant understanding of the financial markets. Formerly he has interned in Prime Brokerage in Otkritie Capital in London and has received experience in Trinnacle Capital Management, which is a big data Hedge Fund based in New-York. Daniil will be the Head of the FX team under the investment group. For any enquiries about joining the FX group contact Daniil via email."
-    },
-    "daniel": {
-        "name": "Daniel Yehuda",
-        "slug": "daniel",
-        "position": "Head of Macro Economic Research",
-        "linkedIn": "https://www.linkedin.com/in/daniel-yehuda-88498013b",
-        "facebook": "https://www.facebook.com/daniel.yehuda.5",
-        "email": "d.yehuda@hss15.qmul.ac.uk",
-        "photoUrl": "daniel.jpg",
-        "description": "Daniel is a 3rd year student in the BSc Economics programme at Queen Mary. He has interned at Commerzbank and Allianz in London and is now interning at XL Catlin. In charge of the macroeconomic research division of QMTIS, his role includes organising the macro research team and informing the wider society about macroeconomic shocks. For any enquiries about available roles within the macro research team, contact Daniel via email."
+    "natalia": {
+        "name": "Natalia Trufanova",
+        "slug": "natalia",
+        "position": "Vice President (Head of Investment)",
+        "linkedIn": " https://www.linkedin.com/in/natalia-trufanova/",
+        "facebook": "https://www.facebook.com/natali.tru.9",
+        "email": "n.trufanova@hss17.qmul.ac.uk",
+        "photoUrl": "natalia.png",
+        "description": "Natalia is a penultimate year Economics student at Queen Mary, University of London. Before starting university, she completed an apprenticeship in a Russian investment company as a research analyst. In her first year she completed an insight week at Barings, an asset management firm with over $300bn under management. As Vice President, Natalia will be organising and executing society events, she will also head up the Investments team where she will be overseeing our weekly sessions on Equity Research and Financial Modelling."
     },
     "damodara": {
         "name": "Damodara Puddu",
@@ -56,6 +27,56 @@
         "facebook": "https://www.facebook.com/don.pablo.90",
         "email": "damodara.puddu@gmail.com",
         "photoUrl": "damo.jpg",
-        "description": "2nd year BSc Computer Science student at Queen Mary University of London. He is engaged in projects and research covering Data Science, Quants and Big Data. His tech team will be responsible for organising events in the Fintech space, researching and keeping up to date with related news and mentoring members that want to get into the industry. For inquiries, please contact via email."
+        "description": "Damodara is a penultimate year Computer Science student at Queen Mary University of London. He is engaged in projects and research covering Data Science, Quants and Big Data. His tech team will be responsible for organising events in the Fintech space, researching and keeping up to date with related news and mentoring members that want to get into the industry. For inquiries, please contact via email."
+    },
+    "luke": {
+        "name": "Luke Griffin",
+        "slug": "luke",
+        "position": "Treasurer",
+        "linkedIn": "https://www.linkedin.com/in/luke-griffin-653053128/",
+        "facebook": "https://www.facebook.com/luke.griffin.56",
+        "email": "l.griffin@hss16.qmul.ac.uk",
+        "photoUrl": "luke.png",
+        "description": "Luke is a final year student studying BSc Accounting and Management at Queen Mary, University of London. He has interned at Fitch Ratings, a credit rating agency, in Financial Institutions and Corporates. Luke will be overlooking the finances of QMTIS, as well as teaching in the Investments Team."
+    },
+    "aubrey": {
+        "name": "Aubrey Mckinnon",
+        "slug": "aubrey",
+        "position": "Head of Technology Research",
+        "linkedIn": "https://www.linkedin.com/in/aubrey-mckinnon-23b872140/",
+        "facebook": "https://www.facebook.com/aubrey.mckinnon",
+        "email": "a.mckinnon@se15.qmul.ac.uk",
+        "photoUrl": "aubrey.png",
+        "description": "Aubrey is a 3rd year studying BSc Astrophysics with an interest in quantitative finance, AI and data science. He has interned at Hadleigh PVT, a private equity firm, and has authored articles on topics ranging from the physics of colour to the applications of AI to improve fraud detection for insurance companies. He is the Head of Technology Research for QMTIS."
+    },
+    "kayla": {
+        "name": "Kayla Honosutomo",
+        "slug": "kayla",
+        "position": "Operations Officer",
+        "linkedIn": "https://www.linkedin.com/in/kaylahonosutomo/",
+        "facebook": "https://www.facebook.com/kayla.honosutomo",
+        "email": "k.h.s.honosutomo@hss16.qmul.ac.uk",
+        "photoUrl": "kayla.png",
+        "description": "Kayla is currently a third-year studying Marketing and Management. Her interest in Finance emerged after visiting the Chicago Board of Trade in High School, which showcased the fast-paced and dynamic nature of the industry. To explore her interest, she has undergone work experience in companies such as JP Morgan, Bank of America Merrill Lynch, a global FinTech, and a stock brokerage firm."
+    },
+    "sofia": {
+        "name": "Sofia Zaffari",
+        "slug": "sofia",
+        "position": "Operations Officer",
+        "linkedIn": "https://www.linkedin.com/in/sofiazaffari/",
+        "facebook": "https://www.facebook.com/sofia.zaffari",
+        "email": "s.zaffari@se16qmul.ac.uk",
+        "photoUrl": "sofia.png",
+        "description": "Sofia is a 3rd year studying BSc Psychology at Queen Mary, University of London, with an interest in the banking industry. As the Deutsche Bank ambassador, Sofia is hoping to not only recruit strong candidates but also offer opportunities to students to network with the company’s employers during events. This year, Sofia will contribute to organising socials and promoting upcoming events via social media. "
+    },
+    "nisha": {
+        "name": "Nisha Sangar",
+        "slug": "nisha",
+        "position": "Women in Finance Director",
+        "linkedIn": "https://www.linkedin.com/in/nisha-sangar-b0937113a/",
+        "facebook": "https://www.facebook.com/nisha.sangar.12",
+        "email": "n.sangar@se16.qmul.ac.uk",
+        "photoUrl": "nisha.png",
+        "description": "Nisha is a 3rd year BSc Mathematics undergraduate at Queen Mary, University of London. Her interest lies in Sales and Trading with financial experience at Lloyds Banking Group Markets and Qconsult sponsored by JP Morgan. Nisha's main role within QMTIS will be organising talks with professionals from well-known institutions and promoting gender diversity within finance."
     }
 }
