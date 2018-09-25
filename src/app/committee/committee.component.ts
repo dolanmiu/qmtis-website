@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Observable } from 'rxjs/Rx';
-
-import 'rxjs/Rx';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
     selector: 'app-committee',
