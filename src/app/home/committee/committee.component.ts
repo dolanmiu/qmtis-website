@@ -12,7 +12,8 @@ export class CommitteeComponent {
     public members$: Observable<any>;
 
     constructor(http: Http) {
-        this.members$ = http.get('/assets/committee/details.json')
+        this.members$ = http
+            .get('/assets/committee/details.json')
             .map((res) => res.json())
             .map((members) => {
                 const arr = [];

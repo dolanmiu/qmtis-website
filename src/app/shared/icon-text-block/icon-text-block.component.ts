@@ -6,7 +6,10 @@ import { Component, Input } from '@angular/core';
     styleUrls: ['./icon-text-block.component.scss'],
 })
 export class IconTextBlockComponent {
-    @Input() public title: string;
-    @Input() public description: string;
-    @Input() public icon: string;
+    @Input()
+    public title: string;
+    @Input()
+    public description: string;
+    @Input()
+    public icon: string;
 }

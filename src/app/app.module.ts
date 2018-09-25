@@ -11,10 +11,7 @@ import { NavComponent } from './nav/nav.component';
 import { ReportsModule } from './reports/reports.module';
 import { SponsorModule } from './sponsor/sponsor.module';
 @NgModule({
-    declarations: [
-        AppComponent,
-        NavComponent,
-    ],
+    declarations: [AppComponent, NavComponent],
     imports: [
         Ng2PageScrollModule,
         BrowserModule,
@@ -27,4 +24,4 @@ import { SponsorModule } from './sponsor/sponsor.module';
     ],
     bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

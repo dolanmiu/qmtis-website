@@ -7,13 +7,12 @@ import { ReportComponent } from './report/report.component';
     imports: [
         RouterModule.forChild([
             {
-                path: 'reports/report', component: ReportComponent,
+                path: 'reports/report',
+                component: ReportComponent,
             },
         ]),
     ],
     declarations: [],
-    exports: [
-        RouterModule,
-    ],
+    exports: [RouterModule],
 })
-export class ReportsRoutingModule { }
+export class ReportsRoutingModule {}

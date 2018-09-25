@@ -14,23 +14,8 @@ import { PartnersComponent } from './partners/partners.component';
 import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
-    declarations: [
-        HomeComponent,
-        AboutComponent,
-        BackdropComponent,
-        CommitteeComponent,
-        IntroComponent,
-        JoinComponent,
-        PartnersComponent,
-    ],
-    imports: [
-        CommonModule,
-        EventsModule,
-        HeroModule,
-        SharedModule,
-    ],
-    exports: [
-        HomeComponent,
-    ],
+    declarations: [HomeComponent, AboutComponent, BackdropComponent, CommitteeComponent, IntroComponent, JoinComponent, PartnersComponent],
+    imports: [CommonModule, EventsModule, HeroModule, SharedModule],
+    exports: [HomeComponent],
 })
-export class HomeModule { }
+export class HomeModule {}

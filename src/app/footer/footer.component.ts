@@ -10,13 +10,16 @@ export class FooterComponent {
     public year: number;
     public photos: FacebookPhoto[];
 
-    constructor(private facebookService: FacebookService) {
+    constructor(facebookService: FacebookService) {
         this.year = new Date().getFullYear();
 
-        this.facebookService.getPhotos().subscribe((photos) => {
-            this.photos = photos.data;
-        }, (err) => {
-            console.error(err);
-        });
+        facebookService.getPhotos().subscribe(
+            (photos) => {
+                this.photos = photos.data;
+            },
+            (err) => {
+                console.error(err);
+            },
+        );
     }
 }

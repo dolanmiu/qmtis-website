@@ -6,16 +6,8 @@ import { CommiteeComponent } from './committee.component';
 import { HeroComponent } from './hero/hero.component';
 
 @NgModule({
-    imports: [
-        CommonModule,
-    ],
-    declarations: [
-        CommiteeComponent,
-        HeroComponent,
-        BackdropComponent,
-    ],
-    exports: [
-        CommiteeComponent,
-    ],
+    imports: [CommonModule],
+    declarations: [CommiteeComponent, HeroComponent, BackdropComponent],
+    exports: [CommiteeComponent],
 })
-export class CommitteeModule { }
+export class CommitteeModule {}

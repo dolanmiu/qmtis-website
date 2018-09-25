@@ -6,16 +6,8 @@ import { HeroComponent } from './hero/hero.component';
 import { SponsorComponent } from './sponsor.component';
 
 @NgModule({
-    imports: [
-        CommonModule,
-    ],
-    declarations: [
-        SponsorComponent,
-        HeroComponent,
-        BackdropComponent,
-    ],
-    exports: [
-        SponsorComponent,
-    ],
+    imports: [CommonModule],
+    declarations: [SponsorComponent, HeroComponent, BackdropComponent],
+    exports: [SponsorComponent],
 })
-export class SponsorModule { }
+export class SponsorModule {}

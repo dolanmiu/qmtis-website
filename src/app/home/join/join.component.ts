@@ -5,5 +5,4 @@ import { Component } from '@angular/core';
     templateUrl: './join.component.html',
     styleUrls: ['./join.component.scss', '../../shared/section.component.scss'],
 })
-export class JoinComponent {
-}
+export class JoinComponent {}

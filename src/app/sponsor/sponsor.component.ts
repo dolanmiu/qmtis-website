@@ -6,7 +6,5 @@ import { Component } from '@angular/core';
     styleUrls: ['./sponsor.component.scss', '../shared/section.component.scss'],
 })
 export class SponsorComponent {
-
-    constructor() { }
-
+    constructor() {}
 }

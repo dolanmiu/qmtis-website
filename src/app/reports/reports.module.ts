@@ -11,23 +11,9 @@ import { ReportsRoutingModule } from './reports-routing.module';
 import { ReportsComponent } from './reports.component';
 
 @NgModule({
-    declarations: [
-        ReportsComponent,
-        PostCardComponent,
-        HeroComponent,
-        BackdropComponent,
-        ReportComponent,
-    ],
-    imports: [
-        CommonModule,
-        ReportsRoutingModule,
-        SharedModule,
-    ],
-    providers: [
-        BloggerService,
-    ],
-    exports: [
-        ReportsComponent,
-    ],
+    declarations: [ReportsComponent, PostCardComponent, HeroComponent, BackdropComponent, ReportComponent],
+    imports: [CommonModule, ReportsRoutingModule, SharedModule],
+    providers: [BloggerService],
+    exports: [ReportsComponent],
 })
-export class ReportsModule { }
+export class ReportsModule {}

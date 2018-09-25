@@ -13,8 +13,8 @@ interface FacebookResponse {
 export class FacebookService {
     private readonly data$: Observable<FacebookResponse>;
 
-    constructor(private http: Http) {
-        this.data$ = this.http.get(URL).map((eventJson) => {
+    constructor(http: Http) {
+        this.data$ = http.get(URL).map((eventJson) => {
             return eventJson.json() as FacebookResponse;
         });
     }

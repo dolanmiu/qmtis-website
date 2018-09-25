@@ -10,22 +10,24 @@ import { SponsorComponent } from './sponsor/sponsor.component';
     imports: [
         RouterModule.forRoot([
             {
-                path: '', component: HomeComponent,
+                path: '',
+                component: HomeComponent,
             },
             {
-                path: 'reports', component: ReportsComponent,
+                path: 'reports',
+                component: ReportsComponent,
             },
             {
-                path: 'committee', component: CommiteeComponent,
+                path: 'committee',
+                component: CommiteeComponent,
             },
             {
-                path: 'sponsors', component: SponsorComponent,
+                path: 'sponsors',
+                component: SponsorComponent,
             },
         ]),
     ],
     declarations: [],
-    exports: [
-        RouterModule,
-    ],
+    exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

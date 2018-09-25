@@ -17,8 +17,8 @@ export class ReportsComponent implements OnInit {
     public pageReferences: PageReference[];
     public posts: Post[];
 
-    constructor(private bloggerService: BloggerService, private router: Router) {
-        this.router.events.first().subscribe((ev) => {
+    constructor(private readonly bloggerService: BloggerService, router: Router) {
+        router.events.first().subscribe((ev) => {
             if (ev instanceof NavigationEnd) {
                 window.scrollTo(0, 0);
             }
@@ -27,11 +27,13 @@ export class ReportsComponent implements OnInit {
 
     public ngOnInit(): void {
         this.bloggerService.blog().subscribe((res) => {
-            this.pageReferences = Array(res.blog.posts.totalItems).fill({}).map((x, i) => {
-                return {
-                    id: i + 1,
-                };
-            });
+            this.pageReferences = Array(res.blog.posts.totalItems)
+                .fill({})
+                .map((x, i) => {
+                    return {
+                        id: i + 1,
+                    };
+                });
             this.posts = res.posts.items;
             console.log(this.pageReferences);
         });

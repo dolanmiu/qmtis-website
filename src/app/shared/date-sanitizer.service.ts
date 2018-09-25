@@ -2,10 +2,7 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class DateSanitizerService {
-
-    constructor() {
-
-    }
+    constructor() {}
 
     public sanitize(dateString: string): string {
         if (!dateString) {

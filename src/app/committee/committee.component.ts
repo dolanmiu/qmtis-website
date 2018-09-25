@@ -11,10 +11,11 @@ import { Observable } from 'rxjs/Observable';
 export class CommiteeComponent implements OnInit {
     public member$: Observable<any>;
 
-    constructor(private http: Http, route: ActivatedRoute, router: Router) {
+    constructor(http: Http, route: ActivatedRoute, router: Router) {
         this.member$ = route.queryParams.flatMap((params) => {
             console.log(params);
-            return this.http.get('/assets/committee/details.json')
+            return http
+                .get('/assets/committee/details.json')
                 .map((res) => res.json())
                 .map((all) => all[params.member])
                 .do((member) => {
@@ -25,7 +26,5 @@ export class CommiteeComponent implements OnInit {
         });
     }
 
-    public ngOnInit(): void {
-    }
-
+    public ngOnInit(): void {}
 }

@@ -8,14 +8,16 @@ import { DateSanitizerService } from '../../../shared/date-sanitizer.service';
     providers: [DateSanitizerService],
 })
 export class EventCardComponent {
+    @Input()
+    public name: string;
+    @Input()
+    public description: string;
+    @Input()
+    public date: string;
+    @Input()
+    public active: boolean;
 
-    @Input() public name: string;
-    @Input() public description: string;
-    @Input() public date: string;
-    @Input() public active: boolean;
-
-    constructor(private dateSanitizerService: DateSanitizerService) {
-    }
+    constructor(private readonly dateSanitizerService: DateSanitizerService) {}
 
     public sanitizeDate(dateString: string): string {
         return this.dateSanitizerService.sanitize(dateString);
