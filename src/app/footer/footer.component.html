@@ -37,7 +37,7 @@
                 <h2 class="footer-heading">Latest Photos</h2>
                 <hr />
                 <div class="row">
-                    <app-fb-photo *ngFor="let photo of photos" class="col-lg-4" [fbuid]="photo.id"></app-fb-photo>
+                    <app-fb-photo *ngFor="let photo of photos" class="col-lg-4" [url]="photo.url"></app-fb-photo>
                 </div>
             </div>
         </div>
