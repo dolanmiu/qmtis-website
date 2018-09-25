@@ -12,6 +12,6 @@ export class DateSanitizerService {
         const re = /(\d+-\d+-\w+:\d+:\d+)/;
 
         const matches = dateString.match(re);
-        return matches[0];
+        return matches ? matches[0] : '';
     }
 }
