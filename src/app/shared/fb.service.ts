@@ -4,11 +4,6 @@ import { Observable } from 'rxjs/Observable';
 
 const URL = `https://wt-9017166451e5dc00461b648d19f5e8da-0.sandbox.auth0-extend.com/qmtis-facebook`;
 
-interface FaceboothOAuthResponse {
-    access_token: string;
-    token_type: string;
-}
-
 interface FacebookResponse {
     photos: FacebookPhotosResponse;
     events: FacebookEventResponse;
