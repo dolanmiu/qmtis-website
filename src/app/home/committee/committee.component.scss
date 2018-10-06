@@ -28,3 +28,35 @@ h4 {
         filter: grayscale(0%);
     }
 }
+
+@media (max-width: 543px) {
+    .card {
+        display: flex;
+        height: 100px;
+        overflow: hidden;
+        border: none;
+
+        h4 {
+            font-size: 1.1em;
+            line-height: 2em;
+        }
+
+        p {
+            font-size: .8em;
+        }
+
+        .card-block {
+            height: initial;
+            padding: 10px 0 0 10px;
+        }
+
+        .photo {
+            height: 100%;
+
+            img {
+                border-radius: 0;
+                width: 100px;
+            }
+        }
+    }
+}
