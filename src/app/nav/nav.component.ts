@@ -25,8 +25,8 @@ export class NavComponent {
             route: 'join',
         },
         {
-            text: 'Events',
-            route: 'events',
+            text: 'Sponsors',
+            route: 'sponsors',
         },
     ];
 
