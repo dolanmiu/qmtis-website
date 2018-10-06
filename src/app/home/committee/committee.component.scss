@@ -24,6 +24,12 @@ h4 {
     overflow: hidden;
     transition: filter .5s;
 
+    img {
+        height: 230px;
+        object-fit: cover;
+        width: 256px;
+    }
+
     &:hover {
         filter: grayscale(0%);
     }
@@ -55,6 +61,7 @@ h4 {
 
             img {
                 border-radius: 0;
+                height: 100px;
                 width: 100px;
             }
         }
