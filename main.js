@@ -12804,7 +12804,7 @@ module.exports = ""
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var ng2_page_scroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ng2-page-scroll */ "./node_modules/ng2-page-scroll/ng2-page-scroll.js");
+/* harmony import */ var ngx_page_scroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ngx-page-scroll */ "./node_modules/ngx-page-scroll/ngx-page-scroll.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -12818,8 +12818,8 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 var AppComponent = /** @class */ (function () {
     function AppComponent() {
-        ng2_page_scroll__WEBPACK_IMPORTED_MODULE_1__["PageScrollConfig"].defaultScrollOffset = 50;
-        ng2_page_scroll__WEBPACK_IMPORTED_MODULE_1__["PageScrollConfig"].defaultEasingLogic = {
+        ngx_page_scroll__WEBPACK_IMPORTED_MODULE_1__["PageScrollConfig"].defaultScrollOffset = 50;
+        ngx_page_scroll__WEBPACK_IMPORTED_MODULE_1__["PageScrollConfig"].defaultEasingLogic = {
             ease: function (t, b, c, d) {
                 // easeInOutExpo easing
                 if (t === 0) {
@@ -12834,7 +12834,7 @@ var AppComponent = /** @class */ (function () {
                 return (c / 2) * (-Math.pow(2, -10 * --t) + 2) + b;
             },
         };
-        ng2_page_scroll__WEBPACK_IMPORTED_MODULE_1__["PageScrollConfig"].defaultDuration = 500;
+        ngx_page_scroll__WEBPACK_IMPORTED_MODULE_1__["PageScrollConfig"].defaultDuration = 500;
     }
     AppComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -12863,7 +12863,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppModule", function() { return AppModule; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
-/* harmony import */ var ng2_page_scroll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ng2-page-scroll */ "./node_modules/ng2-page-scroll/ng2-page-scroll.js");
+/* harmony import */ var ngx_page_scroll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ngx-page-scroll */ "./node_modules/ngx-page-scroll/ngx-page-scroll.js");
 /* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
 /* harmony import */ var _committee_committee_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./committee/committee.module */ "./src/app/committee/committee.module.ts");
@@ -12893,7 +12893,7 @@ var AppModule = /** @class */ (function () {
     AppModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
             declarations: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"], _nav_nav_component__WEBPACK_IMPORTED_MODULE_8__["NavComponent"]],
-            imports: [ng2_page_scroll__WEBPACK_IMPORTED_MODULE_2__["Ng2PageScrollModule"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _footer_footer_module__WEBPACK_IMPORTED_MODULE_6__["FooterModule"], _home_home_module__WEBPACK_IMPORTED_MODULE_7__["HomeModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"], _reports_reports_module__WEBPACK_IMPORTED_MODULE_9__["ReportsModule"], _committee_committee_module__WEBPACK_IMPORTED_MODULE_5__["CommitteeModule"]],
+            imports: [ngx_page_scroll__WEBPACK_IMPORTED_MODULE_2__["NgxPageScrollModule"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _footer_footer_module__WEBPACK_IMPORTED_MODULE_6__["FooterModule"], _home_home_module__WEBPACK_IMPORTED_MODULE_7__["HomeModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"], _reports_reports_module__WEBPACK_IMPORTED_MODULE_9__["ReportsModule"], _committee_committee_module__WEBPACK_IMPORTED_MODULE_5__["CommitteeModule"]],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]],
         })
     ], AppModule);
@@ -13819,7 +13819,7 @@ var HeroComponent = /** @class */ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HeroModule", function() { return HeroModule; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var ng2_page_scroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ng2-page-scroll */ "./node_modules/ng2-page-scroll/ng2-page-scroll.js");
+/* harmony import */ var ngx_page_scroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ngx-page-scroll */ "./node_modules/ngx-page-scroll/ngx-page-scroll.js");
 /* harmony import */ var _hero_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./hero.component */ "./src/app/home/hero/hero.component.ts");
 /* harmony import */ var _mouse_icon_mouse_icon_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./mouse-icon/mouse-icon.component */ "./src/app/home/hero/mouse-icon/mouse-icon.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
@@ -13838,7 +13838,7 @@ var HeroModule = /** @class */ (function () {
     HeroModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
             declarations: [_hero_component__WEBPACK_IMPORTED_MODULE_2__["HeroComponent"], _mouse_icon_mouse_icon_component__WEBPACK_IMPORTED_MODULE_3__["MouseIconComponent"]],
-            imports: [ng2_page_scroll__WEBPACK_IMPORTED_MODULE_1__["Ng2PageScrollModule"]],
+            imports: [ngx_page_scroll__WEBPACK_IMPORTED_MODULE_1__["NgxPageScrollModule"]],
             providers: [],
             bootstrap: [],
             exports: [_hero_component__WEBPACK_IMPORTED_MODULE_2__["HeroComponent"]],

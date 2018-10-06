@@ -69439,1055 +69439,6 @@ var VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["Version"]('6.1.9')
 
 /***/ }),
 
-/***/ "./node_modules/ng2-page-scroll/ng2-page-scroll.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/ng2-page-scroll/ng2-page-scroll.js ***!
-  \*********************************************************/
-/*! exports provided: PageScroll, PageScrollService, NG2PAGESCROLL_SERVICE_PROVIDER_FACTORY, NG2PAGESCROLL_SERVICE_PROVIDER, EasingLogic, PageScrollConfig, PageScrollInstance, PageScrollUtilService, Ng2PageScrollModule */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _src_ng2_page_scroll_directive__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./src/ng2-page-scroll.directive */ "./node_modules/ng2-page-scroll/src/ng2-page-scroll.directive.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PageScroll", function() { return _src_ng2_page_scroll_directive__WEBPACK_IMPORTED_MODULE_0__["PageScroll"]; });
-
-/* harmony import */ var _src_ng2_page_scroll_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./src/ng2-page-scroll.service */ "./node_modules/ng2-page-scroll/src/ng2-page-scroll.service.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PageScrollService", function() { return _src_ng2_page_scroll_service__WEBPACK_IMPORTED_MODULE_1__["PageScrollService"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NG2PAGESCROLL_SERVICE_PROVIDER_FACTORY", function() { return _src_ng2_page_scroll_service__WEBPACK_IMPORTED_MODULE_1__["NG2PAGESCROLL_SERVICE_PROVIDER_FACTORY"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NG2PAGESCROLL_SERVICE_PROVIDER", function() { return _src_ng2_page_scroll_service__WEBPACK_IMPORTED_MODULE_1__["NG2PAGESCROLL_SERVICE_PROVIDER"]; });
-
-/* harmony import */ var _src_ng2_page_scroll_config__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./src/ng2-page-scroll-config */ "./node_modules/ng2-page-scroll/src/ng2-page-scroll-config.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "EasingLogic", function() { return _src_ng2_page_scroll_config__WEBPACK_IMPORTED_MODULE_2__["EasingLogic"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PageScrollConfig", function() { return _src_ng2_page_scroll_config__WEBPACK_IMPORTED_MODULE_2__["PageScrollConfig"]; });
-
-/* harmony import */ var _src_ng2_page_scroll_instance__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./src/ng2-page-scroll-instance */ "./node_modules/ng2-page-scroll/src/ng2-page-scroll-instance.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PageScrollInstance", function() { return _src_ng2_page_scroll_instance__WEBPACK_IMPORTED_MODULE_3__["PageScrollInstance"]; });
-
-/* harmony import */ var _src_ng2_page_scroll_util_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./src/ng2-page-scroll-util.service */ "./node_modules/ng2-page-scroll/src/ng2-page-scroll-util.service.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PageScrollUtilService", function() { return _src_ng2_page_scroll_util_service__WEBPACK_IMPORTED_MODULE_4__["PageScrollUtilService"]; });
-
-/* harmony import */ var _src_ng2_page_scroll_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./src/ng2-page-scroll.module */ "./node_modules/ng2-page-scroll/src/ng2-page-scroll.module.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Ng2PageScrollModule", function() { return _src_ng2_page_scroll_module__WEBPACK_IMPORTED_MODULE_5__["Ng2PageScrollModule"]; });
-
-
-
-
-
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/ng2-page-scroll/src/ng2-page-scroll-config.js":
-/*!********************************************************************!*\
-  !*** ./node_modules/ng2-page-scroll/src/ng2-page-scroll-config.js ***!
-  \********************************************************************/
-/*! exports provided: EasingLogic, PageScrollConfig */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EasingLogic", function() { return EasingLogic; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PageScrollConfig", function() { return PageScrollConfig; });
-var EasingLogic = (function () {
-    function EasingLogic() {
-    }
-    return EasingLogic;
-}());
-
-var PageScrollConfig = (function () {
-    function PageScrollConfig() {
-    }
-    Object.defineProperty(PageScrollConfig, "defaultEasingLogic", {
-        // Getter and setter to avoid auto completion to suggest calling the method
-        get: function () {
-            return PageScrollConfig._easingLogic;
-        },
-        set: function (easingLogic) {
-            PageScrollConfig._easingLogic = easingLogic;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    /**
-     * The number of milliseconds to wait till updating the scroll position again.
-     * Small amounts may produce smoother animations but require more processing power.
-     * @type {number}
-     * @private
-     */
-    PageScrollConfig._interval = 10;
-    /**
-     * The amount of pixels that need to be between the current scrollTop/scrollLeft position
-     * and the target position the cause a scroll animation. In case distance is below
-     * this threshold, an immediate jump will be performed.
-     * Due to dpi or rounding irregularities in browsers floating point numbers for scrollTop/scrollLeft values
-     * are possible, making a === comparison of current scrollTop or scrollLeft and target scrollPosition error-prone.
-     * @type {number}
-     * @private
-     */
-    PageScrollConfig._minScrollDistance = 2;
-    /**
-     * Name of the default namespace.
-     * @type {string}
-     * @private
-     */
-    PageScrollConfig._defaultNamespace = 'default';
-    /**
-     * Whether by default the scrolling should happen in vertical direction (by manipulating the scrollTop property)
-     * (= true; default) or in horizontal direction (by manipulating the scrollLeft property) (= false
-     * @type {boolean}
-     */
-    PageScrollConfig.defaultIsVerticalScrolling = true;
-    /**
-     * How many console logs should be emitted.
-     * 0: None
-     * 2: If animation could not be started due to missing target, "already at destination" or similar reasons
-     * 5: All scroll position values that get set
-     * @type {boolean}
-     * @private
-     */
-    PageScrollConfig._logLevel = 2;
-    /**
-     * The duration how long a scrollTo animation should last by default.
-     * May be overridden using the page-scroll-duration attribute on a single ng2PageScroll instance.
-     * @type {number}
-     */
-    PageScrollConfig.defaultDuration = 1250;
-    /**
-     * The distance in pixels above scroll target where the animation should stop. Setting a positive number results in
-     * the scroll target being more in the middle of the screen, negative numbers will produce scrolling "too far"
-     * @type {number}
-     */
-    PageScrollConfig.defaultScrollOffset = 0;
-    /**
-     * Whether by default for inline scroll animations the advanced offset calculation should take place (true) or
-     * not (false). Default is false.
-     * The advanced offset calculation will traverse the DOM tree upwards, starting at the scrollTarget, until it finds
-     * the scrollingView container element. Along the way the offset positions of the relative positioned
-     * (position: relative) elements will be taken into account for calculating the target elements position.
-     * @type {boolean}
-     */
-    PageScrollConfig.defaultAdvancedInlineOffsetCalculation = false;
-    /**
-     * The events that are listened to on the body to decide whether a scroll animation has been interfered/interrupted by the user
-     * @type {string[]}
-     * @private
-     */
-    PageScrollConfig._interruptEvents = ['mousedown', 'wheel', 'DOMMouseScroll', 'mousewheel', 'keyup', 'touchmove'];
-    /**
-     * The keys that are considered to interrupt a scroll animation (mainly the arrow keys). All other key presses will not stop the
-     * scroll animation.
-     * @type {number[]}
-     * @private
-     */
-    PageScrollConfig._interruptKeys = [33, 34, 35, 36, 38, 40];
-    /**
-     * Whether a scroll animation should be interruptible by user interaction (true) or not (false). If the user performs an
-     * interrupting event while a scroll animation takes place, the scroll animation stops.
-     * @type {boolean}
-     */
-    PageScrollConfig.defaultInterruptible = true;
-    PageScrollConfig._easingLogic = {
-        ease: function (t, b, c, d) {
-            // Linear easing
-            return c * t / d + b;
-        }
-    };
-    return PageScrollConfig;
-}());
-
-
-
-/***/ }),
-
-/***/ "./node_modules/ng2-page-scroll/src/ng2-page-scroll-instance.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/ng2-page-scroll/src/ng2-page-scroll-instance.js ***!
-  \**********************************************************************/
-/*! exports provided: PageScrollInstance */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PageScrollInstance", function() { return PageScrollInstance; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _ng2_page_scroll_config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ng2-page-scroll-config */ "./node_modules/ng2-page-scroll/src/ng2-page-scroll-config.js");
-/* harmony import */ var _ng2_page_scroll_util_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ng2-page-scroll-util.service */ "./node_modules/ng2-page-scroll/src/ng2-page-scroll-util.service.js");
-/**
- * Created by sebastianfuss on 29.08.16.
- */
-
-
-
-/**
- * Represents a scrolling action
- */
-var PageScrollInstance = (function () {
-    /**
-     * Private constructor, requires the properties assumed to be the bare minimum.
-     * Use the factory methods to create instances:
-     *      {@link PageScrollInstance#simpleInstance}
-     *      {@link PageScrollInstance#newInstance}
-     * @param namespace
-     * @param document
-     */
-    function PageScrollInstance(namespace, document) {
-        /**
-         * These properties will be set during instance construction and default to their defaults from PageScrollConfig
-         */
-        /* A namespace to "group" scroll animations together and stopping some does not stop others */
-        this._namespace = _ng2_page_scroll_config__WEBPACK_IMPORTED_MODULE_1__["PageScrollConfig"]._defaultNamespace;
-        /* Whether we scroll vertically (true) or horizontally (false) */
-        this._verticalScrolling = _ng2_page_scroll_config__WEBPACK_IMPORTED_MODULE_1__["PageScrollConfig"].defaultIsVerticalScrolling;
-        /* Offset in px that the animation should stop above that target element */
-        this._offset = _ng2_page_scroll_config__WEBPACK_IMPORTED_MODULE_1__["PageScrollConfig"].defaultScrollOffset;
-        /* Duration in milliseconds the scroll animation should last */
-        this._duration = _ng2_page_scroll_config__WEBPACK_IMPORTED_MODULE_1__["PageScrollConfig"].defaultDuration;
-        /* Easing function to manipulate the scrollTop/scrollLeft value over time */
-        this._easingLogic = _ng2_page_scroll_config__WEBPACK_IMPORTED_MODULE_1__["PageScrollConfig"].defaultEasingLogic;
-        /* Boolean whether the scroll animation should stop on user interruption or not */
-        this._interruptible = _ng2_page_scroll_config__WEBPACK_IMPORTED_MODULE_1__["PageScrollConfig"].defaultInterruptible;
-        /* Whether the advanded offset calculation for inline scrolling should be used */
-        this._advancedInlineOffsetCalculation = _ng2_page_scroll_config__WEBPACK_IMPORTED_MODULE_1__["PageScrollConfig"].defaultAdvancedInlineOffsetCalculation;
-        /* Event emitter to notify the world about the scrolling */
-        this._pageScrollFinish = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
-        /**
-         * These properties will be set/manipulated if the scroll animation starts
-         */
-        /* The initial value of the scrollTop or scrollLeft position when the animation starts */
-        this._startScrollPosition = 0;
-        /* Whether an interrupt listener is attached to the body or not */
-        this._interruptListenersAttached = false;
-        /* References to the timer instance that is used to perform the scroll animation to be
-         able to clear it on animation end*/
-        this._timer = null;
-        this._namespace = namespace;
-        this.document = document;
-    }
-    /*
-     * Factory methods for instance creation
-     */
-    PageScrollInstance.simpleInstance = function (document, scrollTarget, namespace) {
-        return PageScrollInstance.newInstance({
-            document: document,
-            scrollTarget: scrollTarget,
-            namespace: namespace
-        });
-    };
-    PageScrollInstance.newInstance = function (options) {
-        if (_ng2_page_scroll_util_service__WEBPACK_IMPORTED_MODULE_2__["PageScrollUtilService"].isUndefinedOrNull(options.namespace) || options.namespace.length <= 0) {
-            options.namespace = _ng2_page_scroll_config__WEBPACK_IMPORTED_MODULE_1__["PageScrollConfig"]._defaultNamespace;
-        }
-        var pageScrollInstance = new PageScrollInstance(options.namespace, document);
-        if (_ng2_page_scroll_util_service__WEBPACK_IMPORTED_MODULE_2__["PageScrollUtilService"].isUndefinedOrNull(options.scrollingViews) || options.scrollingViews.length === 0) {
-            pageScrollInstance._isInlineScrolling = false;
-            pageScrollInstance._scrollingViews = [document.documentElement, document.body, document.body.parentNode];
-        }
-        else {
-            pageScrollInstance._isInlineScrolling = true;
-            pageScrollInstance._scrollingViews = options.scrollingViews;
-        }
-        pageScrollInstance._scrollTarget = options.scrollTarget;
-        if (!_ng2_page_scroll_util_service__WEBPACK_IMPORTED_MODULE_2__["PageScrollUtilService"].isUndefinedOrNull(options.verticalScrolling)) {
-            pageScrollInstance._verticalScrolling = options.verticalScrolling;
-        }
-        if (!_ng2_page_scroll_util_service__WEBPACK_IMPORTED_MODULE_2__["PageScrollUtilService"].isUndefinedOrNull(options.pageScrollOffset)) {
-            pageScrollInstance._offset = options.pageScrollOffset;
-        }
-        if (!_ng2_page_scroll_util_service__WEBPACK_IMPORTED_MODULE_2__["PageScrollUtilService"].isUndefinedOrNull(options.pageScrollEasingLogic)) {
-            pageScrollInstance._easingLogic = options.pageScrollEasingLogic;
-        }
-        if (_ng2_page_scroll_util_service__WEBPACK_IMPORTED_MODULE_2__["PageScrollUtilService"].isUndefinedOrNull(options.pageScrollDuration) && !_ng2_page_scroll_util_service__WEBPACK_IMPORTED_MODULE_2__["PageScrollUtilService"].isUndefinedOrNull(options.pageScrollSpeed)) {
-            // No duration specified in the options, only in this case we use the speed option when present
-            pageScrollInstance._speed = options.pageScrollSpeed;
-            pageScrollInstance._duration = undefined;
-        }
-        else if (!_ng2_page_scroll_util_service__WEBPACK_IMPORTED_MODULE_2__["PageScrollUtilService"].isUndefinedOrNull(options.pageScrollDuration)) {
-            pageScrollInstance._duration = options.pageScrollDuration;
-        }
-        if (!_ng2_page_scroll_util_service__WEBPACK_IMPORTED_MODULE_2__["PageScrollUtilService"].isUndefinedOrNull(options.pageScrollFinishListener)) {
-            pageScrollInstance._pageScrollFinish = options.pageScrollFinishListener;
-        }
-        pageScrollInstance._interruptible = options.pageScrollInterruptible ||
-            (_ng2_page_scroll_util_service__WEBPACK_IMPORTED_MODULE_2__["PageScrollUtilService"].isUndefinedOrNull(options.pageScrollInterruptible) && _ng2_page_scroll_config__WEBPACK_IMPORTED_MODULE_1__["PageScrollConfig"].defaultInterruptible);
-        pageScrollInstance._advancedInlineOffsetCalculation = options.advancedInlineOffsetCalculation ||
-            (_ng2_page_scroll_util_service__WEBPACK_IMPORTED_MODULE_2__["PageScrollUtilService"].isUndefinedOrNull(options.advancedInlineOffsetCalculation) &&
-                _ng2_page_scroll_config__WEBPACK_IMPORTED_MODULE_1__["PageScrollConfig"].defaultAdvancedInlineOffsetCalculation);
-        return pageScrollInstance;
-    };
-    PageScrollInstance.prototype.getScrollPropertyValue = function (scrollingView) {
-        if (!this.verticalScrolling) {
-            return scrollingView.scrollLeft;
-        }
-        return scrollingView.scrollTop;
-    };
-    /**
-     * Extract the exact location of the scrollTarget element.
-     *
-     * Extract the scrollTarget HTMLElement from the given PageScrollTarget object. The latter one may be
-     * a string like "#heading2", then this method returns the corresponding DOM element for that id.
-     *
-     * @returns {HTMLElement}
-     */
-    PageScrollInstance.prototype.extractScrollTargetPosition = function () {
-        var scrollTargetElement;
-        if (typeof this._scrollTarget === 'string') {
-            scrollTargetElement = this.document.querySelector(this._scrollTarget);
-        }
-        else {
-            scrollTargetElement = this._scrollTarget;
-        }
-        if (scrollTargetElement === null || scrollTargetElement === undefined) {
-            // Scroll target not found
-            return { top: NaN, left: NaN };
-        }
-        if (this._isInlineScrolling) {
-            var position = { top: scrollTargetElement.offsetTop, left: scrollTargetElement.offsetLeft };
-            if (this._advancedInlineOffsetCalculation && this.scrollingViews.length === 1) {
-                var accumulatedParentsPos = { top: 0, left: 0 };
-                // not named window to make sure we're not getting the global window variable by accident
-                var theWindow = scrollTargetElement.ownerDocument.defaultView;
-                var parentFound = false;
-                // Start parent is the immediate parent
-                var parent_1 = scrollTargetElement.parentElement;
-                // Iterate upwards all parents
-                while (!parentFound && !_ng2_page_scroll_util_service__WEBPACK_IMPORTED_MODULE_2__["PageScrollUtilService"].isUndefinedOrNull(parent_1)) {
-                    if (theWindow.getComputedStyle(parent_1).getPropertyValue('position') === 'relative') {
-                        accumulatedParentsPos.top += parent_1.offsetTop;
-                        accumulatedParentsPos.left += parent_1.offsetLeft;
-                    }
-                    // Next iteration
-                    parent_1 = parent_1.parentElement;
-                    parentFound = parent_1 === this.scrollingViews[0];
-                }
-                if (parentFound) {
-                    // Only use the results if we found the parent, otherwise we accumulated too much anyway
-                    position.top += accumulatedParentsPos.top;
-                    position.left += accumulatedParentsPos.left;
-                }
-                else {
-                    if (_ng2_page_scroll_config__WEBPACK_IMPORTED_MODULE_1__["PageScrollConfig"]._logLevel >= 2) {
-                        console.warn('Unable to find nested scrolling targets parent!');
-                    }
-                }
-            }
-            return position;
-        }
-        return _ng2_page_scroll_util_service__WEBPACK_IMPORTED_MODULE_2__["PageScrollUtilService"].extractElementPosition(this.document, scrollTargetElement);
-    };
-    /**
-     * Get the top offset of the scroll animation.
-     * This automatically takes the offset location of the scrolling container/scrolling view
-     * into account (for nested/inline scrolling).
-     *
-     * @returns {number}
-     */
-    PageScrollInstance.prototype.getCurrentOffset = function () {
-        return this._offset;
-    };
-    /**
-     * Sets the "scrollTop" or "scrollLeft" property for all scrollingViews to the provided value
-     * @param position
-     * @return true if at least for one ScrollTopSource the scrollTop/scrollLeft value could be set and it kept the new value.
-     *          false if it failed for all ScrollingViews, meaning that we should stop the animation
-     *          (probably because we're at the end of the scrolling region)
-     */
-    PageScrollInstance.prototype.setScrollPosition = function (position) {
-        var _this = this;
-        if (_ng2_page_scroll_config__WEBPACK_IMPORTED_MODULE_1__["PageScrollConfig"]._logLevel >= 5) {
-            console.warn('Scroll Position: ' + position);
-        }
-        // Set the new scrollTop/scrollLeft to all scrollingViews elements
-        return this.scrollingViews.reduce(function (oneAlreadyWorked, scrollingView) {
-            var startScrollPropertyValue = _this.getScrollPropertyValue(scrollingView);
-            if (scrollingView && !_ng2_page_scroll_util_service__WEBPACK_IMPORTED_MODULE_2__["PageScrollUtilService"].isUndefinedOrNull(startScrollPropertyValue)) {
-                var scrollDistance = Math.abs(startScrollPropertyValue - position);
-                // The movement we need to perform is less than 2px
-                // This we consider a small movement which some browser may not perform when
-                // changing the scrollTop/scrollLeft property
-                // Thus in this cases we do not stop the scroll animation, although setting the
-                // scrollTop/scrollLeft value "fails"
-                var isSmallMovement = scrollDistance < _ng2_page_scroll_config__WEBPACK_IMPORTED_MODULE_1__["PageScrollConfig"]._minScrollDistance;
-                if (!_this.verticalScrolling) {
-                    scrollingView.scrollLeft = position;
-                }
-                else {
-                    scrollingView.scrollTop = position;
-                }
-                // Return true of setting the new scrollTop/scrollLeft value worked
-                // We consider that it worked if the new scrollTop/scrollLeft value is closer to the
-                // desired scrollTop/scrollLeft than before (it might not be exactly the value we
-                // set due to dpi or rounding irregularities)
-                if (isSmallMovement || scrollDistance > Math.abs(_this.getScrollPropertyValue(scrollingView) - position)) {
-                    return true;
-                }
-            }
-            return oneAlreadyWorked;
-        }, false);
-    };
-    /**
-     * Trigger firing a animation finish event
-     * @param value Whether the animation finished at the target (true) or got interrupted (false)
-     */
-    PageScrollInstance.prototype.fireEvent = function (value) {
-        if (this._pageScrollFinish) {
-            this._pageScrollFinish.emit(value);
-        }
-    };
-    /**
-     * Attach the interrupt listeners to the PageScrollInstance body. The given interruptReporter
-     * will be called if any of the attached events is fired.
-     *
-     * Possibly attached interruptListeners are automatically removed from the body before the new one will be attached.
-     *
-     * @param interruptReporter
-     */
-    PageScrollInstance.prototype.attachInterruptListeners = function (interruptReporter) {
-        var _this = this;
-        if (this._interruptListenersAttached) {
-            // Detach possibly existing listeners first
-            this.detachInterruptListeners();
-        }
-        this._interruptListener = function (event) {
-            interruptReporter.report(event, _this);
-        };
-        _ng2_page_scroll_config__WEBPACK_IMPORTED_MODULE_1__["PageScrollConfig"]._interruptEvents.forEach(function (event) { return _this.document.body.addEventListener(event, _this._interruptListener); });
-        this._interruptListenersAttached = true;
-    };
-    /**
-     * Remove event listeners from the body and stop listening for events that might be treated as "animation
-     * interrupt" events.
-     */
-    PageScrollInstance.prototype.detachInterruptListeners = function () {
-        var _this = this;
-        _ng2_page_scroll_config__WEBPACK_IMPORTED_MODULE_1__["PageScrollConfig"]._interruptEvents.forEach(function (event) { return _this.document.body.removeEventListener(event, _this._interruptListener); });
-        this._interruptListenersAttached = false;
-    };
-    Object.defineProperty(PageScrollInstance.prototype, "namespace", {
-        get: function () {
-            return this._namespace;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(PageScrollInstance.prototype, "scrollTarget", {
-        get: function () {
-            return this._scrollTarget;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(PageScrollInstance.prototype, "verticalScrolling", {
-        get: function () {
-            return this._verticalScrolling;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(PageScrollInstance.prototype, "scrollingViews", {
-        get: function () {
-            return this._scrollingViews;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(PageScrollInstance.prototype, "startScrollPosition", {
-        get: function () {
-            return this._startScrollPosition;
-        },
-        set: function (value) {
-            this._startScrollPosition = value;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(PageScrollInstance.prototype, "targetScrollPosition", {
-        get: function () {
-            return this._targetScrollPosition;
-        },
-        set: function (value) {
-            this._targetScrollPosition = value;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(PageScrollInstance.prototype, "distanceToScroll", {
-        get: function () {
-            return this._distanceToScroll;
-        },
-        set: function (value) {
-            this._distanceToScroll = value;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(PageScrollInstance.prototype, "executionDuration", {
-        get: function () {
-            return this._executionDuration;
-        },
-        set: function (value) {
-            this._executionDuration = value;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(PageScrollInstance.prototype, "duration", {
-        get: function () {
-            return this._duration;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(PageScrollInstance.prototype, "speed", {
-        get: function () {
-            return this._speed;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(PageScrollInstance.prototype, "easingLogic", {
-        get: function () {
-            return this._easingLogic;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(PageScrollInstance.prototype, "interruptible", {
-        get: function () {
-            return this._interruptible;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(PageScrollInstance.prototype, "startTime", {
-        get: function () {
-            return this._startTime;
-        },
-        set: function (value) {
-            this._startTime = value;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(PageScrollInstance.prototype, "endTime", {
-        get: function () {
-            return this._endTime;
-        },
-        set: function (value) {
-            this._endTime = value;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(PageScrollInstance.prototype, "timer", {
-        get: function () {
-            return this._timer;
-        },
-        set: function (value) {
-            this._timer = value;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(PageScrollInstance.prototype, "interruptListenersAttached", {
-        get: function () {
-            return this._interruptListenersAttached;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    return PageScrollInstance;
-}());
-
-
-
-/***/ }),
-
-/***/ "./node_modules/ng2-page-scroll/src/ng2-page-scroll-util.service.js":
-/*!**************************************************************************!*\
-  !*** ./node_modules/ng2-page-scroll/src/ng2-page-scroll-util.service.js ***!
-  \**************************************************************************/
-/*! exports provided: PageScrollUtilService */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PageScrollUtilService", function() { return PageScrollUtilService; });
-/**
- * Created by sebastianfuss on 02.09.16.
- */
-var PageScrollUtilService = (function () {
-    function PageScrollUtilService() {
-    }
-    /**
-     * Util method to check whether a given variable is either undefined or null
-     * @param variable
-     * @returns {boolean} true the variable is undefined or null
-     */
-    PageScrollUtilService.isUndefinedOrNull = function (variable) {
-        return (typeof variable === 'undefined') || variable === undefined || variable === null;
-    };
-    PageScrollUtilService.extractElementPosition = function (document, scrollTargetElement) {
-        var body = document.body;
-        var docEl = document.documentElement;
-        var windowPageYOffset = document.defaultView && document.defaultView.pageYOffset || undefined;
-        var windowPageXOffset = document.defaultView && document.defaultView.pageXOffset || undefined;
-        var scrollTop = windowPageYOffset || docEl.scrollTop || body.scrollTop;
-        var scrollLeft = windowPageXOffset || docEl.scrollLeft || body.scrollLeft;
-        var clientTop = docEl.clientTop || body.clientTop || 0;
-        var clientLeft = docEl.clientLeft || body.clientLeft || 0;
-        if (PageScrollUtilService.isUndefinedOrNull(scrollTargetElement)) {
-            // No element found, so return the current position to not cause any change in scroll position
-            return { top: scrollTop, left: scrollLeft };
-        }
-        var box = scrollTargetElement.getBoundingClientRect();
-        var top = box.top + scrollTop - clientTop;
-        var left = box.left + scrollLeft - clientLeft;
-        return { top: Math.round(top), left: Math.round(left) };
-    };
-    return PageScrollUtilService;
-}());
-
-
-
-/***/ }),
-
-/***/ "./node_modules/ng2-page-scroll/src/ng2-page-scroll.directive.js":
-/*!***********************************************************************!*\
-  !*** ./node_modules/ng2-page-scroll/src/ng2-page-scroll.directive.js ***!
-  \***********************************************************************/
-/*! exports provided: PageScroll */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PageScroll", function() { return PageScroll; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
-/* harmony import */ var _ng2_page_scroll_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ng2-page-scroll.service */ "./node_modules/ng2-page-scroll/src/ng2-page-scroll.service.js");
-/* harmony import */ var _ng2_page_scroll_instance__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ng2-page-scroll-instance */ "./node_modules/ng2-page-scroll/src/ng2-page-scroll-instance.js");
-/* harmony import */ var _ng2_page_scroll_util_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ng2-page-scroll-util.service */ "./node_modules/ng2-page-scroll/src/ng2-page-scroll-util.service.js");
-
-
-
-
-
-
-var PageScroll = (function () {
-    function PageScroll(pageScrollService, router, document) {
-        this.pageScrollService = pageScrollService;
-        this.router = router;
-        this.pageScrollTarget = null;
-        this.pageScrollHorizontal = null;
-        this.pageScrollOffset = null;
-        this.pageScrollDuration = null;
-        this.pageScrollSpeed = null;
-        this.pageScrollEasing = null;
-        this.pageScrollAdjustHash = false;
-        this.pageScroll = null;
-        this.pageScrollFinish = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
-        this.document = document;
-    }
-    PageScroll.prototype.ngOnChanges = function (changes) {
-        // Some inputs changed, reset the pageScrollInstance
-        this.pageScrollInstance = undefined;
-    };
-    PageScroll.prototype.ngOnDestroy = function () {
-        if (this.pageScrollInstance) {
-            this.pageScrollService.stop(this.pageScrollInstance);
-        }
-        return undefined;
-    };
-    PageScroll.prototype.generatePageScrollInstance = function () {
-        if (_ng2_page_scroll_util_service__WEBPACK_IMPORTED_MODULE_5__["PageScrollUtilService"].isUndefinedOrNull(this.pageScrollInstance)) {
-            this.pageScrollInstance = _ng2_page_scroll_instance__WEBPACK_IMPORTED_MODULE_4__["PageScrollInstance"].newInstance({
-                document: this.document,
-                scrollTarget: this.pageScrollTarget || this.href,
-                scrollingViews: null,
-                namespace: this.pageScroll,
-                verticalScrolling: !this.pageScrollHorizontal,
-                pageScrollOffset: this.pageScrollOffset,
-                pageScrollInterruptible: this.pageScrollInterruptible,
-                pageScrollEasingLogic: this.pageScrollEasing,
-                pageScrollDuration: this.pageScrollDuration,
-                pageScrollSpeed: this.pageScrollSpeed,
-                pageScrollFinishListener: this.pageScrollFinish
-            });
-        }
-        return this.pageScrollInstance;
-    };
-    PageScroll.prototype.pushRouterState = function () {
-        if (this.pageScrollAdjustHash && typeof this.pageScrollInstance.scrollTarget === 'string'
-            && this.pageScrollInstance.scrollTarget.substr(0, 1) === '#') {
-            // "Navigate" to the current route again and this time set the fragment/hash
-            this.router.navigate([], {
-                fragment: this.pageScrollInstance.scrollTarget.substr(1),
-                preserveQueryParams: true
-            });
-        }
-    };
-    PageScroll.prototype.scroll = function () {
-        var pageScrollInstance = this.generatePageScrollInstance();
-        this.pushRouterState();
-        this.pageScrollService.start(pageScrollInstance);
-    };
-    PageScroll.prototype.handleClick = function (clickEvent) {
-        var _this = this;
-        if (this.routerLink && this.router !== null && this.router !== undefined) {
-            var urlTree = void 0;
-            if (typeof this.routerLink === 'string') {
-                urlTree = this.router.parseUrl(this.routerLink);
-            }
-            else {
-                urlTree = this.router.createUrlTree(this.routerLink);
-            }
-            if (!this.router.isActive(urlTree, true)) {
-                // We need to navigate their first.
-                // Navigation is handled by the routerLink directive
-                // so we only need to listen for route change
-                var subscription_1 = this.router.events.subscribe(function (routerEvent) {
-                    if (routerEvent instanceof _angular_router__WEBPACK_IMPORTED_MODULE_1__["NavigationEnd"]) {
-                        subscription_1.unsubscribe();
-                        _this.scroll();
-                    }
-                    else if (routerEvent instanceof _angular_router__WEBPACK_IMPORTED_MODULE_1__["NavigationError"] || routerEvent instanceof _angular_router__WEBPACK_IMPORTED_MODULE_1__["NavigationCancel"]) {
-                        subscription_1.unsubscribe();
-                    }
-                });
-                return false; // to preventDefault()
-            }
-        }
-        this.scroll();
-        return false; // to preventDefault()
-    };
-    PageScroll.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"], args: [{
-                    selector: '[pageScroll]',
-                    host: {
-                        '(click)': 'handleClick($event)',
-                    }
-                },] },
-    ];
-    /** @nocollapse */
-    PageScroll.ctorParameters = function () { return [
-        { type: _ng2_page_scroll_service__WEBPACK_IMPORTED_MODULE_3__["PageScrollService"], },
-        { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"], decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Optional"] },] },
-        { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"], args: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["DOCUMENT"],] },] },
-    ]; };
-    PageScroll.propDecorators = {
-        'routerLink': [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] },],
-        'href': [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] },],
-        'pageScrollTarget': [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] },],
-        'pageScrollHorizontal': [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] },],
-        'pageScrollOffset': [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] },],
-        'pageScrollDuration': [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] },],
-        'pageScrollSpeed': [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] },],
-        'pageScrollEasing': [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] },],
-        'pageScrollInterruptible': [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] },],
-        'pageScrollAdjustHash': [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] },],
-        'pageScroll': [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] },],
-        'pageScrollFinish': [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] },],
-    };
-    return PageScroll;
-}());
-
-
-
-/***/ }),
-
-/***/ "./node_modules/ng2-page-scroll/src/ng2-page-scroll.module.js":
-/*!********************************************************************!*\
-  !*** ./node_modules/ng2-page-scroll/src/ng2-page-scroll.module.js ***!
-  \********************************************************************/
-/*! exports provided: Ng2PageScrollModule */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Ng2PageScrollModule", function() { return Ng2PageScrollModule; });
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _ng2_page_scroll_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ng2-page-scroll.service */ "./node_modules/ng2-page-scroll/src/ng2-page-scroll.service.js");
-/* harmony import */ var _ng2_page_scroll_directive__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ng2-page-scroll.directive */ "./node_modules/ng2-page-scroll/src/ng2-page-scroll.directive.js");
-/**
- * Created by sebastianfuss on 03.09.16.
- */
-
-
-
-
-var Ng2PageScrollModule = (function () {
-    function Ng2PageScrollModule() {
-    }
-    /** @deprecated since v4.0.0-beta.10 (https://github.com/Nolanus/ng2-page-scroll/pull/190) */
-    Ng2PageScrollModule.forRoot = function () {
-        return {
-            ngModule: Ng2PageScrollModule,
-            providers: [
-                { provide: _ng2_page_scroll_service__WEBPACK_IMPORTED_MODULE_2__["PageScrollService"], useClass: _ng2_page_scroll_service__WEBPACK_IMPORTED_MODULE_2__["PageScrollService"] }
-            ]
-        };
-    };
-    Ng2PageScrollModule.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"], args: [{
-                    imports: [_angular_common__WEBPACK_IMPORTED_MODULE_0__["CommonModule"]],
-                    declarations: [_ng2_page_scroll_directive__WEBPACK_IMPORTED_MODULE_3__["PageScroll"]],
-                    exports: [_ng2_page_scroll_directive__WEBPACK_IMPORTED_MODULE_3__["PageScroll"]],
-                    providers: [_ng2_page_scroll_service__WEBPACK_IMPORTED_MODULE_2__["NG2PAGESCROLL_SERVICE_PROVIDER"]]
-                },] },
-    ];
-    /** @nocollapse */
-    Ng2PageScrollModule.ctorParameters = function () { return []; };
-    return Ng2PageScrollModule;
-}());
-
-
-
-/***/ }),
-
-/***/ "./node_modules/ng2-page-scroll/src/ng2-page-scroll.service.js":
-/*!*********************************************************************!*\
-  !*** ./node_modules/ng2-page-scroll/src/ng2-page-scroll.service.js ***!
-  \*********************************************************************/
-/*! exports provided: PageScrollService, NG2PAGESCROLL_SERVICE_PROVIDER_FACTORY, NG2PAGESCROLL_SERVICE_PROVIDER */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PageScrollService", function() { return PageScrollService; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NG2PAGESCROLL_SERVICE_PROVIDER_FACTORY", function() { return NG2PAGESCROLL_SERVICE_PROVIDER_FACTORY; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NG2PAGESCROLL_SERVICE_PROVIDER", function() { return NG2PAGESCROLL_SERVICE_PROVIDER; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _ng2_page_scroll_config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ng2-page-scroll-config */ "./node_modules/ng2-page-scroll/src/ng2-page-scroll-config.js");
-/* harmony import */ var _ng2_page_scroll_util_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ng2-page-scroll-util.service */ "./node_modules/ng2-page-scroll/src/ng2-page-scroll-util.service.js");
-
-
-
-var PageScrollService = (function () {
-    function PageScrollService() {
-        var _this = this;
-        this.runningInstances = [];
-        this.onInterrupted = {
-            report: function (event, pageScrollInstance) {
-                if (!pageScrollInstance.interruptible) {
-                    // Non-interruptible anyway, so do not stop anything
-                    return;
-                }
-                var shouldStop = true;
-                if (event.type === 'keyup') {
-                    // Only stop if specific keys have been pressed, for all others don't stop anything
-                    if (_ng2_page_scroll_config__WEBPACK_IMPORTED_MODULE_1__["PageScrollConfig"]._interruptKeys.indexOf(event.keyCode) === -1) {
-                        // The pressed key is not in the list of interrupting keys
-                        shouldStop = false;
-                    }
-                }
-                else if (event.type === 'mousedown') {
-                    // For mousedown events we only stop the scroll animation of the mouse has
-                    // been clicked inside the scrolling container
-                    if (!pageScrollInstance.scrollingViews.some(function (scrollingView) { return scrollingView.contains(event.target); })) {
-                        // Mouse clicked an element which is not inside any of the the scrolling containers
-                        shouldStop = false;
-                    }
-                }
-                if (shouldStop) {
-                    _this.stopAll(pageScrollInstance.namespace);
-                }
-            }
-        };
-        if (PageScrollService.instanceCounter > 0 && Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["isDevMode"])()) {
-            console.warn('An instance of PageScrollService already exists, usually ' +
-                'including one provider should be enough, so double check.');
-        }
-        PageScrollService.instanceCounter++;
-    }
-    PageScrollService.prototype.stopInternal = function (interrupted, pageScrollInstance) {
-        var index = this.runningInstances.indexOf(pageScrollInstance);
-        if (index >= 0) {
-            this.runningInstances.splice(index, 1);
-        }
-        if (pageScrollInstance.interruptListenersAttached) {
-            pageScrollInstance.detachInterruptListeners();
-        }
-        if (pageScrollInstance.timer) {
-            // Clear/Stop the timer
-            clearInterval(pageScrollInstance.timer);
-            // Clear the reference to this timer
-            pageScrollInstance.timer = undefined;
-            pageScrollInstance.fireEvent(!interrupted);
-            return true;
-        }
-        return false;
-    };
-    /**
-     * Start a scroll animation. All properties of the animation are stored in the given {@link PageScrollInstance} object.
-     *
-     * This is the core functionality of the whole library.
-     *
-     * @param pageScrollInstance
-     */
-    PageScrollService.prototype.start = function (pageScrollInstance) {
-        var _this = this;
-        // Stop all possibly running scroll animations in the same namespace
-        this.stopAll(pageScrollInstance.namespace);
-        if (pageScrollInstance.scrollingViews === null || pageScrollInstance.scrollingViews.length === 0) {
-            // No scrollingViews specified, thus we can't animate anything
-            if (Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["isDevMode"])()) {
-                console.warn('No scrollingViews specified, this ng2-page-scroll does not know which DOM elements to scroll');
-            }
-            return;
-        }
-        var startScrollPositionFound = false;
-        // Reset start scroll position to 0. If any of the scrollingViews has a different one, it will be extracted next
-        pageScrollInstance.startScrollPosition = 0;
-        // Get the start scroll position from the scrollingViews (e.g. if the user already scrolled down the content)
-        pageScrollInstance.scrollingViews.forEach(function (scrollingView) {
-            if (_ng2_page_scroll_util_service__WEBPACK_IMPORTED_MODULE_2__["PageScrollUtilService"].isUndefinedOrNull(scrollingView)) {
-                return;
-            }
-            // Get the scrollTop or scrollLeft value of the first scrollingView that returns a value for its "scrollTop"
-            // or "scrollLeft" property that is not undefined and unequal to 0
-            var scrollPosition = pageScrollInstance.getScrollPropertyValue(scrollingView);
-            if (!startScrollPositionFound && scrollPosition) {
-                // We found a scrollingView that does not have scrollTop or scrollLeft 0
-                // Return the scroll position value, as this will be our startScrollPosition
-                pageScrollInstance.startScrollPosition = scrollPosition;
-                startScrollPositionFound = true;
-            }
-        });
-        var pageScrollOffset = pageScrollInstance.getCurrentOffset();
-        // Calculate the target position that the scroll animation should go to
-        var scrollTargetPosition = pageScrollInstance.extractScrollTargetPosition();
-        pageScrollInstance.targetScrollPosition = Math.round((pageScrollInstance.verticalScrolling ? scrollTargetPosition.top : scrollTargetPosition.left) - pageScrollOffset);
-        // Calculate the distance we need to go in total
-        pageScrollInstance.distanceToScroll = pageScrollInstance.targetScrollPosition - pageScrollInstance.startScrollPosition;
-        if (isNaN(pageScrollInstance.distanceToScroll)) {
-            // We weren't able to find the target position, maybe the element does not exist?
-            if (Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["isDevMode"])()) {
-                console.log('Scrolling not possible, as we can\'t find the specified target');
-            }
-            pageScrollInstance.fireEvent(false);
-            return;
-        }
-        // We're at the final destination already
-        // OR we need to scroll down but are already at the end
-        // OR we need to scroll up but are at the top already
-        var allReadyAtDestination = Math.abs(pageScrollInstance.distanceToScroll) < _ng2_page_scroll_config__WEBPACK_IMPORTED_MODULE_1__["PageScrollConfig"]._minScrollDistance;
-        // Check how long we need to scroll if a speed option is given
-        // Default executionDuration is the specified duration
-        pageScrollInstance.executionDuration = pageScrollInstance.duration;
-        // Maybe we need to pay attention to the speed option?
-        if (!_ng2_page_scroll_util_service__WEBPACK_IMPORTED_MODULE_2__["PageScrollUtilService"].isUndefinedOrNull(pageScrollInstance.speed) && _ng2_page_scroll_util_service__WEBPACK_IMPORTED_MODULE_2__["PageScrollUtilService"].isUndefinedOrNull(pageScrollInstance.duration)) {
-            // Speed option is set and no duration => calculate duration based on speed and scroll distance
-            pageScrollInstance.executionDuration = Math.abs(pageScrollInstance.distanceToScroll) / pageScrollInstance.speed * 1000;
-        }
-        // We should go there directly, as our "animation" would have one big step
-        // only anyway and this way we save the interval stuff
-        var tooShortInterval = pageScrollInstance.executionDuration <= _ng2_page_scroll_config__WEBPACK_IMPORTED_MODULE_1__["PageScrollConfig"]._interval;
-        if (allReadyAtDestination || tooShortInterval) {
-            if (Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["isDevMode"])()) {
-                if (allReadyAtDestination) {
-                    console.log('Scrolling not possible, as we can\'t get any closer to the destination');
-                }
-                else {
-                    console.log('Scroll duration shorter that interval length, jumping to target');
-                }
-            }
-            pageScrollInstance.setScrollPosition(pageScrollInstance.targetScrollPosition);
-            pageScrollInstance.fireEvent(true);
-            return;
-        }
-        // Register the interrupt listeners if we want an interruptible scroll animation
-        if (pageScrollInstance.interruptible ||
-            (_ng2_page_scroll_util_service__WEBPACK_IMPORTED_MODULE_2__["PageScrollUtilService"].isUndefinedOrNull(pageScrollInstance.interruptible) && _ng2_page_scroll_config__WEBPACK_IMPORTED_MODULE_1__["PageScrollConfig"].defaultInterruptible)) {
-            pageScrollInstance.attachInterruptListeners(this.onInterrupted);
-        }
-        // Let's get started, get the start time...
-        pageScrollInstance.startTime = new Date().getTime();
-        // .. and calculate the end time (when we need to finish at last)
-        pageScrollInstance.endTime = pageScrollInstance.startTime + pageScrollInstance.executionDuration;
-        pageScrollInstance.timer = setInterval(function (_pageScrollInstance) {
-            // Take the current time
-            var currentTime = new Date().getTime();
-            // Determine the new scroll position
-            var newScrollPosition;
-            var stopNow = false;
-            if (_pageScrollInstance.endTime <= currentTime) {
-                // We're over the time already, so go the targetScrollPosition (aka destination)
-                newScrollPosition = _pageScrollInstance.targetScrollPosition;
-                stopNow = true;
-            }
-            else {
-                // Calculate the scroll position based on the current time using the easing function
-                newScrollPosition = Math.round(_pageScrollInstance.easingLogic.ease(currentTime - _pageScrollInstance.startTime, _pageScrollInstance.startScrollPosition, _pageScrollInstance.distanceToScroll, _pageScrollInstance.executionDuration));
-            }
-            // Set the new scrollPosition to all scrollingViews elements
-            if (!_pageScrollInstance.setScrollPosition(newScrollPosition)) {
-                // Setting the new scrollTop/scrollLeft value failed for all ScrollingViews
-                // early stop the scroll animation to save resources
-                stopNow = true;
-            }
-            // At the end do the internal stop maintenance and fire the pageScrollFinish event
-            // (otherwise the event might arrive at "too early")
-            if (stopNow) {
-                _this.stopInternal(false, _pageScrollInstance);
-            }
-        }, _ng2_page_scroll_config__WEBPACK_IMPORTED_MODULE_1__["PageScrollConfig"]._interval, pageScrollInstance);
-        // Register the instance as running one
-        this.runningInstances.push(pageScrollInstance);
-    };
-    /**
-     * Stop all running scroll animations. Optionally limit to stop only the ones of specific namespace.
-     *
-     * @param namespace
-     * @returns {boolean}
-     */
-    PageScrollService.prototype.stopAll = function (namespace) {
-        if (this.runningInstances.length > 0) {
-            var stoppedSome = false;
-            for (var i = 0; i < this.runningInstances.length; ++i) {
-                var pageScrollInstance = this.runningInstances[i];
-                if (_ng2_page_scroll_util_service__WEBPACK_IMPORTED_MODULE_2__["PageScrollUtilService"].isUndefinedOrNull(namespace) || namespace.length === 0 ||
-                    pageScrollInstance.namespace === namespace) {
-                    stoppedSome = true;
-                    this.stopInternal(true, pageScrollInstance);
-                    // Decrease the counter, as we removed an item from the array we iterate over
-                    i--;
-                }
-            }
-            return stoppedSome;
-        }
-        return false;
-    };
-    PageScrollService.prototype.stop = function (pageScrollInstance) {
-        return this.stopInternal(true, pageScrollInstance);
-    };
-    PageScrollService.instanceCounter = 0;
-    PageScrollService.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"] },
-    ];
-    /** @nocollapse */
-    PageScrollService.ctorParameters = function () { return []; };
-    return PageScrollService;
-}());
-
-/* singleton pattern taken from https://github.com/angular/angular/issues/13854 */
-function NG2PAGESCROLL_SERVICE_PROVIDER_FACTORY(parentDispatcher) {
-    return parentDispatcher || new PageScrollService();
-}
-var NG2PAGESCROLL_SERVICE_PROVIDER = {
-    provide: PageScrollService,
-    deps: [[new _angular_core__WEBPACK_IMPORTED_MODULE_0__["Optional"](), new _angular_core__WEBPACK_IMPORTED_MODULE_0__["SkipSelf"](), PageScrollService]],
-    useFactory: NG2PAGESCROLL_SERVICE_PROVIDER_FACTORY
-};
-
-
-/***/ }),
-
 /***/ "./node_modules/ngx-facebook/dist/esm/components/fb-comment-embed/fb-comment-embed.js":
 /*!********************************************************************************************!*\
   !*** ./node_modules/ngx-facebook/dist/esm/components/fb-comment-embed/fb-comment-embed.js ***!
@@ -72207,6 +71158,1172 @@ FacebookService.decorators = [
 /** @nocollapse */
 FacebookService.ctorParameters = function () { return []; };
 //# sourceMappingURL=facebook.js.map
+
+/***/ }),
+
+/***/ "./node_modules/ngx-page-scroll/ngx-page-scroll.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/ngx-page-scroll/ngx-page-scroll.js ***!
+  \*********************************************************/
+/*! exports provided: PageScroll, PageScrollService, NgxPageScrollServiceProviderFactory, NgxPageScrollServiceProvider, EasingLogic, PageScrollConfig, PageScrollInstance, PageScrollUtilService, NgxPageScrollModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _src_ngx_page_scroll_directive__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./src/ngx-page-scroll.directive */ "./node_modules/ngx-page-scroll/src/ngx-page-scroll.directive.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PageScroll", function() { return _src_ngx_page_scroll_directive__WEBPACK_IMPORTED_MODULE_0__["PageScroll"]; });
+
+/* harmony import */ var _src_ngx_page_scroll_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./src/ngx-page-scroll.service */ "./node_modules/ngx-page-scroll/src/ngx-page-scroll.service.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PageScrollService", function() { return _src_ngx_page_scroll_service__WEBPACK_IMPORTED_MODULE_1__["PageScrollService"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NgxPageScrollServiceProviderFactory", function() { return _src_ngx_page_scroll_service__WEBPACK_IMPORTED_MODULE_1__["NgxPageScrollServiceProviderFactory"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NgxPageScrollServiceProvider", function() { return _src_ngx_page_scroll_service__WEBPACK_IMPORTED_MODULE_1__["NgxPageScrollServiceProvider"]; });
+
+/* harmony import */ var _src_ngx_page_scroll_config__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./src/ngx-page-scroll-config */ "./node_modules/ngx-page-scroll/src/ngx-page-scroll-config.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "EasingLogic", function() { return _src_ngx_page_scroll_config__WEBPACK_IMPORTED_MODULE_2__["EasingLogic"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PageScrollConfig", function() { return _src_ngx_page_scroll_config__WEBPACK_IMPORTED_MODULE_2__["PageScrollConfig"]; });
+
+/* harmony import */ var _src_ngx_page_scroll_instance__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./src/ngx-page-scroll-instance */ "./node_modules/ngx-page-scroll/src/ngx-page-scroll-instance.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PageScrollInstance", function() { return _src_ngx_page_scroll_instance__WEBPACK_IMPORTED_MODULE_3__["PageScrollInstance"]; });
+
+/* harmony import */ var _src_ngx_page_scroll_util_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./src/ngx-page-scroll-util.service */ "./node_modules/ngx-page-scroll/src/ngx-page-scroll-util.service.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PageScrollUtilService", function() { return _src_ngx_page_scroll_util_service__WEBPACK_IMPORTED_MODULE_4__["PageScrollUtilService"]; });
+
+/* harmony import */ var _src_ngx_page_scroll_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./src/ngx-page-scroll.module */ "./node_modules/ngx-page-scroll/src/ngx-page-scroll.module.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NgxPageScrollModule", function() { return _src_ngx_page_scroll_module__WEBPACK_IMPORTED_MODULE_5__["NgxPageScrollModule"]; });
+
+
+
+
+
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/ngx-page-scroll/src/ngx-page-scroll-config.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/ngx-page-scroll/src/ngx-page-scroll-config.js ***!
+  \********************************************************************/
+/*! exports provided: EasingLogic, PageScrollConfig */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EasingLogic", function() { return EasingLogic; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PageScrollConfig", function() { return PageScrollConfig; });
+var EasingLogic = /** @class */ (function () {
+    function EasingLogic() {
+    }
+    return EasingLogic;
+}());
+
+var PageScrollConfig = /** @class */ (function () {
+    function PageScrollConfig() {
+    }
+    Object.defineProperty(PageScrollConfig, "defaultEasingLogic", {
+        // Getter and setter to avoid auto completion to suggest calling the method
+        get: 
+        // Getter and setter to avoid auto completion to suggest calling the method
+        function () {
+            return PageScrollConfig._easingLogic;
+        },
+        set: function (easingLogic) {
+            PageScrollConfig._easingLogic = easingLogic;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+         * The number of milliseconds to wait till updating the scroll position again.
+         * Small amounts may produce smoother animations but require more processing power.
+         * @type {number}
+         */
+    PageScrollConfig._interval = 10;
+    /**
+         * The amount of pixels that need to be between the current scrollTop/scrollLeft position
+         * and the target position the cause a scroll animation. In case distance is below
+         * this threshold, an immediate jump will be performed.
+         * Due to dpi or rounding irregularities in browsers floating point numbers for scrollTop/scrollLeft values
+         * are possible, making a === comparison of current scrollTop or scrollLeft and target scrollPosition error-prone.
+         * @type {number}
+         */
+    PageScrollConfig._minScrollDistance = 2;
+    /**
+         * Name of the default namespace.
+         * @type {string}
+         */
+    PageScrollConfig._defaultNamespace = 'default';
+    /**
+         * Whether by default the scrolling should happen in vertical direction (by manipulating the scrollTop property)
+         * (= true; default) or in horizontal direction (by manipulating the scrollLeft property) (= false
+         * @type {boolean}
+         */
+    PageScrollConfig.defaultIsVerticalScrolling = true;
+    /**
+         * How many console logs should be emitted. Also influenced by angular mode (dev or prod mode)
+         * 0: No logs, neither in dev nor in prod mode
+         * 1: Animation errors in dev mode, no logs in prod mode
+         * 2: Animation errors in dev and prod mode
+         * 5: Animation errors in dev and all scroll position values that get set; animation errors in prod mode
+         * @type {number}
+         */
+    PageScrollConfig._logLevel = 1;
+    /**
+         * The duration how long a scrollTo animation should last by default.
+         * May be overridden using the page-scroll-duration attribute on a single ngxPageScroll instance.
+         * @type {number}
+         */
+    PageScrollConfig.defaultDuration = 1250;
+    /**
+         * The distance in pixels above scroll target where the animation should stop. Setting a positive number results in
+         * the scroll target being more in the middle of the screen, negative numbers will produce scrolling "too far"
+         * @type {number}
+         */
+    PageScrollConfig.defaultScrollOffset = 0;
+    /**
+         * Whether by default for inline scroll animations the advanced offset calculation should take place (true) or
+         * not (false). Default is false.
+         * The advanced offset calculation will traverse the DOM tree upwards, starting at the scrollTarget, until it finds
+         * the scrollingView container element. Along the way the offset positions of the relative positioned
+         * (position: relative) elements will be taken into account for calculating the target elements position.
+         * @type {boolean}
+         */
+    PageScrollConfig.defaultAdvancedInlineOffsetCalculation = false;
+    /**
+         * The events that are listened to on the body to decide whether a scroll animation has been interfered/interrupted by the user
+         * @type {string[]}
+         */
+    PageScrollConfig._interruptEvents = ['mousedown', 'wheel', 'DOMMouseScroll', 'mousewheel', 'keyup', 'touchmove'];
+    /**
+         * The keys that are considered to interrupt a scroll animation (mainly the arrow keys). All other key presses will not stop the
+         * scroll animation.
+         * @type {number[]}
+         */
+    PageScrollConfig._interruptKeys = [33, 34, 35, 36, 38, 40];
+    /**
+         * Whether a scroll animation should be interruptible by user interaction (true) or not (false). If the user performs an
+         * interrupting event while a scroll animation takes place, the scroll animation stops.
+         * @type {boolean}
+         */
+    PageScrollConfig.defaultInterruptible = true;
+    PageScrollConfig._easingLogic = {
+        ease: function (t, b, c, d) {
+            // Linear easing
+            return c * t / d + b;
+        }
+    };
+    return PageScrollConfig;
+}());
+
+
+
+/***/ }),
+
+/***/ "./node_modules/ngx-page-scroll/src/ngx-page-scroll-instance.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/ngx-page-scroll/src/ngx-page-scroll-instance.js ***!
+  \**********************************************************************/
+/*! exports provided: PageScrollInstance */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PageScrollInstance", function() { return PageScrollInstance; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _ngx_page_scroll_config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ngx-page-scroll-config */ "./node_modules/ngx-page-scroll/src/ngx-page-scroll-config.js");
+/* harmony import */ var _ngx_page_scroll_util_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ngx-page-scroll-util.service */ "./node_modules/ngx-page-scroll/src/ngx-page-scroll-util.service.js");
+
+
+
+/**
+ * Represents a scrolling action
+ */
+var /**
+ * Represents a scrolling action
+ */
+PageScrollInstance = /** @class */ (function () {
+    /**
+     * Private constructor, requires the properties assumed to be the bare minimum.
+     * Use the factory methods to create instances:
+     *      {@link PageScrollInstance#simpleInstance}
+     *      {@link PageScrollInstance#newInstance}
+     * @param namespace
+     * @param document
+     */
+    function PageScrollInstance(namespace, document) {
+        /**
+             * These properties will be set during instance construction and default to their defaults from PageScrollConfig
+             */
+        /* A namespace to "group" scroll animations together and stopping some does not stop others */
+        this._namespace = _ngx_page_scroll_config__WEBPACK_IMPORTED_MODULE_1__["PageScrollConfig"]._defaultNamespace;
+        /* Whether we scroll vertically (true) or horizontally (false) */
+        this._verticalScrolling = _ngx_page_scroll_config__WEBPACK_IMPORTED_MODULE_1__["PageScrollConfig"].defaultIsVerticalScrolling;
+        /* Offset in px that the animation should stop above that target element */
+        this._offset = _ngx_page_scroll_config__WEBPACK_IMPORTED_MODULE_1__["PageScrollConfig"].defaultScrollOffset;
+        /* Duration in milliseconds the scroll animation should last */
+        this._duration = _ngx_page_scroll_config__WEBPACK_IMPORTED_MODULE_1__["PageScrollConfig"].defaultDuration;
+        /* Easing function to manipulate the scrollTop/scrollLeft value over time */
+        this._easingLogic = _ngx_page_scroll_config__WEBPACK_IMPORTED_MODULE_1__["PageScrollConfig"].defaultEasingLogic;
+        /* Boolean whether the scroll animation should stop on user interruption or not */
+        this._interruptible = _ngx_page_scroll_config__WEBPACK_IMPORTED_MODULE_1__["PageScrollConfig"].defaultInterruptible;
+        /* Whether the advanded offset calculation for inline scrolling should be used */
+        this._advancedInlineOffsetCalculation = _ngx_page_scroll_config__WEBPACK_IMPORTED_MODULE_1__["PageScrollConfig"].defaultAdvancedInlineOffsetCalculation;
+        /* Event emitter to notify the world about the scrolling */
+        this._pageScrollFinish = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        /**
+             * These properties will be set/manipulated if the scroll animation starts
+             */
+        /* The initial value of the scrollTop or scrollLeft position when the animation starts */
+        this._startScrollPosition = 0;
+        /* Whether an interrupt listener is attached to the body or not */
+        this._interruptListenersAttached = false;
+        /* References to the timer instance that is used to perform the scroll animation to be
+             able to clear it on animation end*/
+        this._timer = null;
+        this._namespace = namespace;
+        this.document = document;
+    }
+    /*
+     * Factory methods for instance creation
+     */
+    /*
+         * Factory methods for instance creation
+         */
+    PageScrollInstance.simpleInstance = /*
+         * Factory methods for instance creation
+         */
+    function (document, scrollTarget, namespace) {
+        return PageScrollInstance.newInstance({
+            document: document,
+            scrollTarget: scrollTarget,
+            namespace: namespace
+        });
+    };
+    PageScrollInstance.newInstance = function (options) {
+        if (_ngx_page_scroll_util_service__WEBPACK_IMPORTED_MODULE_2__["PageScrollUtilService"].isUndefinedOrNull(options.namespace) || options.namespace.length <= 0) {
+            options.namespace = _ngx_page_scroll_config__WEBPACK_IMPORTED_MODULE_1__["PageScrollConfig"]._defaultNamespace;
+        }
+        var pageScrollInstance = new PageScrollInstance(options.namespace, document);
+        if (_ngx_page_scroll_util_service__WEBPACK_IMPORTED_MODULE_2__["PageScrollUtilService"].isUndefinedOrNull(options.scrollingViews) || options.scrollingViews.length === 0) {
+            pageScrollInstance._isInlineScrolling = false;
+            pageScrollInstance._scrollingViews = [document.documentElement, document.body, document.body.parentNode];
+        }
+        else {
+            pageScrollInstance._isInlineScrolling = true;
+            pageScrollInstance._scrollingViews = options.scrollingViews;
+        }
+        pageScrollInstance._scrollTarget = options.scrollTarget;
+        if (!_ngx_page_scroll_util_service__WEBPACK_IMPORTED_MODULE_2__["PageScrollUtilService"].isUndefinedOrNull(options.verticalScrolling)) {
+            pageScrollInstance._verticalScrolling = options.verticalScrolling;
+        }
+        if (!_ngx_page_scroll_util_service__WEBPACK_IMPORTED_MODULE_2__["PageScrollUtilService"].isUndefinedOrNull(options.pageScrollOffset)) {
+            pageScrollInstance._offset = options.pageScrollOffset;
+        }
+        if (!_ngx_page_scroll_util_service__WEBPACK_IMPORTED_MODULE_2__["PageScrollUtilService"].isUndefinedOrNull(options.pageScrollEasingLogic)) {
+            pageScrollInstance._easingLogic = options.pageScrollEasingLogic;
+        }
+        if (_ngx_page_scroll_util_service__WEBPACK_IMPORTED_MODULE_2__["PageScrollUtilService"].isUndefinedOrNull(options.pageScrollDuration) && !_ngx_page_scroll_util_service__WEBPACK_IMPORTED_MODULE_2__["PageScrollUtilService"].isUndefinedOrNull(options.pageScrollSpeed)) {
+            // No duration specified in the options, only in this case we use the speed option when present
+            pageScrollInstance._speed = options.pageScrollSpeed;
+            pageScrollInstance._duration = undefined;
+        }
+        else if (!_ngx_page_scroll_util_service__WEBPACK_IMPORTED_MODULE_2__["PageScrollUtilService"].isUndefinedOrNull(options.pageScrollDuration)) {
+            pageScrollInstance._duration = options.pageScrollDuration;
+        }
+        if (!_ngx_page_scroll_util_service__WEBPACK_IMPORTED_MODULE_2__["PageScrollUtilService"].isUndefinedOrNull(options.pageScrollFinishListener)) {
+            pageScrollInstance._pageScrollFinish = options.pageScrollFinishListener;
+        }
+        pageScrollInstance._interruptible = options.pageScrollInterruptible ||
+            (_ngx_page_scroll_util_service__WEBPACK_IMPORTED_MODULE_2__["PageScrollUtilService"].isUndefinedOrNull(options.pageScrollInterruptible) && _ngx_page_scroll_config__WEBPACK_IMPORTED_MODULE_1__["PageScrollConfig"].defaultInterruptible);
+        pageScrollInstance._advancedInlineOffsetCalculation = options.advancedInlineOffsetCalculation ||
+            (_ngx_page_scroll_util_service__WEBPACK_IMPORTED_MODULE_2__["PageScrollUtilService"].isUndefinedOrNull(options.advancedInlineOffsetCalculation) &&
+                _ngx_page_scroll_config__WEBPACK_IMPORTED_MODULE_1__["PageScrollConfig"].defaultAdvancedInlineOffsetCalculation);
+        return pageScrollInstance;
+    };
+    PageScrollInstance.prototype.getScrollPropertyValue = function (scrollingView) {
+        if (!this.verticalScrolling) {
+            return scrollingView.scrollLeft;
+        }
+        return scrollingView.scrollTop;
+    };
+    /**
+     * Extract the exact location of the scrollTarget element.
+     *
+     * Extract the scrollTarget HTMLElement from the given PageScrollTarget object. The latter one may be
+     * a string like "#heading2", then this method returns the corresponding DOM element for that id.
+     *
+     * @returns {HTMLElement}
+     */
+    /**
+         * Extract the exact location of the scrollTarget element.
+         *
+         * Extract the scrollTarget HTMLElement from the given PageScrollTarget object. The latter one may be
+         * a string like "#heading2", then this method returns the corresponding DOM element for that id.
+         *
+         * @returns {HTMLElement}
+         */
+    PageScrollInstance.prototype.extractScrollTargetPosition = /**
+         * Extract the exact location of the scrollTarget element.
+         *
+         * Extract the scrollTarget HTMLElement from the given PageScrollTarget object. The latter one may be
+         * a string like "#heading2", then this method returns the corresponding DOM element for that id.
+         *
+         * @returns {HTMLElement}
+         */
+    function () {
+        var scrollTargetElement;
+        if (typeof this._scrollTarget === 'string') {
+            var targetSelector = this._scrollTarget;
+            if (targetSelector.match(/^#[^\s]+$/g) !== null) {
+                // It's an id selector and a valid id, as it does not contain any white space characters
+                scrollTargetElement = this.document.getElementById(targetSelector.substr(1));
+            }
+            else {
+                scrollTargetElement = this.document.querySelector(targetSelector);
+            }
+        }
+        else {
+            scrollTargetElement = this._scrollTarget;
+        }
+        if (scrollTargetElement === null || scrollTargetElement === undefined) {
+            // Scroll target not found
+            return { top: NaN, left: NaN };
+        }
+        if (this._isInlineScrolling) {
+            var position = { top: scrollTargetElement.offsetTop, left: scrollTargetElement.offsetLeft };
+            if (this._advancedInlineOffsetCalculation && this.scrollingViews.length === 1) {
+                var accumulatedParentsPos = { top: 0, left: 0 };
+                // not named window to make sure we're not getting the global window variable by accident
+                var theWindow = scrollTargetElement.ownerDocument.defaultView;
+                var parentFound = false;
+                // Start parent is the immediate parent
+                var parent_1 = scrollTargetElement.parentElement;
+                // Iterate upwards all parents
+                while (!parentFound && !_ngx_page_scroll_util_service__WEBPACK_IMPORTED_MODULE_2__["PageScrollUtilService"].isUndefinedOrNull(parent_1)) {
+                    if (theWindow.getComputedStyle(parent_1).getPropertyValue('position') === 'relative') {
+                        accumulatedParentsPos.top += parent_1.offsetTop;
+                        accumulatedParentsPos.left += parent_1.offsetLeft;
+                    }
+                    // Next iteration
+                    // Next iteration
+                    parent_1 = parent_1.parentElement;
+                    parentFound = parent_1 === this.scrollingViews[0];
+                }
+                if (parentFound) {
+                    // Only use the results if we found the parent, otherwise we accumulated too much anyway
+                    position.top += accumulatedParentsPos.top;
+                    position.left += accumulatedParentsPos.left;
+                }
+                else {
+                    if (_ngx_page_scroll_config__WEBPACK_IMPORTED_MODULE_1__["PageScrollConfig"]._logLevel >= 2 || (_ngx_page_scroll_config__WEBPACK_IMPORTED_MODULE_1__["PageScrollConfig"]._logLevel >= 1 && Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["isDevMode"])())) {
+                        console.warn('Unable to find nested scrolling targets parent!');
+                    }
+                }
+            }
+            return position;
+        }
+        return _ngx_page_scroll_util_service__WEBPACK_IMPORTED_MODULE_2__["PageScrollUtilService"].extractElementPosition(this.document, scrollTargetElement);
+    };
+    /**
+     * Get the top offset of the scroll animation.
+     * This automatically takes the offset location of the scrolling container/scrolling view
+     * into account (for nested/inline scrolling).
+     *
+     * @returns {number}
+     */
+    /**
+         * Get the top offset of the scroll animation.
+         * This automatically takes the offset location of the scrolling container/scrolling view
+         * into account (for nested/inline scrolling).
+         *
+         * @returns {number}
+         */
+    PageScrollInstance.prototype.getCurrentOffset = /**
+         * Get the top offset of the scroll animation.
+         * This automatically takes the offset location of the scrolling container/scrolling view
+         * into account (for nested/inline scrolling).
+         *
+         * @returns {number}
+         */
+    function () {
+        return this._offset;
+    };
+    /**
+     * Sets the "scrollTop" or "scrollLeft" property for all scrollingViews to the provided value
+     * @param position
+     * @return true if at least for one ScrollTopSource the scrollTop/scrollLeft value could be set and it kept the new value.
+     *          false if it failed for all ScrollingViews, meaning that we should stop the animation
+     *          (probably because we're at the end of the scrolling region)
+     */
+    /**
+         * Sets the "scrollTop" or "scrollLeft" property for all scrollingViews to the provided value
+         * @param position
+         * @return true if at least for one ScrollTopSource the scrollTop/scrollLeft value could be set and it kept the new value.
+         *          false if it failed for all ScrollingViews, meaning that we should stop the animation
+         *          (probably because we're at the end of the scrolling region)
+         */
+    PageScrollInstance.prototype.setScrollPosition = /**
+         * Sets the "scrollTop" or "scrollLeft" property for all scrollingViews to the provided value
+         * @param position
+         * @return true if at least for one ScrollTopSource the scrollTop/scrollLeft value could be set and it kept the new value.
+         *          false if it failed for all ScrollingViews, meaning that we should stop the animation
+         *          (probably because we're at the end of the scrolling region)
+         */
+    function (position) {
+        var _this = this;
+        if (_ngx_page_scroll_config__WEBPACK_IMPORTED_MODULE_1__["PageScrollConfig"]._logLevel >= 5 && Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["isDevMode"])()) {
+            console.warn('Scroll Position: ' + position);
+        }
+        // Set the new scrollTop/scrollLeft to all scrollingViews elements
+        return this.scrollingViews.reduce(function (oneAlreadyWorked, scrollingView) {
+            var startScrollPropertyValue = _this.getScrollPropertyValue(scrollingView);
+            if (scrollingView && !_ngx_page_scroll_util_service__WEBPACK_IMPORTED_MODULE_2__["PageScrollUtilService"].isUndefinedOrNull(startScrollPropertyValue)) {
+                var scrollDistance = Math.abs(startScrollPropertyValue - position);
+                // The movement we need to perform is less than 2px
+                // This we consider a small movement which some browser may not perform when
+                // changing the scrollTop/scrollLeft property
+                // Thus in this cases we do not stop the scroll animation, although setting the
+                // scrollTop/scrollLeft value "fails"
+                var isSmallMovement = scrollDistance < _ngx_page_scroll_config__WEBPACK_IMPORTED_MODULE_1__["PageScrollConfig"]._minScrollDistance;
+                if (!_this.verticalScrolling) {
+                    scrollingView.scrollLeft = position;
+                }
+                else {
+                    scrollingView.scrollTop = position;
+                }
+                // Return true of setting the new scrollTop/scrollLeft value worked
+                // We consider that it worked if the new scrollTop/scrollLeft value is closer to the
+                // desired scrollTop/scrollLeft than before (it might not be exactly the value we
+                // set due to dpi or rounding irregularities)
+                if (isSmallMovement || scrollDistance > Math.abs(_this.getScrollPropertyValue(scrollingView) - position)) {
+                    return true;
+                }
+            }
+            return oneAlreadyWorked;
+        }, false);
+    };
+    /**
+     * Trigger firing a animation finish event
+     * @param value Whether the animation finished at the target (true) or got interrupted (false)
+     */
+    /**
+         * Trigger firing a animation finish event
+         * @param value Whether the animation finished at the target (true) or got interrupted (false)
+         */
+    PageScrollInstance.prototype.fireEvent = /**
+         * Trigger firing a animation finish event
+         * @param value Whether the animation finished at the target (true) or got interrupted (false)
+         */
+    function (value) {
+        if (this._pageScrollFinish) {
+            this._pageScrollFinish.emit(value);
+        }
+    };
+    /**
+     * Attach the interrupt listeners to the PageScrollInstance body. The given interruptReporter
+     * will be called if any of the attached events is fired.
+     *
+     * Possibly attached interruptListeners are automatically removed from the body before the new one will be attached.
+     *
+     * @param interruptReporter
+     */
+    /**
+         * Attach the interrupt listeners to the PageScrollInstance body. The given interruptReporter
+         * will be called if any of the attached events is fired.
+         *
+         * Possibly attached interruptListeners are automatically removed from the body before the new one will be attached.
+         *
+         * @param interruptReporter
+         */
+    PageScrollInstance.prototype.attachInterruptListeners = /**
+         * Attach the interrupt listeners to the PageScrollInstance body. The given interruptReporter
+         * will be called if any of the attached events is fired.
+         *
+         * Possibly attached interruptListeners are automatically removed from the body before the new one will be attached.
+         *
+         * @param interruptReporter
+         */
+    function (interruptReporter) {
+        var _this = this;
+        if (this._interruptListenersAttached) {
+            // Detach possibly existing listeners first
+            this.detachInterruptListeners();
+        }
+        this._interruptListener = function (event) {
+            interruptReporter.report(event, _this);
+        };
+        _ngx_page_scroll_config__WEBPACK_IMPORTED_MODULE_1__["PageScrollConfig"]._interruptEvents.forEach(function (event) { return _this.document.body.addEventListener(event, _this._interruptListener); });
+        this._interruptListenersAttached = true;
+    };
+    /**
+     * Remove event listeners from the body and stop listening for events that might be treated as "animation
+     * interrupt" events.
+     */
+    /**
+         * Remove event listeners from the body and stop listening for events that might be treated as "animation
+         * interrupt" events.
+         */
+    PageScrollInstance.prototype.detachInterruptListeners = /**
+         * Remove event listeners from the body and stop listening for events that might be treated as "animation
+         * interrupt" events.
+         */
+    function () {
+        var _this = this;
+        _ngx_page_scroll_config__WEBPACK_IMPORTED_MODULE_1__["PageScrollConfig"]._interruptEvents.forEach(function (event) { return _this.document.body.removeEventListener(event, _this._interruptListener); });
+        this._interruptListenersAttached = false;
+    };
+    Object.defineProperty(PageScrollInstance.prototype, "namespace", {
+        get: function () {
+            return this._namespace;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(PageScrollInstance.prototype, "scrollTarget", {
+        get: function () {
+            return this._scrollTarget;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(PageScrollInstance.prototype, "verticalScrolling", {
+        get: function () {
+            return this._verticalScrolling;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(PageScrollInstance.prototype, "scrollingViews", {
+        get: function () {
+            return this._scrollingViews;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(PageScrollInstance.prototype, "startScrollPosition", {
+        get: function () {
+            return this._startScrollPosition;
+        },
+        set: function (value) {
+            this._startScrollPosition = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(PageScrollInstance.prototype, "targetScrollPosition", {
+        get: function () {
+            return this._targetScrollPosition;
+        },
+        set: function (value) {
+            this._targetScrollPosition = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(PageScrollInstance.prototype, "distanceToScroll", {
+        get: function () {
+            return this._distanceToScroll;
+        },
+        set: function (value) {
+            this._distanceToScroll = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(PageScrollInstance.prototype, "executionDuration", {
+        get: function () {
+            return this._executionDuration;
+        },
+        set: function (value) {
+            this._executionDuration = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(PageScrollInstance.prototype, "duration", {
+        get: function () {
+            return this._duration;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(PageScrollInstance.prototype, "speed", {
+        get: function () {
+            return this._speed;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(PageScrollInstance.prototype, "easingLogic", {
+        get: function () {
+            return this._easingLogic;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(PageScrollInstance.prototype, "interruptible", {
+        get: function () {
+            return this._interruptible;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(PageScrollInstance.prototype, "startTime", {
+        get: function () {
+            return this._startTime;
+        },
+        set: function (value) {
+            this._startTime = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(PageScrollInstance.prototype, "endTime", {
+        get: function () {
+            return this._endTime;
+        },
+        set: function (value) {
+            this._endTime = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(PageScrollInstance.prototype, "timer", {
+        get: function () {
+            return this._timer;
+        },
+        set: function (value) {
+            this._timer = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(PageScrollInstance.prototype, "interruptListenersAttached", {
+        get: function () {
+            return this._interruptListenersAttached;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    return PageScrollInstance;
+}());
+/**
+ * Represents a scrolling action
+ */
+
+
+
+/***/ }),
+
+/***/ "./node_modules/ngx-page-scroll/src/ngx-page-scroll-util.service.js":
+/*!**************************************************************************!*\
+  !*** ./node_modules/ngx-page-scroll/src/ngx-page-scroll-util.service.js ***!
+  \**************************************************************************/
+/*! exports provided: PageScrollUtilService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PageScrollUtilService", function() { return PageScrollUtilService; });
+var PageScrollUtilService = /** @class */ (function () {
+    function PageScrollUtilService() {
+    }
+    /**
+     * Util method to check whether a given variable is either undefined or null
+     * @param variable
+     * @returns {boolean} true the variable is undefined or null
+     */
+    /**
+         * Util method to check whether a given variable is either undefined or null
+         * @param variable
+         * @returns {boolean} true the variable is undefined or null
+         */
+    PageScrollUtilService.isUndefinedOrNull = /**
+         * Util method to check whether a given variable is either undefined or null
+         * @param variable
+         * @returns {boolean} true the variable is undefined or null
+         */
+    function (variable) {
+        return (typeof variable === 'undefined') || variable === undefined || variable === null;
+    };
+    PageScrollUtilService.extractElementPosition = function (document, scrollTargetElement) {
+        var body = document.body;
+        var docEl = document.documentElement;
+        var windowPageYOffset = document.defaultView && document.defaultView.pageYOffset || undefined;
+        var windowPageXOffset = document.defaultView && document.defaultView.pageXOffset || undefined;
+        var scrollTop = windowPageYOffset || docEl.scrollTop || body.scrollTop;
+        var scrollLeft = windowPageXOffset || docEl.scrollLeft || body.scrollLeft;
+        var clientTop = docEl.clientTop || body.clientTop || 0;
+        var clientLeft = docEl.clientLeft || body.clientLeft || 0;
+        if (PageScrollUtilService.isUndefinedOrNull(scrollTargetElement)) {
+            // No element found, so return the current position to not cause any change in scroll position
+            return { top: scrollTop, left: scrollLeft };
+        }
+        var box = scrollTargetElement.getBoundingClientRect();
+        var top = box.top + scrollTop - clientTop;
+        var left = box.left + scrollLeft - clientLeft;
+        return { top: Math.round(top), left: Math.round(left) };
+    };
+    return PageScrollUtilService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./node_modules/ngx-page-scroll/src/ngx-page-scroll.directive.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/ngx-page-scroll/src/ngx-page-scroll.directive.js ***!
+  \***********************************************************************/
+/*! exports provided: PageScroll */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PageScroll", function() { return PageScroll; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _ngx_page_scroll_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ngx-page-scroll.service */ "./node_modules/ngx-page-scroll/src/ngx-page-scroll.service.js");
+/* harmony import */ var _ngx_page_scroll_instance__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ngx-page-scroll-instance */ "./node_modules/ngx-page-scroll/src/ngx-page-scroll-instance.js");
+/* harmony import */ var _ngx_page_scroll_util_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ngx-page-scroll-util.service */ "./node_modules/ngx-page-scroll/src/ngx-page-scroll-util.service.js");
+/* harmony import */ var _ngx_page_scroll_config__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./ngx-page-scroll-config */ "./node_modules/ngx-page-scroll/src/ngx-page-scroll-config.js");
+
+
+
+
+
+
+
+var PageScroll = /** @class */ (function () {
+    function PageScroll(pageScrollService, router, document) {
+        this.pageScrollService = pageScrollService;
+        this.router = router;
+        this.pageScrollTarget = null;
+        this.pageScrollHorizontal = null;
+        this.pageScrollOffset = null;
+        this.pageScrollDuration = null;
+        this.pageScrollSpeed = null;
+        this.pageScrollEasing = null;
+        this.pageScrollAdjustHash = false;
+        this.pageScroll = null;
+        this.pageScrollFinish = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this.document = document;
+    }
+    PageScroll.prototype.ngOnChanges = function (changes) {
+        // Some inputs changed, reset the pageScrollInstance
+        this.pageScrollInstance = undefined;
+    };
+    PageScroll.prototype.ngOnDestroy = function () {
+        if (this.pageScrollInstance) {
+            this.pageScrollService.stop(this.pageScrollInstance);
+        }
+        return undefined;
+    };
+    PageScroll.prototype.generatePageScrollInstance = function () {
+        if (_ngx_page_scroll_util_service__WEBPACK_IMPORTED_MODULE_5__["PageScrollUtilService"].isUndefinedOrNull(this.pageScrollInstance)) {
+            this.pageScrollInstance = _ngx_page_scroll_instance__WEBPACK_IMPORTED_MODULE_4__["PageScrollInstance"].newInstance({
+                document: this.document,
+                scrollTarget: this.pageScrollTarget || this.href,
+                scrollingViews: null,
+                namespace: this.pageScroll,
+                verticalScrolling: !this.pageScrollHorizontal,
+                pageScrollOffset: this.pageScrollOffset,
+                pageScrollInterruptible: this.pageScrollInterruptible,
+                pageScrollEasingLogic: this.pageScrollEasing,
+                pageScrollDuration: this.pageScrollDuration,
+                pageScrollSpeed: this.pageScrollSpeed,
+                pageScrollFinishListener: this.pageScrollFinish
+            });
+        }
+        return this.pageScrollInstance;
+    };
+    PageScroll.prototype.pushRouterState = function () {
+        if (this.pageScrollAdjustHash && typeof this.pageScrollInstance.scrollTarget === 'string'
+            && this.pageScrollInstance.scrollTarget.substr(0, 1) === '#') {
+            // "Navigate" to the current route again and this time set the fragment/hash
+            this.router.navigate([], {
+                fragment: this.pageScrollInstance.scrollTarget.substr(1),
+                preserveQueryParams: true
+            });
+        }
+    };
+    PageScroll.prototype.scroll = function () {
+        var pageScrollInstance = this.generatePageScrollInstance();
+        this.pushRouterState();
+        this.pageScrollService.start(pageScrollInstance);
+    };
+    PageScroll.prototype.handleClick = function (clickEvent) {
+        var _this = this;
+        // tslint:disable-line:no-unused-variable
+        if (this.routerLink && this.router !== null && this.router !== undefined) {
+            var urlTree = void 0;
+            if (typeof this.routerLink === 'string') {
+                urlTree = this.router.parseUrl(this.routerLink);
+            }
+            else {
+                urlTree = this.router.createUrlTree(this.routerLink);
+            }
+            if (!this.router.isActive(urlTree, true)) {
+                // We need to navigate their first.
+                // Navigation is handled by the routerLink directive
+                // so we only need to listen for route change
+                var subscription_1 = this.router.events.subscribe(function (routerEvent) {
+                    if (routerEvent instanceof _angular_router__WEBPACK_IMPORTED_MODULE_1__["NavigationEnd"]) {
+                        subscription_1.unsubscribe();
+                        // use a timeout to start scrolling as soon as the stack is cleared
+                        setTimeout(function () {
+                            _this.scroll();
+                        }, 0);
+                    }
+                    else if (routerEvent instanceof _angular_router__WEBPACK_IMPORTED_MODULE_1__["NavigationError"] || routerEvent instanceof _angular_router__WEBPACK_IMPORTED_MODULE_1__["NavigationCancel"]) {
+                        subscription_1.unsubscribe();
+                    }
+                });
+                return false; // to preventDefault()
+            }
+        }
+        this.scroll();
+        return false; // to preventDefault()
+    };
+    PageScroll.decorators = [
+        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"], args: [{
+                    selector: '[pageScroll]',
+                    host: {
+                        // tslint:disable-line:use-host-property-decorator
+                        '(click)': 'handleClick($event)',
+                    }
+                },] },
+    ];
+    /** @nocollapse */
+    PageScroll.ctorParameters = function () { return [
+        { type: _ngx_page_scroll_service__WEBPACK_IMPORTED_MODULE_3__["PageScrollService"], },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"], decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Optional"] },] },
+        { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"], args: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["DOCUMENT"],] },] },
+    ]; };
+    PageScroll.propDecorators = {
+        "routerLink": [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] },],
+        "href": [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] },],
+        "pageScrollTarget": [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] },],
+        "pageScrollHorizontal": [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] },],
+        "pageScrollOffset": [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] },],
+        "pageScrollDuration": [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] },],
+        "pageScrollSpeed": [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] },],
+        "pageScrollEasing": [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] },],
+        "pageScrollInterruptible": [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] },],
+        "pageScrollAdjustHash": [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] },],
+        "pageScroll": [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] },],
+        "pageScrollFinish": [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] },],
+    };
+    return PageScroll;
+}());
+
+
+
+/***/ }),
+
+/***/ "./node_modules/ngx-page-scroll/src/ngx-page-scroll.module.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/ngx-page-scroll/src/ngx-page-scroll.module.js ***!
+  \********************************************************************/
+/*! exports provided: NgxPageScrollModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NgxPageScrollModule", function() { return NgxPageScrollModule; });
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _ngx_page_scroll_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ngx-page-scroll.service */ "./node_modules/ngx-page-scroll/src/ngx-page-scroll.service.js");
+/* harmony import */ var _ngx_page_scroll_directive__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ngx-page-scroll.directive */ "./node_modules/ngx-page-scroll/src/ngx-page-scroll.directive.js");
+
+
+
+
+var NgxPageScrollModule = /** @class */ (function () {
+    function NgxPageScrollModule() {
+    }
+    NgxPageScrollModule.decorators = [
+        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"], args: [{
+                    imports: [_angular_common__WEBPACK_IMPORTED_MODULE_0__["CommonModule"]],
+                    declarations: [_ngx_page_scroll_directive__WEBPACK_IMPORTED_MODULE_3__["PageScroll"]],
+                    exports: [_ngx_page_scroll_directive__WEBPACK_IMPORTED_MODULE_3__["PageScroll"]],
+                    providers: [_ngx_page_scroll_service__WEBPACK_IMPORTED_MODULE_2__["NgxPageScrollServiceProvider"]]
+                },] },
+    ];
+    return NgxPageScrollModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./node_modules/ngx-page-scroll/src/ngx-page-scroll.service.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/ngx-page-scroll/src/ngx-page-scroll.service.js ***!
+  \*********************************************************************/
+/*! exports provided: PageScrollService, NgxPageScrollServiceProviderFactory, NgxPageScrollServiceProvider */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PageScrollService", function() { return PageScrollService; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NgxPageScrollServiceProviderFactory", function() { return NgxPageScrollServiceProviderFactory; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NgxPageScrollServiceProvider", function() { return NgxPageScrollServiceProvider; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _ngx_page_scroll_config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ngx-page-scroll-config */ "./node_modules/ngx-page-scroll/src/ngx-page-scroll-config.js");
+/* harmony import */ var _ngx_page_scroll_util_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ngx-page-scroll-util.service */ "./node_modules/ngx-page-scroll/src/ngx-page-scroll-util.service.js");
+
+
+
+var PageScrollService = /** @class */ (function () {
+    function PageScrollService() {
+        var _this = this;
+        this.runningInstances = [];
+        this.onInterrupted = {
+            report: function (event, pageScrollInstance) {
+                if (!pageScrollInstance.interruptible) {
+                    // Non-interruptible anyway, so do not stop anything
+                    return;
+                }
+                var shouldStop = true;
+                if (event.type === 'keyup') {
+                    // Only stop if specific keys have been pressed, for all others don't stop anything
+                    if (_ngx_page_scroll_config__WEBPACK_IMPORTED_MODULE_1__["PageScrollConfig"]._interruptKeys.indexOf(event.keyCode) === -1) {
+                        // The pressed key is not in the list of interrupting keys
+                        shouldStop = false;
+                    }
+                }
+                else if (event.type === 'mousedown') {
+                    // For mousedown events we only stop the scroll animation of the mouse has
+                    // been clicked inside the scrolling container
+                    if (!pageScrollInstance.scrollingViews.some(function (scrollingView) { return scrollingView.contains(event.target); })) {
+                        // Mouse clicked an element which is not inside any of the the scrolling containers
+                        shouldStop = false;
+                    }
+                }
+                if (shouldStop) {
+                    _this.stopAll(pageScrollInstance.namespace);
+                }
+            }
+        };
+        if (PageScrollService.instanceCounter > 0 &&
+            (_ngx_page_scroll_config__WEBPACK_IMPORTED_MODULE_1__["PageScrollConfig"]._logLevel >= 2 || (_ngx_page_scroll_config__WEBPACK_IMPORTED_MODULE_1__["PageScrollConfig"]._logLevel >= 1 && Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["isDevMode"])()))) {
+            console.warn('An instance of PageScrollService already exists, usually ' +
+                'including one provider should be enough, so double check.');
+        }
+        PageScrollService.instanceCounter++;
+    }
+    PageScrollService.prototype.stopInternal = function (interrupted, pageScrollInstance) {
+        var index = this.runningInstances.indexOf(pageScrollInstance);
+        if (index >= 0) {
+            this.runningInstances.splice(index, 1);
+        }
+        if (pageScrollInstance.interruptListenersAttached) {
+            pageScrollInstance.detachInterruptListeners();
+        }
+        if (pageScrollInstance.timer) {
+            // Clear/Stop the timer
+            clearInterval(pageScrollInstance.timer);
+            // Clear the reference to this timer
+            pageScrollInstance.timer = undefined;
+            pageScrollInstance.fireEvent(!interrupted);
+            return true;
+        }
+        return false;
+    };
+    /**
+     * Start a scroll animation. All properties of the animation are stored in the given {@link PageScrollInstance} object.
+     *
+     * This is the core functionality of the whole library.
+     *
+     * @param pageScrollInstance
+     */
+    /**
+         * Start a scroll animation. All properties of the animation are stored in the given {@link PageScrollInstance} object.
+         *
+         * This is the core functionality of the whole library.
+         *
+         * @param pageScrollInstance
+         */
+    PageScrollService.prototype.start = /**
+         * Start a scroll animation. All properties of the animation are stored in the given {@link PageScrollInstance} object.
+         *
+         * This is the core functionality of the whole library.
+         *
+         * @param pageScrollInstance
+         */
+    function (pageScrollInstance) {
+        var _this = this;
+        // Stop all possibly running scroll animations in the same namespace
+        this.stopAll(pageScrollInstance.namespace);
+        if (pageScrollInstance.scrollingViews === null || pageScrollInstance.scrollingViews.length === 0) {
+            // No scrollingViews specified, thus we can't animate anything
+            if (_ngx_page_scroll_config__WEBPACK_IMPORTED_MODULE_1__["PageScrollConfig"]._logLevel >= 2 || (_ngx_page_scroll_config__WEBPACK_IMPORTED_MODULE_1__["PageScrollConfig"]._logLevel >= 1 && Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["isDevMode"])())) {
+                console.warn('No scrollingViews specified, this ngx-page-scroll does not know which DOM elements to scroll');
+            }
+            return;
+        }
+        var startScrollPositionFound = false;
+        // Reset start scroll position to 0. If any of the scrollingViews has a different one, it will be extracted next
+        pageScrollInstance.startScrollPosition = 0;
+        // Get the start scroll position from the scrollingViews (e.g. if the user already scrolled down the content)
+        pageScrollInstance.scrollingViews.forEach(function (scrollingView) {
+            if (_ngx_page_scroll_util_service__WEBPACK_IMPORTED_MODULE_2__["PageScrollUtilService"].isUndefinedOrNull(scrollingView)) {
+                return;
+            }
+            // Get the scrollTop or scrollLeft value of the first scrollingView that returns a value for its "scrollTop"
+            // or "scrollLeft" property that is not undefined and unequal to 0
+            var scrollPosition = pageScrollInstance.getScrollPropertyValue(scrollingView);
+            if (!startScrollPositionFound && scrollPosition) {
+                // We found a scrollingView that does not have scrollTop or scrollLeft 0
+                // Return the scroll position value, as this will be our startScrollPosition
+                pageScrollInstance.startScrollPosition = scrollPosition;
+                startScrollPositionFound = true;
+            }
+        });
+        var pageScrollOffset = pageScrollInstance.getCurrentOffset();
+        // Calculate the target position that the scroll animation should go to
+        var scrollTargetPosition = pageScrollInstance.extractScrollTargetPosition();
+        pageScrollInstance.targetScrollPosition = Math.round((pageScrollInstance.verticalScrolling ? scrollTargetPosition.top : scrollTargetPosition.left) - pageScrollOffset);
+        // Calculate the distance we need to go in total
+        pageScrollInstance.distanceToScroll = pageScrollInstance.targetScrollPosition - pageScrollInstance.startScrollPosition;
+        if (isNaN(pageScrollInstance.distanceToScroll)) {
+            // We weren't able to find the target position, maybe the element does not exist?
+            if (_ngx_page_scroll_config__WEBPACK_IMPORTED_MODULE_1__["PageScrollConfig"]._logLevel >= 2 || (_ngx_page_scroll_config__WEBPACK_IMPORTED_MODULE_1__["PageScrollConfig"]._logLevel >= 1 && Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["isDevMode"])())) {
+                console.log('Scrolling not possible, as we can\'t find the specified target');
+            }
+            pageScrollInstance.fireEvent(false);
+            return;
+        }
+        // We're at the final destination already
+        // OR we need to scroll down but are already at the end
+        // OR we need to scroll up but are at the top already
+        var allReadyAtDestination = Math.abs(pageScrollInstance.distanceToScroll) < _ngx_page_scroll_config__WEBPACK_IMPORTED_MODULE_1__["PageScrollConfig"]._minScrollDistance;
+        // Check how long we need to scroll if a speed option is given
+        // Default executionDuration is the specified duration
+        pageScrollInstance.executionDuration = pageScrollInstance.duration;
+        // Maybe we need to pay attention to the speed option?
+        if (!_ngx_page_scroll_util_service__WEBPACK_IMPORTED_MODULE_2__["PageScrollUtilService"].isUndefinedOrNull(pageScrollInstance.speed) && _ngx_page_scroll_util_service__WEBPACK_IMPORTED_MODULE_2__["PageScrollUtilService"].isUndefinedOrNull(pageScrollInstance.duration)) {
+            // Speed option is set and no duration => calculate duration based on speed and scroll distance
+            pageScrollInstance.executionDuration = Math.abs(pageScrollInstance.distanceToScroll) / pageScrollInstance.speed * 1000;
+        }
+        // We should go there directly, as our "animation" would have one big step
+        // only anyway and this way we save the interval stuff
+        var tooShortInterval = pageScrollInstance.executionDuration <= _ngx_page_scroll_config__WEBPACK_IMPORTED_MODULE_1__["PageScrollConfig"]._interval;
+        if (allReadyAtDestination || tooShortInterval) {
+            if (_ngx_page_scroll_config__WEBPACK_IMPORTED_MODULE_1__["PageScrollConfig"]._logLevel >= 2 || (_ngx_page_scroll_config__WEBPACK_IMPORTED_MODULE_1__["PageScrollConfig"]._logLevel >= 1 && Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["isDevMode"])())) {
+                if (allReadyAtDestination) {
+                    console.log('Scrolling not possible, as we can\'t get any closer to the destination');
+                }
+                else {
+                    console.log('Scroll duration shorter that interval length, jumping to target');
+                }
+            }
+            pageScrollInstance.setScrollPosition(pageScrollInstance.targetScrollPosition);
+            pageScrollInstance.fireEvent(true);
+            return;
+        }
+        // Register the interrupt listeners if we want an interruptible scroll animation
+        if (pageScrollInstance.interruptible ||
+            (_ngx_page_scroll_util_service__WEBPACK_IMPORTED_MODULE_2__["PageScrollUtilService"].isUndefinedOrNull(pageScrollInstance.interruptible) && _ngx_page_scroll_config__WEBPACK_IMPORTED_MODULE_1__["PageScrollConfig"].defaultInterruptible)) {
+            pageScrollInstance.attachInterruptListeners(this.onInterrupted);
+        }
+        // Let's get started, get the start time...
+        pageScrollInstance.startTime = new Date().getTime();
+        // .. and calculate the end time (when we need to finish at last)
+        pageScrollInstance.endTime = pageScrollInstance.startTime + pageScrollInstance.executionDuration;
+        pageScrollInstance.timer = setInterval(function (_pageScrollInstance) {
+            // Take the current time
+            var currentTime = new Date().getTime();
+            // Determine the new scroll position
+            var newScrollPosition;
+            var stopNow = false;
+            if (_pageScrollInstance.endTime <= currentTime) {
+                // We're over the time already, so go the targetScrollPosition (aka destination)
+                newScrollPosition = _pageScrollInstance.targetScrollPosition;
+                stopNow = true;
+            }
+            else {
+                // Calculate the scroll position based on the current time using the easing function
+                newScrollPosition = Math.round(_pageScrollInstance.easingLogic.ease(currentTime - _pageScrollInstance.startTime, _pageScrollInstance.startScrollPosition, _pageScrollInstance.distanceToScroll, _pageScrollInstance.executionDuration));
+            }
+            // Set the new scrollPosition to all scrollingViews elements
+            if (!_pageScrollInstance.setScrollPosition(newScrollPosition)) {
+                // Setting the new scrollTop/scrollLeft value failed for all ScrollingViews
+                // early stop the scroll animation to save resources
+                stopNow = true;
+            }
+            // At the end do the internal stop maintenance and fire the pageScrollFinish event
+            // (otherwise the event might arrive at "too early")
+            if (stopNow) {
+                _this.stopInternal(false, _pageScrollInstance);
+            }
+        }, _ngx_page_scroll_config__WEBPACK_IMPORTED_MODULE_1__["PageScrollConfig"]._interval, pageScrollInstance);
+        // Register the instance as running one
+        this.runningInstances.push(pageScrollInstance);
+    };
+    /**
+     * Stop all running scroll animations. Optionally limit to stop only the ones of specific namespace.
+     *
+     * @param namespace
+     * @returns {boolean}
+     */
+    /**
+         * Stop all running scroll animations. Optionally limit to stop only the ones of specific namespace.
+         *
+         * @param namespace
+         * @returns {boolean}
+         */
+    PageScrollService.prototype.stopAll = /**
+         * Stop all running scroll animations. Optionally limit to stop only the ones of specific namespace.
+         *
+         * @param namespace
+         * @returns {boolean}
+         */
+    function (namespace) {
+        if (this.runningInstances.length > 0) {
+            var stoppedSome = false;
+            for (var i = 0; i < this.runningInstances.length; ++i) {
+                var pageScrollInstance = this.runningInstances[i];
+                if (_ngx_page_scroll_util_service__WEBPACK_IMPORTED_MODULE_2__["PageScrollUtilService"].isUndefinedOrNull(namespace) || namespace.length === 0 ||
+                    pageScrollInstance.namespace === namespace) {
+                    stoppedSome = true;
+                    this.stopInternal(true, pageScrollInstance);
+                    // Decrease the counter, as we removed an item from the array we iterate over
+                    i--;
+                }
+            }
+            return stoppedSome;
+        }
+        return false;
+    };
+    PageScrollService.prototype.stop = function (pageScrollInstance) {
+        return this.stopInternal(true, pageScrollInstance);
+    };
+    PageScrollService.instanceCounter = 0;
+    PageScrollService.decorators = [
+        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"] },
+    ];
+    /** @nocollapse */
+    PageScrollService.ctorParameters = function () { return []; };
+    return PageScrollService;
+}());
+
+/* singleton pattern taken from https://github.com/angular/angular/issues/13854 */
+function NgxPageScrollServiceProviderFactory(parentDispatcher) {
+    return parentDispatcher || new PageScrollService();
+}
+var NgxPageScrollServiceProvider = {
+    provide: PageScrollService,
+    deps: [[new _angular_core__WEBPACK_IMPORTED_MODULE_0__["Optional"](), new _angular_core__WEBPACK_IMPORTED_MODULE_0__["SkipSelf"](), PageScrollService]],
+    useFactory: NgxPageScrollServiceProviderFactory
+};
+
 
 /***/ }),
 
