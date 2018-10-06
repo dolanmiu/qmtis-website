@@ -22,7 +22,7 @@ script:
 - npm run lint
 - npm run sass-lint
 - npm run style
-- npm run build -- --prod
+- npm run build
 # - npm run build -- --prod --base-href "/qmtis-website/"
 # deploy:
 #   app: qmtis

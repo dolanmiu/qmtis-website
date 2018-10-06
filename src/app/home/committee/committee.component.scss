@@ -24,7 +24,46 @@ h4 {
     overflow: hidden;
     transition: filter .5s;
 
+    img {
+        height: 230px;
+        object-fit: cover;
+        width: 256px;
+    }
+
     &:hover {
         filter: grayscale(0%);
+    }
+}
+
+@media (max-width: 543px) {
+    .card {
+        border: 0;
+        display: flex;
+        height: 100px;
+        overflow: hidden;
+
+        h4 {
+            font-size: 1.1em;
+            line-height: 2em;
+        }
+
+        p {
+            font-size: .8em;
+        }
+
+        .card-block {
+            height: initial;
+            padding: 10px 0 0 10px;
+        }
+
+        .photo {
+            height: 100%;
+
+            img {
+                border-radius: 0;
+                height: 100px;
+                width: 100px;
+            }
+        }
     }
 }

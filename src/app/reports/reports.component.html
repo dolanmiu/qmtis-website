@@ -1,8 +1,8 @@
-<app-backdrop></app-backdrop>
+<app-backdrop class="hidden-md-down"></app-backdrop>
 
-<app-hero></app-hero>
+<app-hero class="hidden-md-down"></app-hero>
 
-<section id="reports" class="section-dark hidden-md-down section-padding">
+<section id="reports" class="section-dark section-padding">
     <div class="container">
         <app-post-card *ngFor="let post of posts" [title]="post.title" [content]="post.content" [date]="post.published" [link]="post.id"></app-post-card>
 
