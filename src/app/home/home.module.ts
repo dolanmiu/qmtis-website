@@ -16,7 +16,16 @@ import { SharedModule } from '../shared/shared.module';
 import { SponsorsComponent } from './sponsors/sponsors.component';
 
 @NgModule({
-    declarations: [HomeComponent, AboutComponent, BackdropComponent, CommitteeComponent, IntroComponent, JoinComponent, PartnersComponent, SponsorsComponent],
+    declarations: [
+        HomeComponent,
+        AboutComponent,
+        BackdropComponent,
+        CommitteeComponent,
+        IntroComponent,
+        JoinComponent,
+        PartnersComponent,
+        SponsorsComponent,
+    ],
     imports: [CommonModule, EventsModule, HeroModule, SharedModule, FacebookModule.forRoot()],
     exports: [HomeComponent],
 })

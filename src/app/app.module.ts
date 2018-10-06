@@ -9,19 +9,10 @@ import { FooterModule } from './footer/footer.module';
 import { HomeModule } from './home/home.module';
 import { NavComponent } from './nav/nav.component';
 import { ReportsModule } from './reports/reports.module';
-import { SponsorModule } from './sponsor/sponsor.module';
+
 @NgModule({
     declarations: [AppComponent, NavComponent],
-    imports: [
-        Ng2PageScrollModule,
-        BrowserModule,
-        FooterModule,
-        HomeModule,
-        AppRoutingModule,
-        ReportsModule,
-        CommitteeModule,
-        SponsorModule,
-    ],
+    imports: [Ng2PageScrollModule, BrowserModule, FooterModule, HomeModule, AppRoutingModule, ReportsModule, CommitteeModule],
     bootstrap: [AppComponent],
 })
 export class AppModule {}
