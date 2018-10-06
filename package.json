@@ -26,11 +26,11 @@
     "bootstrap": "4.0.0-alpha.4",
     "core-js": "2.4.1",
     "font-awesome": "4.7.0",
-    "ng2-page-scroll": "4.0.0-beta.11",
     "ngx-facebook": "2.4.0",
+    "ngx-page-scroll": "^5.0.0",
     "rxjs": "6.3.3",
-    "zone.js": "0.8.17",
-    "rxjs-compat": "^6.0.0-rc.0"
+    "rxjs-compat": "^6.0.0-rc.0",
+    "zone.js": "0.8.17"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.8.0",

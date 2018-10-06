@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
-import { Ng2PageScrollModule } from 'ng2-page-scroll';
+import { NgxPageScrollModule } from 'ngx-page-scroll';
 
 import { HeroComponent } from './hero.component';
 import { MouseIconComponent } from './mouse-icon/mouse-icon.component';
 
 @NgModule({
     declarations: [HeroComponent, MouseIconComponent],
-    imports: [Ng2PageScrollModule],
+    imports: [NgxPageScrollModule],
     providers: [],
     bootstrap: [],
     exports: [HeroComponent],
