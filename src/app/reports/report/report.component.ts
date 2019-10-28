@@ -12,7 +12,11 @@ import { BloggerService } from '../blogger.service';
 export class ReportComponent implements OnInit {
     public post$: Observable<Post>;
 
-    constructor(private activatedRoute: ActivatedRoute, private bloggerService: BloggerService, private router: Router) {
+    constructor(
+        private readonly activatedRoute: ActivatedRoute,
+        private readonly bloggerService: BloggerService,
+        private readonly router: Router,
+    ) {
         this.router.events.first().subscribe((ev) => {
             if (ev instanceof NavigationEnd) {
                 window.scrollTo(0, 0);
@@ -21,16 +25,19 @@ export class ReportComponent implements OnInit {
     }
 
     public ngOnInit(): void {
-        this.post$ = this.activatedRoute.queryParams.flatMap((params) => {
-            return this.bloggerService.post(params.id);
-        }).map((post) => {
-            return {
-                ...post,
-                content: post.content.replace(/<!--[\s\S]*?-->/g, ''),
-            };
-        }).catch((err) => {
-            this.router.navigate(['/reports']);
-            return Observable.throw(err);
-        });
+        this.post$ = this.activatedRoute.queryParams
+            .flatMap((params) => {
+                return this.bloggerService.post(params.id);
+            })
+            .map((post) => {
+                return {
+                    ...post,
+                    content: post.content.replace(/<!--[\s\S]*?-->/g, ''),
+                };
+            })
+            .catch((err) => {
+                this.router.navigate(['/reports']);
+                return Observable.throw(err);
+            });
     }
 }

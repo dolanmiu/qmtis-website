@@ -5,5 +5,4 @@ import { Component } from '@angular/core';
     templateUrl: './mouse-icon.component.html',
     styleUrls: ['./mouse-icon.component.scss'],
 })
-export class MouseIconComponent {
-}
+export class MouseIconComponent {}

@@ -7,10 +7,7 @@ import { EventCardComponent } from './event-card/event-card.component';
 import { EventsComponent } from './events.component';
 
 @NgModule({
-    declarations: [
-        EventsComponent,
-        EventCardComponent,
-    ],
+    declarations: [EventsComponent, EventCardComponent],
     imports: [
         BrowserModule,
         AgmCoreModule.forRoot({
@@ -18,10 +15,7 @@ import { EventsComponent } from './events.component';
         }),
         SharedModule,
     ],
-    providers: [
-    ],
-    exports: [
-        EventsComponent,
-    ],
+    providers: [],
+    exports: [EventsComponent],
 })
-export class EventsModule { }
+export class EventsModule {}

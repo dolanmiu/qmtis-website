@@ -1,6 +1,17 @@
 import { Component } from '@angular/core';
 import { Http } from '@angular/http';
-import { Observable } from 'rxjs/Rx';
+import { Observable } from 'rxjs/Observable';
+
+interface Member {
+    name: string;
+    slug: string;
+    position: string;
+    linkedIn: string;
+    facebook: string;
+    email: string;
+    photoUrl: string;
+    description: string;
+}
 
 @Component({
     selector: 'app-committee',
@@ -12,10 +23,11 @@ export class CommitteeComponent {
     public members$: Observable<any>;
 
     constructor(http: Http) {
-        this.members$ = http.get('/assets/committee/details.json')
-            .map((res) => res.json())
+        this.members$ = http
+            .get('/assets/committee/details.json')
+            .map((res) => res.json() as Member[])
             .map((members) => {
-                const arr = [];
+                const arr: Member[] = [];
 
                 for (const key in members) {
                     if (!members[key]) {

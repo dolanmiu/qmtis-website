@@ -1,16 +1,17 @@
 declare interface FacebookPhoto {
-    created_time: string,
-    name: string,
-    id: string
+    created_time: string;
+    name: string;
+    id: string;
+    url: string;
 }
 
 declare interface FacebookPhotosResponse {
-    data: FacebookPhoto[],
+    data: FacebookPhoto[];
     paging: {
         cursors: {
-            before: string,
-            after: string
-        },
-        next: string
-    }
+            before: string;
+            after: string;
+        };
+        next: string;
+    };
 }

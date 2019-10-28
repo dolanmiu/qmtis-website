@@ -5,5 +5,4 @@ import { Component } from '@angular/core';
     templateUrl: './backdrop.component.html',
     styleUrls: ['./backdrop.component.scss'],
 })
-export class BackdropComponent {
-}
+export class BackdropComponent {}

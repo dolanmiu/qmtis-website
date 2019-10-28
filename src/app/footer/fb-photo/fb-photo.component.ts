@@ -6,5 +6,6 @@ import { Component, Input } from '@angular/core';
     styleUrls: ['./fb-photo.component.scss'],
 })
 export class FacebookPhotoComponent {
-    @Input() public fbuid: number;
+    @Input()
+    public url: string;
 }

@@ -28,7 +28,7 @@
                 <hr />
                 <p class="text-xs-center text-lg-left"><i class="fa fa-map-marker fa-fw" aria-hidden="true"></i>Mile End Rd, London E1 4NS</p>
                 <p class="text-xs-center text-lg-left"><i class="fa fa-envelope fa-fw" aria-hidden="true"></i><a href="mailto:enquiries@qmtis.com" target="_top">enquiries@qmtis.com</a></p>
-                <p class="text-xs-center text-lg-left"><i class="fa fa-comments fa-fw" aria-hidden="true"></i><a class="message-us" href="http://m.me/qmtis" target="_blank">Message us directly!</a></p>
+                <p class="text-xs-center text-lg-left"><i class="fa fa-comments fa-fw" aria-hidden="true"></i><a class="message-us" href="https://m.me/qmtis" target="_blank">Message us directly!</a></p>
                 <p class="text-xs-center text-lg-left"><i class="fa fa-globe fa-fw" aria-hidden="true"></i><a class="message-us" href="https://www.qmsu.org/groups/investment" target="_blank">Union website</a></p>
                 <p class="text-xs-center text-lg-left"><i class="fa fa-newspaper-o fa-fw" aria-hidden="true"></i><a class="message-us" href="https://docs.google.com/forms/d/e/1FAIpQLSftZN92EQUnL8Ux03MKdUmQeek-RFSNNY2XXhpStPvxz7Q4CQ/viewform" target="_blank">Sign up to our newsletter</a></p>
             </div>
@@ -37,7 +37,7 @@
                 <h2 class="footer-heading">Latest Photos</h2>
                 <hr />
                 <div class="row">
-                    <app-fb-photo *ngFor="let photo of photos" class="col-lg-4" [fbuid]="photo.id"></app-fb-photo>
+                    <app-fb-photo *ngFor="let photo of photos" class="col-lg-4" [url]="photo.url"></app-fb-photo>
                 </div>
             </div>
         </div>

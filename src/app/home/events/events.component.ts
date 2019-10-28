@@ -31,14 +31,17 @@ export class EventsComponent {
     public currentLat: number;
     public currentLng: number;
 
-    constructor(private facebookService: FacebookService, private dateSanitizerService: DateSanitizerService) {
-        this.facebookService.getEvents().subscribe((events) => {
-            this.currentEvent = events.data[0];
-            this.loadEventToSide(this.currentEvent);
-            this.events = events.data;
-        }, (err) => {
-            console.error(err);
-        });
+    constructor(facebookService: FacebookService, private readonly dateSanitizerService: DateSanitizerService) {
+        facebookService.getEvents().subscribe(
+            (events) => {
+                this.currentEvent = events.data[0];
+                this.loadEventToSide(this.currentEvent);
+                this.events = events.data;
+            },
+            (err) => {
+                console.error(err);
+            },
+        );
     }
 
     public loadEventToSide(event: FacebookEvent): void {

@@ -8,16 +8,16 @@ declare interface Blog {
     url: string;
     selfLink: string;
     posts: {
-        totalItems: number,
-        selfLink: string
+        totalItems: number;
+        selfLink: string;
     };
     pages: {
-        totalItems: number,
-        selfLink: string
+        totalItems: number;
+        selfLink: string;
     };
     locale: {
-        language: string,
-        country: string,
-        variant: string
-    }
+        language: string;
+        country: string;
+        variant: string;
+    };
 }

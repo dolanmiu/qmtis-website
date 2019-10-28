@@ -2,10 +2,7 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class DateSanitizerService {
-
-    constructor() {
-
-    }
+    constructor() {}
 
     public sanitize(dateString: string): string {
         if (!dateString) {
@@ -15,6 +12,6 @@ export class DateSanitizerService {
         const re = /(\d+-\d+-\w+:\d+:\d+)/;
 
         const matches = dateString.match(re);
-        return matches[0];
+        return matches ? matches[0] : '';
     }
 }

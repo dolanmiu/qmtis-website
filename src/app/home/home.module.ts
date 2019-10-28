@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { FacebookModule } from 'ngx-facebook';
 
 import { AboutComponent } from './about/about.component';
 import { BackdropComponent } from './backdrop/backdrop.component';
@@ -12,6 +13,7 @@ import { JoinComponent } from './join/join.component';
 import { PartnersComponent } from './partners/partners.component';
 
 import { SharedModule } from '../shared/shared.module';
+import { SponsorsComponent } from './sponsors/sponsors.component';
 
 @NgModule({
     declarations: [
@@ -22,15 +24,9 @@ import { SharedModule } from '../shared/shared.module';
         IntroComponent,
         JoinComponent,
         PartnersComponent,
+        SponsorsComponent,
     ],
-    imports: [
-        CommonModule,
-        EventsModule,
-        HeroModule,
-        SharedModule,
-    ],
-    exports: [
-        HomeComponent,
-    ],
+    imports: [CommonModule, EventsModule, HeroModule, SharedModule, FacebookModule.forRoot()],
+    exports: [HomeComponent],
 })
-export class HomeModule { }
+export class HomeModule {}

@@ -10,24 +10,9 @@ import { IconTextBlockComponent } from './icon-text-block/icon-text-block.compon
 import { RemoveHtmlTagsPipe } from './remove-html-tags.pipe';
 
 @NgModule({
-    declarations: [
-        IconTextBlockComponent,
-        CutPipe,
-        RemoveHtmlTagsPipe,
-    ],
-    imports: [
-        BrowserModule,
-        FormsModule,
-        HttpModule,
-    ],
-    providers: [
-        FacebookService,
-        DateSanitizerService,
-    ],
-    exports: [
-        IconTextBlockComponent,
-        CutPipe,
-        RemoveHtmlTagsPipe,
-    ],
+    declarations: [IconTextBlockComponent, CutPipe, RemoveHtmlTagsPipe],
+    imports: [BrowserModule, FormsModule, HttpModule],
+    providers: [FacebookService, DateSanitizerService],
+    exports: [IconTextBlockComponent, CutPipe, RemoveHtmlTagsPipe],
 })
-export class SharedModule { }
+export class SharedModule {}

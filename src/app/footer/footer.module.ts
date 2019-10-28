@@ -6,16 +6,9 @@ import { FacebookPhotoComponent } from './fb-photo/fb-photo.component';
 import { FooterComponent } from './footer.component';
 
 @NgModule({
-    declarations: [
-        FooterComponent,
-        FacebookPhotoComponent,
-    ],
-    imports: [
-        BrowserModule,
-    ],
+    declarations: [FooterComponent, FacebookPhotoComponent],
+    imports: [BrowserModule],
     providers: [FacebookService],
-    exports: [
-        FooterComponent,
-    ],
+    exports: [FooterComponent],
 })
-export class FooterModule { }
+export class FooterModule {}
