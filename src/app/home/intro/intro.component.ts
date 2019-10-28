@@ -19,7 +19,7 @@ export class IntroComponent {
         title: 'Access to society social events',
         icon: 'comments-o',
     }, {
-        title: 'Priveleged access to QMTIS Alumni Network',
+        title: 'Privileged access to QMTIS Alumni Network',
         icon: 'graduation-cap',
     }, {
         title: 'Benefit from guest speakers and professionals',
