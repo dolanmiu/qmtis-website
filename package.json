@@ -9,7 +9,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "sass-lint": "sass-lint \"src/**/*.scss\" -v -q",
-    "style": "prettier -l \"src/**/*.ts\" && prettier -l \"src/**/*.html\"&& prettier -l \"src/**/*.scss\""
+    "style": "prettier -l \"src/**/*.ts\" && prettier -l \"src/**/*.html\"&& prettier -l \"src/**/*.scss\"",
+    "style:fix": "prettier --write \"src/**/*.ts\" && prettier --write \"src/**/*.html\"&& prettier --write \"src/**/*.scss\""
   },
   "private": true,
   "dependencies": {
