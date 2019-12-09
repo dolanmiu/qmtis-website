@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "test": "npm run lint",
+    "test": "npm run lint && npm run style",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "sass-lint": "sass-lint \"src/**/*.scss\" -v -q",
