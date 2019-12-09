@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/54/Queen_Mary%2C_University_of_London_logo.svg/1280px-Queen_Mary%2C_University_of_London_logo.svg.png" height="120">
+    <img src="https://i.imgur.com/kWzCv5f.png" height="120">
 </p>
 
 [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
@@ -20,8 +20,7 @@ Once all the unit tests have passed, it will deploy to the [Heroku](https://qmti
     <img src="https://avatars1.githubusercontent.com/u/3284117" height="120">
     <img src="https://worldvectorlogo.com/logos/heroku.svg" height="120">
     <img src="https://worldvectorlogo.com/logos/travis-ci-icon.svg" height="120">
-    <img src="http://getbootstrap.com/assets/brand/bootstrap-solid.svg" height="120">
-    <img src="https://strongloop.com/wp-content/uploads/2015/12/nodejs-logo.png" height="120">
+    <img src="https://i.imgur.com/Ta4p3XR.png" height="120">
 </p>
 
 ## Usage
