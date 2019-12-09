@@ -1,5 +1,5 @@
 $message-us-color: #fff;
-$company-details-color: rgba(173, 173, 173, .81);
+$company-details-color: rgba(173, 173, 173, 0.81);
 $footer-bg-color: #104464;
 $footer-text-color: #f2f2f2;
 $facebook-color: #3b5998;
@@ -8,7 +8,7 @@ $linkedin-color: #4875b4;
 $github-color: #333;
 
 p {
-    font-size: .8em;
+    font-size: 0.8em;
 }
 
 .footer {
@@ -47,20 +47,19 @@ p {
 
 .company-details {
     color: $company-details-color;
-    font-size: .8em;
+    font-size: 0.8em;
 }
 
 .logo-text {
-    font-size: .9em;
+    font-size: 0.9em;
     font-weight: bold;
     margin-top: 10px;
 }
 
 .logo-description {
-    font-size: .8em;
+    font-size: 0.8em;
     font-weight: lighter;
 }
-
 
 .footer-heading {
     font-size: 1.2em;

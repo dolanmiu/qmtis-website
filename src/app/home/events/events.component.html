@@ -11,21 +11,32 @@
                 </div>-->
                 <div class="card">
                     <div class="card-img-top hidden-md-down" src="..." alt="Card image cap">
-                        <agm-map [latitude]="currentLat" [longitude]="currentLng" [zoom]="17" [scrollwheel]="false" [streetViewControl]="false">
+                        <agm-map
+                            [latitude]="currentLat"
+                            [longitude]="currentLng"
+                            [zoom]="17"
+                            [scrollwheel]="false"
+                            [streetViewControl]="false"
+                        >
                             <agm-marker [latitude]="currentLat" [longitude]="currentLng"></agm-marker>
                         </agm-map>
                     </div>
                     <div class="card-block" *ngIf="currentEvent; else noEvents">
-                        <h4 class="card-title">{{currentEvent.name}}</h4>
-                        <p class="lead">{{sanitizeDate(currentEvent.start_time) | date: 'medium'}}</p>
+                        <h4 class="card-title">{{ currentEvent.name }}</h4>
+                        <p class="lead">{{ sanitizeDate(currentEvent.start_time) | date: 'medium' }}</p>
                         <ul class="fa-ul">
                             <li>
-                                <i class="fa-li fa fa-map-marker"></i>{{currentEvent.place.name}}
-                                <br />{{currentEvent.place.location ? currentEvent.place.location.street : ""}}
-                                <br />{{currentEvent.place.location ? currentEvent.place.location.zip : ""}}
+                                <i class="fa-li fa fa-map-marker"></i>{{ currentEvent.place.name }} <br />{{
+                                    currentEvent.place.location ? currentEvent.place.location.street : ''
+                                }}
+                                <br />{{ currentEvent.place.location ? currentEvent.place.location.zip : '' }}
+                            </li>
                         </ul>
-                        <p class="card-text">{{currentEvent.description}}</p>
-                        <a href="#" class="btn btn-primary" href="https://www.facebook.com/events/{{currentEvent.id}}/" target="_blank">Go to Event</a>
+
+                        <p class="card-text">{{ currentEvent.description }}</p>
+                        <a href="#" class="btn btn-primary" href="https://www.facebook.com/events/{{ currentEvent.id }}/" target="_blank"
+                            >Go to Event</a
+                        >
                     </div>
 
                     <ng-template #noEvents>
@@ -38,8 +49,14 @@
             </div>
 
             <div class="col-lg-6 hidden-md-down">
-                <app-event-card *ngFor="let event of events" [name]="event.name" [description]="event.description" [date]="event.start_time"
-                    (click)="loadEventToSide(event)" [active]="event.id == currentEvent.id"></app-event-card>
+                <app-event-card
+                    *ngFor="let event of events"
+                    [name]="event.name"
+                    [description]="event.description"
+                    [date]="event.start_time"
+                    (click)="loadEventToSide(event)"
+                    [active]="event.id == currentEvent.id"
+                ></app-event-card>
             </div>
         </div>
     </div>

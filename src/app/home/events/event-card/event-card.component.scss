@@ -4,7 +4,7 @@ $active-color: #0275d8;
 
 .drop-shadow {
     box-shadow: 0 0 20px $drop-shadow-color;
-    transition: box-shadow .2s;
+    transition: box-shadow 0.2s;
 
     &:hover {
         box-shadow: 0 0 30px $drop-shadow-hover-color;
@@ -12,7 +12,7 @@ $active-color: #0275d8;
 }
 
 .card {
-    transition: transform .2s;
+    transition: transform 0.2s;
 
     &:hover {
         cursor: pointer;

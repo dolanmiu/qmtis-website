@@ -3,16 +3,18 @@
         <div class="clearfix">
             <div class="row">
                 <div class="col-xs-6 text-xs-left">
-                    <p [hidden]="!active"><i class="fa fa-arrow-up hidden-lg-up" aria-hidden="true"></i><i class="fa fa-arrow-left hidden-md-down" aria-hidden="true"></i></p>
+                    <p [hidden]="!active">
+                        <i class="fa fa-arrow-up hidden-lg-up" aria-hidden="true"></i
+                        ><i class="fa fa-arrow-left hidden-md-down" aria-hidden="true"></i>
+                    </p>
                 </div>
 
                 <div class="col-xs-6 text-xs-right">
-                    <p>{{sanitizeDate(date) | date: 'dd/MM/yyyy'}}</p>
+                    <p>{{ sanitizeDate(date) | date: 'dd/MM/yyyy' }}</p>
                 </div>
             </div>
         </div>
-        <h5 class="card-title">{{name}}</h5>
-        <p class="card-text">{{description | cut: 150}}</p>
-
+        <h5 class="card-title">{{ name }}</h5>
+        <p class="card-text">{{ description | cut: 150 }}</p>
     </div>
 </div>

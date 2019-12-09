@@ -4,32 +4,31 @@
 
 <section id="reports" class="section-dark section-padding">
     <div class="container" *ngIf="member$ | async; let member">
-        <h1 class="display-3">{{member.name}}</h1>
-        <p class="lead position">{{member.position}}</p>
+        <h1 class="display-3">{{ member.name }}</h1>
+        <p class="lead position">{{ member.position }}</p>
 
         <div class="row">
             <div class="col-lg-6">
-                <p>{{member.description}}</p>
+                <p>{{ member.description }}</p>
 
-                <hr>
+                <hr />
 
                 <p *ngIf="member.email">
-                    <strong>Email:</strong> <a [href]="member.email" target="_blank">{{member.email}}</a>
+                    <strong>Email:</strong> <a [href]="member.email" target="_blank">{{ member.email }}</a>
                 </p>
 
                 <p>
-                    <strong>Facebook:</strong> <a [href]="member.facebook" target="_blank">{{member.facebook}}</a>
+                    <strong>Facebook:</strong> <a [href]="member.facebook" target="_blank">{{ member.facebook }}</a>
                 </p>
 
                 <p>
-                    <strong>LinkedIn:</strong> <a [href]="member.linkedIn" target="_blank">{{member.linkedIn}}</a>
+                    <strong>LinkedIn:</strong> <a [href]="member.linkedIn" target="_blank">{{ member.linkedIn }}</a>
                 </p>
             </div>
 
             <div class="col-lg-6">
-                <img class="img-fluid" src="./assets/committee/{{member.photoUrl}}" [alt]="member.name">
+                <img class="img-fluid" src="./assets/committee/{{ member.photoUrl }}" [alt]="member.name" />
             </div>
         </div>
-
     </div>
 </section>

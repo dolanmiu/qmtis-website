@@ -1,12 +1,16 @@
-<nav id="navbar" class="navbar navbar-full bg-faded navbar-fixed-top hidden-sm-down" [ngClass]="{'unscrolled-nav': !scrolled, 'navbar-dark': scrolled, 'bg-inverse': scrolled}">
+<nav
+    id="navbar"
+    class="navbar navbar-full bg-faded navbar-fixed-top hidden-sm-down"
+    [ngClass]="{ 'unscrolled-nav': !scrolled, 'navbar-dark': scrolled, 'bg-inverse': scrolled }"
+>
     <div class="container">
-        <a pageScroll class="navbar-brand nav-padding hidden-sm-down" href="#home" routerLink="/"><img src="./assets/qm-logo.png" /></a>
+        <a pageScroll class="navbar-brand nav-padding hidden-sm-down" href="#home" routerLink="/"><img src="./assets/qm-logo.png"/></a>
         <ul class="nav navbar-nav pull-xs-right nav-padding">
             <li class="nav-item hidden-sm-down">
                 <a pageScroll class="nav-link" href="#home" routerLink="/" fragment="home">Home</a>
             </li>
             <li *ngFor="let link of links" class="nav-item">
-                <a pageScroll class="nav-link" href="#{{link.route}}" routerLink="/" fragment="{{link.route}}">{{link.text}}</a>
+                <a pageScroll class="nav-link" href="#{{ link.route }}" routerLink="/" fragment="{{ link.route }}">{{ link.text }}</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" routerLink="/reports" href="#reports">Reports</a>
@@ -21,7 +25,7 @@
     <div class="container">
         <ul class="nav navbar-nav pull-xs-right nav-padding">
             <li *ngFor="let link of links" class="nav-item">
-                <a pageScroll class="nav-link" href="#{{link.route}}">{{link.text}}</a>
+                <a pageScroll class="nav-link" href="#{{ link.route }}">{{ link.text }}</a>
             </li>
         </ul>
     </div>

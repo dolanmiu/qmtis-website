@@ -4,10 +4,10 @@
 
 <section id="reports" class="section-dark hidden-md-down section-padding">
     <div class="container">
-        <ng-container *ngIf="post$ | async; let post; else loading">
-            <h1 innerHTML="{{post.title}}"></h1>
-            <p>{{post.published | date}}</p>
-            <div innerHTML="{{post.content}}"></div>
+        <ng-container *ngIf="post$ | async; let post; else: loading">
+            <h1 innerHTML="{{ post.title }}"></h1>
+            <p>{{ post.published | date }}</p>
+            <div innerHTML="{{ post.content }}"></div>
         </ng-container>
         <ng-template #loading>
             <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>

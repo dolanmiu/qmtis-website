@@ -18,7 +18,7 @@
 
 img {
     filter: brightness(100%);
-    transition: filter .3s;
+    transition: filter 0.3s;
 
     &:hover {
         filter: brightness(120%);

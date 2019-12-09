@@ -1,10 +1,10 @@
-$nav-hover-color: rgba(255, 255, 255, .5);
-$nav-shadow-color: rgba(0, 0, 0, .7);
+$nav-hover-color: rgba(255, 255, 255, 0.5);
+$nav-shadow-color: rgba(0, 0, 0, 0.7);
 $nav-border-color: #2b99dd;
 $nav-text-color: #fff;
 
 nav {
-    transition: background-color .5s, height .5s, padding-top .5s;
+    transition: background-color 0.5s, height 0.5s, padding-top 0.5s;
     transition-timing-function: ease-out;
 }
 
@@ -20,13 +20,12 @@ div {
 
     a {
         color: $nav-text-color;
-        transition: color .5s;
+        transition: color 0.5s;
 
         &:hover {
             color: $nav-hover-color;
         }
     }
-
 }
 
 .btn {
