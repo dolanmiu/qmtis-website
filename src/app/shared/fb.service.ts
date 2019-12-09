@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 const URL = `https://wt-9017166451e5dc00461b648d19f5e8da-0.sandbox.auth0-extend.com/qmtis-facebook`;
 
@@ -14,16 +15,18 @@ export class FacebookService {
     private readonly data$: Observable<FacebookResponse>;
 
     constructor(http: Http) {
-        this.data$ = http.get(URL).map((eventJson) => {
-            return eventJson.json() as FacebookResponse;
-        });
+        this.data$ = http.get(URL).pipe(
+            map((eventJson) => {
+                return eventJson.json() as FacebookResponse;
+            }),
+        );
     }
 
     public getPhotos(): Observable<FacebookPhotosResponse> {
-        return this.data$.map((response) => response.photos);
+        return this.data$.pipe(map((response) => response.photos));
     }
 
     public getEvents(): Observable<FacebookEventResponse> {
-        return this.data$.map((response) => response.events);
+        return this.data$.pipe(map((response) => response.events));
     }
 }

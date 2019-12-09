@@ -33,7 +33,7 @@ export class IntroComponent {
             icon: 'users',
         },
         {
-            title: 'Possibility to join 1 on 1 mentorship programme',
+            title: 'Possibility to join 1 on 1 mentorship programmes',
             icon: 'rocket',
         },
     ];

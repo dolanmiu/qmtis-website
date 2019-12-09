@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
-import { Observable } from 'rxjs/Rx';
+import { Observable } from 'rxjs';
+import { flatMap, map } from 'rxjs/operators';
 
 import { environment } from '../../environments/environment';
 
@@ -17,24 +18,25 @@ export class BloggerService {
         const blogUrl = `https://www.googleapis.com/blogger/v3/blogs/${environment.blogger.id}?key=${environment.blogger.apiKey}`;
         const postsUrl = `https://www.googleapis.com/blogger/v3/blogs/${environment.blogger.id}/posts?key=${environment.blogger.apiKey}`;
 
-        return this.http
-            .get(blogUrl)
-            .map((blog) => blog.json() as Blog)
-            .flatMap((blog) => {
-                return this.http.get(postsUrl).map((posts) => {
-                    return {
-                        blog: blog,
-                        posts: posts.json() as Posts,
-                    };
-                });
-            });
+        return this.http.get(blogUrl).pipe(
+            map((blog) => blog.json() as Blog),
+            flatMap((blog) => {
+                return this.http.get(postsUrl).pipe(
+                    map((posts) => {
+                        return {
+                            blog: blog,
+                            posts: posts.json() as Posts,
+                        };
+                    }),
+                );
+            }),
+        );
     }
 
     public post(id: string): Observable<Post> {
-        const postUrl = `https://www.googleapis.com/blogger/v3/blogs/${environment.blogger.id}/posts/${id}?key=${
-            environment.blogger.apiKey
-        }`;
+        // tslint:disable-next-line:max-line-length
+        const postUrl = `https://www.googleapis.com/blogger/v3/blogs/${environment.blogger.id}/posts/${id}?key=${environment.blogger.apiKey}`;
 
-        return this.http.get(postUrl).map((blog) => blog.json() as Post);
+        return this.http.get(postUrl).pipe(map((blog) => blog.json() as Post));
     }
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
+import { first } from 'rxjs/operators';
 
 import { BloggerService } from './blogger.service';
 
@@ -18,7 +19,7 @@ export class ReportsComponent implements OnInit {
     public posts: Post[];
 
     constructor(private readonly bloggerService: BloggerService, router: Router) {
-        router.events.first().subscribe((ev) => {
+        router.events.pipe(first()).subscribe((ev) => {
             if (ev instanceof NavigationEnd) {
                 window.scrollTo(0, 0);
             }

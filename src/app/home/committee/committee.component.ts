@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Http } from '@angular/http';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 interface Member {
     name: string;
@@ -23,10 +24,9 @@ export class CommitteeComponent {
     public members$: Observable<any>;
 
     constructor(http: Http) {
-        this.members$ = http
-            .get('/assets/committee/details.json')
-            .map((res) => res.json() as Member[])
-            .map((members) => {
+        this.members$ = http.get('/assets/committee/details.json').pipe(
+            map((res) => res.json() as Member[]),
+            map((members) => {
                 const arr: Member[] = [];
 
                 for (const key in members) {
@@ -38,7 +38,8 @@ export class CommitteeComponent {
                 }
 
                 return arr;
-            });
+            }),
+        );
 
         const currentDate = new Date();
         currentDate.setMonth(currentDate.getMonth() - 8);
