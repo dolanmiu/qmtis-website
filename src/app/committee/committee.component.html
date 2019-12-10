@@ -27,7 +27,7 @@
             </div>
 
             <div class="col-lg-6">
-                <img class="img-fluid" src="./assets/committee/{{ member.photoUrl }}" [alt]="member.name" />
+                <img class="img-fluid" src="./assets/committee/{{ year | async }}/{{ member.photoUrl }}" [alt]="member.name" />
             </div>
         </div>
     </div>

@@ -10,14 +10,16 @@ import { flatMap, map, tap } from 'rxjs/operators';
     styleUrls: ['./committee.component.scss', '../shared/section.component.scss'],
 })
 export class CommiteeComponent implements OnInit {
-    public member$: Observable<any>;
+    public readonly member$: Observable<CommitteeMember>;
+    public readonly year: Observable<number>;
 
     constructor(http: Http, route: ActivatedRoute, router: Router) {
+        this.year = route.queryParams.pipe(map((params) => params.year));
         this.member$ = route.queryParams.pipe(
             flatMap((params) => {
                 console.log(params);
-                return http.get('/assets/committee/details.json').pipe(
-                    map((res) => res.json()),
+                return http.get(`/assets/committee/${params.year}/details.json`).pipe(
+                    map((res) => res.json() as { [key: string]: CommitteeMember }),
                     map((all) => all[params.member]),
                     tap((member) => {
                         if (!member) {

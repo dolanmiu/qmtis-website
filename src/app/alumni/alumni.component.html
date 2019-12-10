@@ -1,0 +1,39 @@
+<app-backdrop class="hidden-md-down"></app-backdrop>
+
+<app-hero class="hidden-md-down"></app-hero>
+
+<section id="reports" class="section-dark section-padding">
+    <div class="container">
+        <div class="row" *ngIf="membersGroups$ | async; let membersGroups">
+            <ng-container *ngFor="let memberGroup of membersGroups">
+                <div class="col-xs-12">
+                    <h1>{{ memberGroup.year }} Committee</h1>
+                </div>
+                <div *ngFor="let member of memberGroup.members" class="col-md-4 col-lg-3 col-sm-6">
+                    <div class="card">
+                        <div class="photo">
+                            <a href="/committee?member={{ member.slug }}&year={{ memberGroup.year }}">
+                                <img
+                                    class="card-img-top img-fluid"
+                                    src="./assets/committee/{{ memberGroup.year }}/{{ member.photoUrl }}"
+                                    [alt]="member.name"
+                                />
+                            </a>
+                        </div>
+                        <div class="card-block">
+                            <h4 class="card-title">{{ member.name }}</h4>
+                            <p class="lead lead-role">{{ member.position }}</p>
+                            <a [href]="member.facebook" target="_blank" *ngIf="member.facebook"
+                                ><i class="fa fa-facebook social-icon"></i
+                            ></a>
+                            <a [href]="member.linkedIn" target="_blank" *ngIf="member.linkedIn"
+                                ><i class="fa fa-linkedin social-icon"></i
+                            ></a>
+                            <small><a href="/committee?member={{ member.slug }}&year={{ memberGroup.year }}">Read More</a></small>
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</section>

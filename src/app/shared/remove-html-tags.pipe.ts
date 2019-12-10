@@ -4,7 +4,8 @@ import { Pipe, PipeTransform } from '@angular/core';
     name: 'removeHtmlTags',
 })
 export class RemoveHtmlTagsPipe implements PipeTransform {
-    public transform(value: any, args?: any): any {
+    // tslint:disable-next-line:no-any
+    public transform(value: any, args?: any): string {
         return value ? String(value).replace(/<[^>]+>/gm, '') : '';
     }
 }
