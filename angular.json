@@ -128,8 +128,13 @@
               "devServerTarget": "qmtis-website:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "qmtis-website"
 }
