@@ -11,6 +11,7 @@ interface KeyPoint {
     styleUrls: ['./intro.component.scss', '../../shared/section.component.scss'],
 })
 export class IntroComponent {
+
     public keyPoints: KeyPoint[] = [
         {
             title: 'A Great learning opportunity',
@@ -21,7 +22,7 @@ export class IntroComponent {
             icon: 'comments-o',
         },
         {
-            title: 'Priveleged access to QMTIS Alumni Network',
+            title: 'Privileged access to QMTIS Alumni Network',
             icon: 'graduation-cap',
         },
         {
